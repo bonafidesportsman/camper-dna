@@ -64,7 +64,7 @@
 
   --max-w: 1200px;
   --content-w: 720px;
-  --nav-h: 72px;
+  --nav-h: 88px;
 }
 
 /* ── RESET ──────────────────────────────────────────────────── */
@@ -178,7 +178,12 @@ em { font-style: italic; }
   gap: var(--space-3);
   text-decoration: none;
 }
-.nav__logo-img { width: 52px; height: 52px; object-fit: contain; }
+.nav__logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45));
+}
 .nav__logo-text {
   font-family: var(--ff-head);
   font-size: var(--sz-xl);
@@ -1170,6 +1175,289 @@ em { font-style: italic; }
   font-size: var(--sz-md);
   font-weight: 600;
   color: var(--navy);
+}
+
+/* ── PRODUCT PANELS ──────────────────────────────────────────── */
+
+/* Trust pills */
+.ptrust {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--ff-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+.ptrust::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ptrust--own      { background: #e8f3ec; color: #2a6b3e; }
+.ptrust--own::before      { background: #2a6b3e; }
+.ptrust--seen     { background: #fef3e2; color: #9b6b1a; }
+.ptrust--seen::before     { background: var(--amber); }
+.ptrust--research { background: var(--grey-bg); color: var(--text-lt); border: 1px solid var(--grey-ln); }
+.ptrust--research::before { background: var(--grey-ln); }
+
+/* Category pills */
+.pcat {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--cream-dk);
+  color: var(--text-mid);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+/* Product section wrapper */
+.prod-section {
+  padding: var(--space-14) 0;
+  background: var(--cream);
+  border-top: 1px solid var(--grey-ln);
+}
+.prod-section__kicker {
+  font-family: var(--ff-body);
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Design B wide — Feature Card ──────────────────────────── */
+.prod-feat {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 0;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--grey-ln);
+  margin-bottom: var(--space-5);
+}
+.prod-feat__img {
+  position: relative;
+  min-height: 220px;
+}
+.prod-feat__img-ph {
+  width: 100%; height: 100%;
+  min-height: 220px;
+  background: linear-gradient(135deg, var(--cream-dk) 0%, #c8b8a4 100%);
+}
+.prod-feat__badge {
+  position: absolute;
+  top: var(--space-3); left: var(--space-3);
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--ff-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+.prod-feat__body {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.prod-feat__pills { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.prod-feat__title {
+  font-family: var(--ff-head);
+  font-size: var(--sz-xl);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.prod-feat__desc {
+  font-family: var(--ff-body);
+  font-size: var(--sz-sm);
+  color: var(--text-mid);
+  line-height: 1.65;
+  flex: 1;
+}
+.prod-feat__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: auto;
+}
+.prod-feat__price {
+  font-family: var(--ff-head);
+  font-size: var(--sz-lg);
+  font-weight: 700;
+  color: var(--navy);
+}
+.prod-feat__buy {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--ff-body);
+  font-size: var(--sz-sm);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-6);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.prod-feat__buy:hover { background: var(--amber-dk); }
+
+/* ── Design A — Strip Cards ─────────────────────────────────── */
+.prod-strips { display: flex; flex-direction: column; gap: var(--space-3); }
+.prod-strip {
+  display: grid;
+  grid-template-columns: 68px 1fr auto;
+  gap: var(--space-4);
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--grey-ln);
+  padding: var(--space-4) var(--space-5);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.prod-strip:hover {
+  border-color: var(--amber);
+  box-shadow: 0 2px 12px rgba(196,98,42,0.10);
+}
+.prod-strip__img--ph {
+  width: 68px; height: 68px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--cream-dk) 0%, #c8b8a4 100%);
+  flex-shrink: 0;
+}
+.prod-strip__name {
+  font-family: var(--ff-head);
+  font-size: var(--sz-md);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.prod-strip__desc {
+  font-family: var(--ff-body);
+  font-size: var(--sz-sm);
+  color: var(--text-mid);
+  line-height: 1.5;
+  margin-bottom: var(--space-2);
+}
+.prod-strip__pills { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.prod-strip__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+  min-width: 96px;
+}
+.prod-strip__price {
+  font-family: var(--ff-head);
+  font-size: var(--sz-md);
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.prod-strip__buy {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  color: var(--amber);
+  border: 1.5px solid var(--amber);
+  border-radius: var(--radius-md);
+  padding: 4px 12px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.prod-strip__buy:hover { background: var(--amber); color: var(--white); }
+
+/* ── Design D — Mini Grid ───────────────────────────────────── */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.prod-gc {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--grey-ln);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.prod-gc:hover { box-shadow: 0 4px 20px rgba(27,58,45,0.10); }
+.prod-gc__img-wrap { position: relative; }
+.prod-gc__img-ph {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, var(--cream-dk) 0%, #c8b8a4 100%);
+}
+.prod-gc__img-wrap .ptrust {
+  position: absolute;
+  top: var(--space-2); left: var(--space-2);
+}
+.prod-gc__body { padding: var(--space-4); }
+.prod-gc__name {
+  font-family: var(--ff-head);
+  font-size: var(--sz-md);
+  font-weight: 700;
+  color: var(--navy);
+  margin: var(--space-2) 0;
+  line-height: 1.3;
+}
+.prod-gc__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+  border-top: 1px solid var(--grey-ln);
+  padding-top: var(--space-3);
+}
+.prod-gc__price {
+  font-family: var(--ff-head);
+  font-size: var(--sz-sm);
+  font-weight: 700;
+  color: var(--navy);
+}
+.prod-gc__buy {
+  font-family: var(--ff-body);
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  color: var(--amber);
+  text-decoration: none;
+}
+.prod-gc__buy:hover { text-decoration: underline; }
+
+/* Product panel responsive */
+@media (max-width: 768px) {
+  .prod-feat { grid-template-columns: 1fr; }
+  .prod-feat__img { min-height: 180px; }
+  .prod-feat__img-ph { min-height: 180px; }
+  .prod-strip { grid-template-columns: 52px 1fr; }
+  .prod-strip__cta {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--grey-ln);
+    padding-top: var(--space-3);
+    min-width: unset;
+  }
+  .prod-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .prod-grid { grid-template-columns: 1fr; }
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
