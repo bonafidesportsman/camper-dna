@@ -462,6 +462,32 @@ em { font-style: italic; }
   background: linear-gradient(160deg, var(--navy-mid) 0%, var(--navy-lt) 100%);
   font-size: 4rem;
 }
+/* Avatar variant — profile-pic style for founder section */
+.founder-split__avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+}
+.founder-split__avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 4px solid var(--amber);
+}
+.founder-split__avatar-caption {
+  font-family: var(--ff-body);
+  font-size: var(--sz-sm);
+  font-weight: 600;
+  color: var(--text-lt);
+  text-align: center;
+  line-height: 1.4;
+}
 
 @media (max-width: 860px) {
   .founder-split {
