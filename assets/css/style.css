@@ -764,6 +764,202 @@ em { font-style: italic; }
   font-size: var(--sz-sm);
 }
 
+/* ── QUIZ ────────────────────────────────────────────────────── */
+.quiz {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Progress */
+.quiz__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+.quiz__progress-track {
+  flex: 1;
+  height: 6px;
+  background: var(--grey-ln);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.quiz__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--amber) 0%, var(--golden) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+.quiz__progress-label {
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  color: var(--text-lt);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Steps */
+.quiz__step {
+  display: none;
+}
+.quiz__step.is-active {
+  display: block;
+  animation: quiz-fade-in 0.3s ease;
+}
+@keyframes quiz-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quiz__q-num {
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: var(--space-3);
+}
+.quiz__question {
+  font-family: var(--ff-head);
+  font-size: clamp(var(--sz-xl), 2.5vw, var(--sz-3xl));
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: var(--space-8);
+  letter-spacing: -0.02em;
+}
+
+/* Options */
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.quiz__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  border: 2px solid var(--grey-ln);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  font-family: var(--ff-body);
+}
+.quiz__option:hover {
+  border-color: var(--amber);
+  background: var(--cream);
+  transform: translateX(4px);
+}
+.quiz__option.is-selected {
+  border-color: var(--amber);
+  background: var(--cream);
+  box-shadow: 0 0 0 3px rgba(255,92,53,0.15);
+}
+.quiz__option-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 2.5rem;
+  text-align: center;
+}
+.quiz__option-text {
+  flex: 1;
+  font-size: var(--sz-md);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* Next button */
+.quiz__nav {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: flex-end;
+}
+.quiz__next {
+  display: none;
+}
+.quiz__next.is-visible {
+  display: inline-flex;
+}
+
+/* Result */
+.quiz__result {
+  display: none;
+  animation: quiz-fade-in 0.4s ease;
+}
+.quiz__result.is-active {
+  display: block;
+}
+.quiz__result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--amber);
+  color: var(--white);
+  font-size: var(--sz-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+.quiz__result-title {
+  font-family: var(--ff-head);
+  font-size: clamp(var(--sz-2xl), 3vw, var(--sz-4xl));
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+.quiz__result-desc {
+  font-size: var(--sz-lg);
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+  max-width: 540px;
+}
+.quiz__result-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-8);
+}
+.quiz__result-secondary {
+  padding: var(--space-4) var(--space-6);
+  background: var(--grey-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--grey-ln);
+}
+.quiz__result-secondary p {
+  font-size: var(--sz-sm);
+  color: var(--text-mid);
+  margin: 0;
+}
+.quiz__result-secondary a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.quiz__restart {
+  font-size: var(--sz-sm);
+  font-weight: 600;
+  color: var(--text-lt);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: var(--space-4);
+  display: block;
+}
+.quiz__restart:hover { color: var(--amber); }
+
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero { min-height: 70vh; }

@@ -57,13 +57,40 @@
 
 <section class="section section--cream">
   <div class="container">
-    <div class="overlander" style="max-width:800px;margin:0 auto">
-      <img class="overlander__avatar" src="/assets/images/avatar.png" alt="Overlander" width="88" height="88">
-      <div>
-        <p class="overlander__label">From Overlander</p>
-        <p class="overlander__quote">"Most people end up with the wrong van because they asked the wrong questions. CamperDNA asks the right ones."</p>
-        <p class="overlander__body">The profiler is being built. In the meantime, the guides below will get you most of the way there — and the full tool will be live soon.</p>
+
+    <!-- QUIZ -->
+    <div id="camperdna-quiz" class="quiz">
+
+      <!-- Progress bar -->
+      <div class="quiz__progress">
+        <div class="quiz__progress-track">
+          <div class="quiz__progress-fill" style="width:0%"></div>
+        </div>
+        <span class="quiz__progress-label">Question 1 of 6</span>
       </div>
+
+      <!-- Steps injected by quiz.js -->
+      <div class="quiz__steps"></div>
+
+      <!-- Next / Finish button -->
+      <div class="quiz__nav">
+        <button class="btn btn--amber btn--lg quiz__next" type="button">Next question &rarr;</button>
+      </div>
+
+      <!-- Result screen -->
+      <div class="quiz__result">
+        <span class="quiz__result-badge">&#10003; Your CamperDNA</span>
+        <h2 class="quiz__result-title">Profile name</h2>
+        <p class="quiz__result-desc">Description goes here.</p>
+        <div class="quiz__result-actions">
+          <a href="#" class="btn btn--amber btn--lg quiz__result-cta">Read your full profile &rarr;</a>
+        </div>
+        <div class="quiz__result-secondary">
+          <p></p>
+        </div>
+        <button class="quiz__restart" type="button">Start again</button>
+      </div>
+
     </div>
   </div>
 </section>
@@ -72,8 +99,8 @@
   <div class="container">
     <div class="section-header section-header--center">
       <span class="section-header__eyebrow">The five profiles</span>
-      <h2 class="section-header__title">Which campervan type are you?</h2>
-      <p class="section-header__sub">Every CamperDNA profile maps to a real use case. Read yours and see what it means for your van spec.</p>
+      <h2 class="section-header__title">Or browse all five profiles</h2>
+      <p class="section-header__sub">Not sure where you sit? Every profile maps to a real use case — read yours to see what it means for your van spec.</p>
     </div>
     <div class="spoke-grid">
       <a href="/your-camperdna/weekend-escaper/" class="spoke-card">
@@ -177,5 +204,6 @@
   </div>
 </footer>
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/quiz.js"></script>
 </body>
 </html>
