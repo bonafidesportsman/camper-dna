@@ -17,7 +17,7 @@
       ]
     },
     {
-      q: 'Who's coming with you most of the time?',
+      q: "Who's coming with you most of the time?",
       options: [
         { icon: '🧍', text: 'Just me',                                           scores: { O:3 } },
         { icon: '💑', text: 'Me and my partner',                                 scores: { W:2, E:2 } },
