@@ -1,36 +1,32 @@
 /* ============================================================
    CamperDNA — Design System
    camper-dna.com
-   Fonts: National Park Bold (self-hosted) + Instrument Sans (Google)
+   Fonts: Poppins + DM Sans (Google Fonts)
+   Palette: Sunset/Festival — Dusk purple, Sunset orange, Sun yellow
    ============================================================ */
-
-/* ── FONTS ─────────────────────────────────────────────────── */
-@font-face {
-  font-family: 'National Park';
-  src: url('../fonts/NationalPark-Bold.woff2') format('woff2'),
-       url('../fonts/NationalPark-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ── TOKENS ─────────────────────────────────────────────────── */
 :root {
-  --navy:      #0D1F3C;
-  --navy-mid:  #1a3260;
-  --amber:     #E8960A;
-  --amber-dk:  #c47d06;
-  --cream:     #F5EDD8;
-  --cream-dk:  #ede0c4;
+  --navy:      #2C1654;   /* Dusk purple — dark base (nav, footer, hero bg) */
+  --navy-mid:  #4B2D8A;   /* Dusk mid — gradients */
+  --amber:     #FF5C35;   /* Sunset orange — primary brand / CTAs */
+  --amber-dk:  #E04520;   /* Sunset dark — hover states */
+  --cream:     #FFF5E4;   /* Sand — page backgrounds */
+  --cream-dk:  #FFE8C5;   /* Sand dark — card surfaces */
   --white:     #FFFFFF;
-  --text:      #1e1e1e;
-  --text-mid:  #444444;
-  --text-lt:   #6b6b6b;
-  --grey-bg:   #F7F6F3;
-  --grey-ln:   #e2e0dc;
+  --text:      #1C0A00;   /* Warm near-black */
+  --text-mid:  #4A3728;
+  --text-lt:   #7A6050;
+  --grey-bg:   #FFF8F0;
+  --grey-ln:   #F0E0CF;
 
-  --ff-head:   'National Park', Georgia, 'Times New Roman', serif;
-  --ff-body:   'Instrument Sans', system-ui, -apple-system, sans-serif;
+  /* Extended palette */
+  --golden:    #FF9B1A;   /* Golden amber — gradients */
+  --sun:       #FFD23F;   /* Sun yellow — badges, highlights on dark */
+  --coral:     #FF6B9D;   /* Coral pink — decorative accents */
+
+  --ff-head:   'Poppins', system-ui, -apple-system, sans-serif;
+  --ff-body:   'DM Sans', system-ui, -apple-system, sans-serif;
 
   --sz-xs:  0.75rem;   /* 12px */
   --sz-sm:  0.875rem;  /* 14px */
@@ -59,9 +55,9 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 3px rgba(13,31,60,0.08);
-  --shadow-md: 0 4px 16px rgba(13,31,60,0.10);
-  --shadow-lg: 0 8px 32px rgba(13,31,60,0.14);
+  --shadow-sm: 0 1px 3px rgba(44,22,84,0.08);
+  --shadow-md: 0 4px 16px rgba(44,22,84,0.12);
+  --shadow-lg: 0 8px 32px rgba(44,22,84,0.18);
 
   --max-w: 1200px;
   --content-w: 720px;
@@ -87,14 +83,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── TYPOGRAPHY ─────────────────────────────────────────────── */
 h1, h2, h3, h4 {
   font-family: var(--ff-head);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.15;
   color: var(--navy);
+  letter-spacing: -0.02em;
 }
-h1 { font-size: clamp(var(--sz-3xl), 5vw, var(--sz-5xl)); }
-h2 { font-size: clamp(var(--sz-2xl), 3.5vw, var(--sz-4xl)); }
-h3 { font-family: var(--ff-body); font-size: var(--sz-xl); font-weight: 700; }
-h4 { font-family: var(--ff-body); font-size: var(--sz-lg); font-weight: 700; }
+h1 { font-size: clamp(var(--sz-3xl), 5vw, var(--sz-5xl)); font-weight: 900; }
+h2 { font-size: clamp(var(--sz-2xl), 3.5vw, var(--sz-4xl)); font-weight: 800; }
+h3 { font-family: var(--ff-head); font-size: var(--sz-xl); font-weight: 700; letter-spacing: -0.01em; }
+h4 { font-family: var(--ff-head); font-size: var(--sz-lg); font-weight: 700; letter-spacing: -0.01em; }
 p  { margin-bottom: var(--space-4); }
 p:last-child { margin-bottom: 0; }
 strong { font-weight: 700; }
@@ -131,14 +128,19 @@ em { font-style: italic; }
 }
 .btn--amber {
   background: var(--amber);
-  color: var(--navy);
+  color: var(--white);
 }
-.btn--amber:hover { background: var(--amber-dk); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn--amber:hover { background: var(--amber-dk); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn--navy {
   background: var(--navy);
   color: var(--white);
 }
-.btn--navy:hover { background: var(--navy-mid); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn--navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn--sun {
+  background: var(--sun);
+  color: var(--navy);
+}
+.btn--sun:hover { background: var(--golden); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn--outline {
   background: transparent;
   color: var(--white);
@@ -211,6 +213,11 @@ em { font-style: italic; }
   transition: all 0.2s;
 }
 
+/* Scrolled state — stronger shadow */
+.site-nav.is-scrolled {
+  box-shadow: 0 4px 20px rgba(44,22,84,0.30);
+}
+
 /* Hide mobile nav by default — shown via JS at mobile breakpoint */
 .nav__mobile { display: none; }
 
@@ -246,7 +253,10 @@ em { font-style: italic; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--navy);
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, #8B3DCC 100%);
+}
+.hero--gradient {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #8B3DCC 100%);
 }
 .hero--article { min-height: 52vh; }
 .hero--hub     { min-height: 60vh; }
@@ -264,9 +274,9 @@ em { font-style: italic; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(13,31,60,0.30) 0%,
-    rgba(13,31,60,0.65) 50%,
-    rgba(13,31,60,0.88) 100%
+    rgba(44,22,84,0.30) 0%,
+    rgba(44,22,84,0.65) 50%,
+    rgba(44,22,84,0.88) 100%
   );
 }
 .hero__content {
@@ -404,7 +414,7 @@ em { font-style: italic; }
 .pillar-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,31,60,0.85) 0%, rgba(13,31,60,0.2) 60%);
+  background: linear-gradient(to top, rgba(44,22,84,0.85) 0%, rgba(44,22,84,0.2) 60%);
 }
 .pillar-card__body {
   position: relative;
@@ -746,11 +756,11 @@ em { font-style: italic; }
 
 /* ── PLACEHOLDER IMAGES ──────────────────────────────────────── */
 .img-placeholder {
-  background: linear-gradient(135deg, #c8d4e8 0%, #8fa5c7 100%);
+  background: linear-gradient(135deg, var(--cream-dk) 0%, #e8c4a0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-lt);
   font-size: var(--sz-sm);
 }
 

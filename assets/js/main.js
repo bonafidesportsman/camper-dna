@@ -35,3 +35,21 @@
     }
   });
 })();
+
+// Scroll-based nav: add .is-scrolled class after 40px
+(function () {
+  const nav = document.querySelector('.site-nav');
+  if (!nav) return;
+  var ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        nav.classList.toggle('is-scrolled', window.scrollY > 40);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // run once on load
+})();
