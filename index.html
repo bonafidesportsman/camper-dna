@@ -15,7 +15,7 @@
   <link rel="icon" href="/assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"CamperDNA","url":"https://camper-dna.com","description":"Free, independent campervan profiling for UK buyers."}
@@ -34,7 +34,7 @@
       <li><a href="/buying-a-van/" class="nav__link ">Buying a Van</a></li>
       <li><a href="/kit-and-gear/" class="nav__link ">Kit & Gear</a></li>
     </ul>
-    <a href="/your-camperdna/" class="btn btn--amber nav__cta">Get Your Profile</a>
+    <a href="/your-camperdna/" class="btn btn--amber nav__cta">Get your profile</a>
     <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
     </button>
@@ -45,7 +45,7 @@
     <a href="/buying-a-van/" class="nav__link">Buying a Van</a>
     <a href="/kit-and-gear/" class="nav__link">Kit & Gear</a>
     <a href="/about/" class="nav__link">About</a>
-    <a href="/your-camperdna/" class="btn btn--amber">Get Your Profile</a>
+    <a href="/your-camperdna/" class="btn btn--amber">Get your profile</a>
   </div>
 </nav>
 
@@ -54,84 +54,109 @@
   <img class="hero__img" src="/assets/images/02-modern-exterior/campervan-mountain-kevin-woblick-01--hero--overlay.jpg" alt="" loading="eager" fetchpriority="high">
   <div class="hero__overlay"></div>
   <div class="hero__content">
-    <span class="hero__eyebrow">Free &amp; Independent</span>
-    <h1 class="hero__title">Find the campervan that fits your life</h1>
-    <p class="hero__sub">Answer a few questions. Get your personalised CamperDNA profile — the right spec for how you actually use a van.</p>
-    <div class="hero__actions">
-      <a href="/your-camperdna/" class="btn btn--amber btn--lg">Get Your CamperDNA &rarr;</a>
-      <a href="/how-it-works/" class="btn btn--outline">How It Works</a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-  <p>Independent advice &nbsp;·&nbsp; No conversion companies &nbsp;·&nbsp; No brand deals &nbsp;·&nbsp; Just the right van for you</p>
-</div>
-
-<!-- FROM OVERLANDER -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="overlander">
-      <img class="overlander__avatar" src="/assets/images/avatar.png" alt="Overlander — CamperDNA founder" width="88" height="88">
-      <div>
-        <p class="overlander__label">From Overlander</p>
-        <p class="overlander__name">Why I built this</p>
-        <p class="overlander__quote">"I spent six months trying to work out which campervan was right for me. The internet was full of conversion company blogs and gear roundups with affiliate links. Nobody was asking the right questions."</p>
-        <p class="overlander__body">CamperDNA exists to fix that. It's a free profiling tool that works out what you actually need — based on how you use a van, not what's easy to sell. I built it because I needed it, and I couldn't find it anywhere.</p>
-        <a href="/story/" style="display:inline-flex;align-items:center;gap:6px;margin-top:1rem;font-weight:700;font-size:0.875rem;color:var(--navy);">Read the full story &rarr;</a>
+    <div class="hero__glass">
+      <span class="hero__eyebrow">Free &amp; independent</span>
+      <h1 class="hero__title">Find the van that fits your life</h1>
+      <p class="hero__sub">Six questions. Five minutes. A personalised campervan spec built around how you actually use one.</p>
+      <div class="hero__actions">
+        <a href="/your-camperdna/" class="btn btn--amber btn--lg">Get your CamperDNA &rarr;</a>
+        <a href="/decision-guide/" class="btn btn--outline">Start reading</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PILLAR CARDS -->
+<!-- TRUST ROW -->
+<div class="trust-row">
+  <div class="trust-row__inner">
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      No conversion company ties
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      No brand deals or paid coverage
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      Free. No sign-up needed
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Five minutes to your profile
+    </span>
+  </div>
+</div>
+
+<!-- FOUNDER SPLIT -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="founder-split">
+      <div class="founder-split__content">
+        <p class="founder-split__eyebrow">Why this exists</p>
+        <p class="founder-split__quote">I spent six months trying to work out which campervan was right for me. The internet was full of conversion company blogs and gear roundups with affiliate links. Nobody was asking the right questions.</p>
+        <p class="founder-split__body">CamperDNA is what I needed and couldn't find. It's a free profiling tool that figures out what you actually need — based on how you use a van, not what's easy to sell. No agenda. No sign-up. Just honest guidance.</p>
+        <a href="/story/" class="btn btn--outline-dark btn--sm">Read the full story &rarr;</a>
+        <p class="founder-split__name">— Overlander, founder of CamperDNA</p>
+      </div>
+      <div class="founder-split__img-wrap">
+        <img class="founder-split__img" src="/assets/images/09-practical/outdoor-cooking-dina-badamshina-01--wide.jpg" alt="Van life cooking outdoors" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENTO GRID PILLARS -->
 <section class="section section--grey">
   <div class="container">
     <div class="section-header section-header--center">
       <span class="section-header__eyebrow">Where to start</span>
       <h2 class="section-header__title">Everything you need to buy the right van</h2>
-      <p class="section-header__sub">Independent guides across every part of the campervan decision — from first question to final purchase.</p>
+      <p class="section-header__sub">Independent guides across the full decision — from first question to final purchase.</p>
     </div>
-    <div class="pillars">
-      <a href="/decision-guide/" class="pillar-card">
-        <img class="pillar-card__img" src="/assets/images/01-vw-exterior/vw-t6-exterior-annie-spratt-01--wide.jpg" alt="VW T6 campervan exterior" loading="lazy">
-        <div class="pillar-card__overlay"></div>
-        <div class="pillar-card__body">
-          <p class="pillar-card__tag">Decision Guide</p>
-          <h3 class="pillar-card__title">Should I buy? What size? Which van?</h3>
-          <p class="pillar-card__desc">The big decisions answered — honestly.</p>
-          <span class="pillar-card__arrow">Explore &rarr;</span>
+    <div class="bento-grid">
+      <a href="/decision-guide/" class="bento-card">
+        <div class="bento-card__img-wrap">
+          <img class="spoke-card__img" src="/assets/images/01-vw-exterior/vw-t6-exterior-annie-spratt-01--card.jpg" alt="The Decision Guide" loading="lazy">
+        </div>
+        <div class="bento-card__body">
+          <p class="bento-card__tag">Decision Guide</p>
+          <h3 class="bento-card__title">Should I buy? What size? Which van?</h3>
+          <p class="bento-card__desc">The big decisions, answered honestly.</p>
+          <span class="bento-card__arrow">Explore &rarr;</span>
         </div>
       </a>
-      <a href="/van-systems/" class="pillar-card">
-        <img class="pillar-card__img" src="/assets/images/04-interiors/interior-conversion-corey-willett-01--wide.jpg" alt="Campervan interior conversion" loading="lazy">
-        <div class="pillar-card__overlay"></div>
-        <div class="pillar-card__body">
-          <p class="pillar-card__tag">Van Systems</p>
-          <h3 class="pillar-card__title">Roofs, electrics, heating, water</h3>
-          <p class="pillar-card__desc">Every system explained before you commit.</p>
-          <span class="pillar-card__arrow">Explore &rarr;</span>
+      <a href="/van-systems/" class="bento-card">
+        <div class="bento-card__img-wrap">
+          <img class="spoke-card__img" src="/assets/images/04-interiors/interior-conversion-corey-willett-01--card.jpg" alt="Van Systems" loading="lazy">
+        </div>
+        <div class="bento-card__body">
+          <p class="bento-card__tag">Van Systems</p>
+          <h3 class="bento-card__title">Roofs, electrics, heating and water</h3>
+          <p class="bento-card__desc">Every system explained before you commit.</p>
+          <span class="bento-card__arrow">Explore &rarr;</span>
         </div>
       </a>
-      <a href="/buying-a-van/" class="pillar-card">
-        <img class="pillar-card__img" src="/assets/images/01-vw-exterior/vw-t6-exterior-balkan-campers-02--wide.jpg" alt="Buying a VW campervan" loading="lazy">
-        <div class="pillar-card__overlay"></div>
-        <div class="pillar-card__body">
-          <p class="pillar-card__tag">Buying a Van</p>
-          <h3 class="pillar-card__title">Checklists, insurance, DVLA, costs</h3>
-          <p class="pillar-card__desc">What to check, what to pay, what to avoid.</p>
-          <span class="pillar-card__arrow">Explore &rarr;</span>
+      <a href="/buying-a-van/" class="bento-card">
+        <div class="bento-card__img-wrap">
+          <img class="spoke-card__img" src="/assets/images/01-vw-exterior/vw-t6-exterior-balkan-campers-02--card.jpg" alt="Buying a Van" loading="lazy">
+        </div>
+        <div class="bento-card__body">
+          <p class="bento-card__tag">Buying a Van</p>
+          <h3 class="bento-card__title">Checklists, insurance, DVLA and costs</h3>
+          <p class="bento-card__desc">What to check, what to pay, what to avoid.</p>
+          <span class="bento-card__arrow">Explore &rarr;</span>
         </div>
       </a>
-      <a href="/kit-and-gear/" class="pillar-card">
-        <img class="pillar-card__img" src="/assets/images/09-practical/outdoor-cooking-dina-badamshina-01--wide.jpg" alt="Van life kit and gear" loading="lazy">
-        <div class="pillar-card__overlay"></div>
-        <div class="pillar-card__body">
-          <p class="pillar-card__tag">Kit &amp; Gear</p>
-          <h3 class="pillar-card__title">What actually goes in the van</h3>
-          <p class="pillar-card__desc">Opinionated kit guides. No fluff.</p>
-          <span class="pillar-card__arrow">Explore &rarr;</span>
+      <a href="/kit-and-gear/" class="bento-card">
+        <div class="bento-card__img-wrap">
+          <img class="spoke-card__img" src="/assets/images/09-practical/outdoor-cooking-dina-badamshina-01--card.jpg" alt="Kit & Gear" loading="lazy">
+        </div>
+        <div class="bento-card__body">
+          <p class="bento-card__tag">Kit &amp; Gear</p>
+          <h3 class="bento-card__title">What actually goes in the van</h3>
+          <p class="bento-card__desc">Opinionated kit guides. No fluff.</p>
+          <span class="bento-card__arrow">Explore &rarr;</span>
         </div>
       </a>
     </div>
@@ -142,29 +167,31 @@
 <section class="section">
   <div class="container">
     <div class="section-header section-header--center">
-      <span class="section-header__eyebrow">The Tool</span>
-      <h2 class="section-header__title">How CamperDNA works</h2>
-      <p class="section-header__sub">Three steps. Five minutes. A campervan spec built around how you actually live.</p>
+      <span class="section-header__eyebrow">How it works</span>
+      <h2 class="section-header__title">Three steps to your van spec</h2>
+      <p class="section-header__sub">Five minutes. No registration. A profile matched to how you actually live.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step__num">1</div>
-        <h3 class="step__title">Answer the right questions</h3>
-        <p class="step__desc">We ask about how you use a van — not what you think you want. Use case, frequency, party size, budget, storage needs.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">2</div>
-        <h3 class="step__title">Get your CamperDNA profile</h3>
-        <p class="step__desc">We match your answers to one of five van personas, each with a tailored spec covering size, roof, electrics, bed layout and more.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">3</div>
-        <h3 class="step__title">Use it when buying</h3>
-        <p class="step__desc">Your profile tells you what to look for, what to avoid, and which compromises matter. Take it van shopping.</p>
+    <div class="steps-wrap">
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <h3 class="step__title">Answer honestly</h3>
+          <p class="step__desc">Six questions about how you actually use a van. Trip length, who's coming, where you sleep, what matters.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <h3 class="step__title">Get your profile</h3>
+          <p class="step__desc">We match your answers to one of five van types, each with a specific spec — size, roof, electrics, bed layout.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <h3 class="step__title">Buy with confidence</h3>
+          <p class="step__desc">Your profile tells you what to look for and what to avoid. Carry it into every viewing.</p>
+        </div>
       </div>
     </div>
     <div style="text-align:center;margin-top:3rem">
-      <a href="/your-camperdna/" class="btn btn--amber btn--lg">Start the Profiler &rarr;</a>
+      <a href="/your-camperdna/" class="btn btn--amber btn--lg">Start the profiler &rarr;</a>
     </div>
   </div>
 </section>
@@ -173,11 +200,11 @@
 <section class="section section--grey">
   <div class="container">
     <div class="cta-block">
-      <p class="cta-block__eyebrow">Free &amp; Independent</p>
-      <h2 class="cta-block__title">Find the right van for your life</h2>
-      <p class="cta-block__sub">Answer a few questions. Get a personalised campervan profile matched to how you actually use a van.</p>
-      <a href="/your-camperdna/" class="btn btn--amber btn--lg">Get Your CamperDNA &rarr;</a>
-      <p class="cta-block__note">Free. No sign-up required. No sales agenda.</p>
+      <p class="cta-block__eyebrow">Free &amp; independent</p>
+      <h2 class="cta-block__title">Know what you're looking for before you look</h2>
+      <p class="cta-block__sub">Six questions. Five minutes. A personalised profile that tells you exactly what van to buy — and why.</p>
+      <a href="/your-camperdna/" class="btn btn--amber btn--lg">Get your CamperDNA &rarr;</a>
+      <p class="cta-block__note">Free. No sign-up. No sales pitch.</p>
     </div>
   </div>
 </section>
