@@ -1,25 +1,15 @@
 // CamperDNA – site-wide password protection via HTTP Basic Auth
 // Runs as a Cloudflare Pages middleware on every request.
-// To change the password, update PASSWORD below and redeploy.
+// To change credentials, update VALID_TOKEN below (base64 of "username:password") and redeploy.
+// Current credentials: camperdna / bonafidesportsman
 
-const USERNAME = "camperdna";
-const PASSWORD = "bonafidesportsman";
+const VALID_TOKEN = "Y2FtcGVyZG5hOmJvbmFmaWRlc3BvcnRzbWFu";
 
 export async function onRequest({ request, next }) {
   const auth = request.headers.get("Authorization") || "";
 
-  if (auth.startsWith("Basic ")) {
-    try {
-      const decoded = atob(auth.slice(6));
-      const colon = decoded.indexOf(":");
-      const user = decoded.slice(0, colon);
-      const pass = decoded.slice(colon + 1);
-      if (user === USERNAME && pass === PASSWORD) {
-        return next();
-      }
-    } catch (_) {
-      // fall through to 401
-    }
+  if (auth === `Basic ${VALID_TOKEN}`) {
+    return next();
   }
 
   return new Response("Access restricted — password required.", {
