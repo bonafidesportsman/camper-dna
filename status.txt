@@ -1,0 +1,2 @@
+Rewrote 100% of index.html.
+ Update assets/css/style.css as instructed from the documents.

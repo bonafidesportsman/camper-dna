@@ -1,0 +1,1 @@
+# You are starting from this site directory, rewrite files here. Full briefs in the sibling `FOR-AGENTS/` directory.
