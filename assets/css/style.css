@@ -230,6 +230,22 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .product-card-badge { margin-bottom: 8px; }
 .product-card { padding: 20px; }
 
+/* Buying a Van hub */
+.buying-guides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.guide-card { display: block; background: var(--color-white); border: 1px solid rgba(55,65,81,0.12); border-radius: 8px; padding: 28px; text-decoration: none; color: var(--color-slate); transition: box-shadow 0.15s, transform 0.15s; }
+.guide-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); text-decoration: none; }
+.guide-card-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.guide-card h2 { font-size: 1.25rem; margin-bottom: 10px; color: var(--color-slate); }
+.guide-card p { font-size: var(--fs-small); color: var(--color-charcoal); margin-bottom: 16px; line-height: 1.6; }
+.guide-card-link { font-size: var(--fs-small); font-weight: 600; color: var(--color-rust); }
+.guide-card-featured { border-color: var(--color-rust); background: var(--color-off-white); }
+
+/* Checklist */
+.checklist { list-style: none; margin: 0 0 20px; padding: 0; }
+.checklist li { padding: 9px 0 9px 28px; position: relative; font-size: var(--fs-small); color: var(--color-charcoal); border-bottom: 1px solid rgba(55,65,81,0.07); line-height: 1.55; }
+.checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--color-rust); font-size: 1rem; top: 9px; }
+@media (max-width: 768px) { .buying-guides-grid { grid-template-columns: 1fr; } }
+
 /* Footer */
 .site-footer { background: var(--color-slate); color: rgba(255,255,255,0.7); padding: 44px 0; font-size: var(--fs-small); }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
