@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-03-21",
+    "version": 1,
+    "note": "Affiliate links are placeholders — update with real tracked URLs before launch"
+  },
+  "categories": {
+    "heating": [
+      {
+        "id": "autoterm-comfort-controller",
+        "name": "Autoterm Comfort Controller",
+        "description": "Phone-controllable diesel heater controller with timer, thermostat and remote temperature sensor.",
+        "price_gbp": 120,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=autoterm+comfort+controller",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["heating", "diesel-heater", "comfort", "accessories"],
+        "notes": "Worth every penny. Set your morning temperature from bed. Your partner will thank you."
+      },
+      {
+        "id": "webasto-dbw2000",
+        "name": "Webasto DBW 2000 Diesel Heater",
+        "description": "Premium diesel heater. Quiet, reliable, low 12V draw (~3A). Used in OEM VW Transporters.",
+        "price_gbp": 450,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=webasto+diesel+heater+van",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["heating", "diesel-heater", "premium"],
+        "notes": "OEM quality. Specify at conversion time — retrofitting adds cost and complexity."
+      },
+      {
+        "id": "planar-2d-diesel-heater",
+        "name": "Planar 2D Diesel Heater",
+        "description": "Russian-made diesel heater, popular in van conversions. 2kW output, compact footprint.",
+        "price_gbp": 320,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=planar+2d+diesel+heater",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["heating", "diesel-heater", "budget"],
+        "notes": "Solid value option. Combine with Autoterm controller for phone control."
+      }
+    ],
+    "solar": [
+      {
+        "id": "bimble-400w-kit",
+        "name": "Bimble Solar 400W Starter Kit",
+        "description": "Complete solar setup: 2x 200W panels, MPPT controller, cables, fixings, and instructions.",
+        "price_gbp": 650,
+        "affiliate_url": "https://bimblesolar.com/solar-panels/solar-kits/",
+        "affiliate_programme": "direct",
+        "founder_recommended": true,
+        "tags": ["solar", "electrical", "energy-independence"],
+        "notes": "This is what I use. Overkill for summer, perfect for year-round wild camping."
+      },
+      {
+        "id": "victron-smartsolar-100-20",
+        "name": "Victron SmartSolar MPPT 100/20",
+        "description": "Bluetooth-enabled MPPT charge controller. Monitors via Victron Connect app.",
+        "price_gbp": 90,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=victron+smartsolar+mppt+100+20",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["solar", "electrical", "mppt"],
+        "notes": "The standard for van builds. See real-time solar input from your phone."
+      }
+    ],
+    "batteries": [
+      {
+        "id": "bimble-100ah-lifepo4",
+        "name": "Bimble 100Ah LiFePO4 Leisure Battery",
+        "description": "Lithium iron phosphate battery. 100Ah usable (vs ~50Ah in lead-acid). 2000+ cycle life.",
+        "price_gbp": 380,
+        "affiliate_url": "https://bimblesolar.com/batteries/lithium-batteries/",
+        "affiliate_programme": "direct",
+        "founder_recommended": true,
+        "tags": ["battery", "electrical", "lithium", "energy-independence"],
+        "notes": "The upgrade that makes off-grid van life genuinely comfortable. Worth the premium."
+      },
+      {
+        "id": "renogy-100ah-agm",
+        "name": "Renogy 100Ah AGM Deep Cycle Battery",
+        "description": "Budget leisure battery option. 100Ah AGM, maintenance-free. ~50Ah usable capacity.",
+        "price_gbp": 120,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=renogy+100ah+agm+leisure+battery",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["battery", "electrical", "agm", "budget"],
+        "notes": "Fine starting point. Upgrade to lithium when budget allows."
+      }
+    ],
+    "bike-racks": [
+      {
+        "id": "atera-strada-vario-3",
+        "name": "Atera Strada Vario 3 Bike Rack",
+        "description": "Towbar-mounted rack for up to 3 bikes. Works with barn doors — folds away cleanly. 60kg capacity.",
+        "price_gbp": 380,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=atera+strada+vario+3+bike+rack",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["bikes", "outdoor-activities", "rack", "cycling"],
+        "notes": "Best option for barn door setups. Swings out around the doors — no need to remove it."
+      },
+      {
+        "id": "thule-epos-2-bike",
+        "name": "Thule EPos 2 Bike Towbar Rack",
+        "description": "Premium towbar-mounted rack for 2 bikes. Tool-free bike fastening, 60kg capacity.",
+        "price_gbp": 650,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=thule+epos+2+bike+towbar",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "outdoor-activities", "rack", "premium"],
+        "notes": "Premium choice if you're carrying e-bikes or value tool-free loading."
+      }
+    ],
+    "roof-racks": [
+      {
+        "id": "reimo-van-top-roof-rack",
+        "name": "Reimo Van Top Roof Rack",
+        "description": "Purpose-built roof rack for T5/T6. Powder-coated steel. Compatible with most pop-tops and high-roofs.",
+        "price_gbp": 280,
+        "affiliate_url": "https://www.reimo.com/en/products/van-systems/roof-systems",
+        "affiliate_programme": "direct",
+        "founder_recommended": false,
+        "tags": ["roof-rack", "accessories", "watersports"],
+        "notes": "Good for boards, kayaks, or extra kit. Check pop-top compatibility before ordering."
+      }
+    ],
+    "awnings": [
+      {
+        "id": "fiamma-f45s",
+        "name": "Fiamma F45S Retractable Awning",
+        "description": "Wall-mounted retractable awning for VW Transporters. 2.5m or 3m width. UV-stabilised canopy.",
+        "price_gbp": 490,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=fiamma+f45s+awning+vw+transporter",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["awning", "outdoor-living", "retractable"],
+        "notes": "The go-to choice for T5/T6. Fits tidily on the factory roof rail. No drilling required."
+      },
+      {
+        "id": "driveaway-awning-rail",
+        "name": "Kiravans Awning Rail Kit",
+        "description": "Side-door awning rail for T5/T6. Accepts drive-away tents from Outdoor Revolution, Vango etc.",
+        "price_gbp": 65,
+        "affiliate_url": "https://www.kiravans.com/awning-rails/",
+        "affiliate_programme": "direct",
+        "founder_recommended": false,
+        "tags": ["awning", "awning-rail", "drive-away"],
+        "notes": "Essential if you want a drive-away tent. Fits most T5/T6 — check compatibility with your tent."
+      }
+    ],
+    "insurance": [
+      {
+        "id": "brentacre-campervan-insurance",
+        "name": "Brentacre Campervan Insurance",
+        "description": "Specialist campervan insurance. Covers conversions, new for old, European breakdown. Free agreed value.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.brentacre.com/campervan-insurance/",
+        "affiliate_programme": "referral",
+        "founder_recommended": true,
+        "tags": ["insurance", "legal", "essential"],
+        "notes": "Consistently best value for T5/T6. Get a quote before committing elsewhere."
+      }
+    ],
+    "inspection": [
+      {
+        "id": "rac-pre-purchase-inspection",
+        "name": "RAC Pre-Purchase Inspection",
+        "description": "Independent vehicle inspection before buying. 82-point check covering mechanical, bodywork, and history.",
+        "price_gbp": 300,
+        "affiliate_url": "https://www.rac.co.uk/buying-a-car/vehicle-inspections/",
+        "affiliate_programme": "referral",
+        "founder_recommended": true,
+        "tags": ["inspection", "buying-process", "essential"],
+        "notes": "Non-negotiable for private purchases. £300 now or a £3,000 surprise later."
+      },
+      {
+        "id": "hpi-check",
+        "name": "HPI Check",
+        "description": "Full vehicle history check: finance outstanding, stolen, written off, mileage discrepancies.",
+        "price_gbp": 20,
+        "affiliate_url": "https://www.hpicheck.com/",
+        "affiliate_programme": "referral",
+        "founder_recommended": true,
+        "tags": ["inspection", "buying-process", "history-check"],
+        "notes": "Do this before every private purchase. Never skip it — takes 5 minutes online."
+      }
+    ],
+    "bed-mattresses": [
+      {
+        "id": "rib112-mattress-topper",
+        "name": "Edge Campervans RIB112 Mattress Topper",
+        "description": "Purpose-made memory foam topper for RIB Altair bed systems. Folds with the bed.",
+        "price_gbp": 180,
+        "affiliate_url": "https://www.edgecampervans.com/",
+        "affiliate_programme": "direct",
+        "founder_recommended": true,
+        "tags": ["bed", "mattress", "rib", "comfort"],
+        "notes": "The difference between 'camping sleep' and actual sleep. Buy this at conversion time."
+      }
+    ],
+    "towbars": [
+      {
+        "id": "westfalia-detachable-towbar",
+        "name": "Westfalia Detachable Towbar (T6)",
+        "description": "OEM-quality detachable towbar for VW T6. 13-pin electrics, 2000kg towing capacity.",
+        "price_gbp": 520,
+        "affiliate_url": "https://www.amazon.co.uk/s?k=westfalia+towbar+vw+t6",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["towbar", "bikes", "accessories"],
+        "notes": "Detachable is worth the extra cost — remove it when you don't need it."
+      }
+    ]
+  }
+}

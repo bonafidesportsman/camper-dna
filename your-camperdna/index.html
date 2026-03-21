@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your CamperDNA — Find Your Ideal VW Camper</title>
+  <meta name="description" content="Answer 14 questions and get a personalised VW T5/T6 buying guide sent straight to your inbox. Free, no spam.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="quiz-page">
+
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/" class="site-logo">CamperDNA</a>
+      <ul class="nav-links">
+        <li><a href="/your-camperdna/" class="active">Your CamperDNA</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/buying-a-van/">Buying a Van</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="quiz-hero">
+    <h1>Find Your Ideal VW Camper</h1>
+    <p>14 questions. Personalised spec report sent to your inbox. No spam — ever.</p>
+  </div>
+
+  <div class="quiz-wrapper">
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 0%"></div>
+    </div>
+
+    <!-- Questions rendered by quiz.js -->
+    <div id="quiz-questions"></div>
+
+    <!-- Result screen -->
+    <div id="quiz-result" class="quiz-result">
+      <h2 class="result-heading">Your CamperDNA Profile</h2>
+      <p class="result-sub">Based on your answers, here's your recommended spec across 8 dimensions. Your full personalised report — with reasoning, red flags, and top things to verify — is one step away.</p>
+
+      <div class="spec-grid" id="spec-grid">
+        <!-- Populated by quiz.js -->
+      </div>
+
+      <div class="email-cta-box">
+        <h3>Get your full report</h3>
+        <p>Your personalised buying guide — van spec reasoning, red flags for your route, and top 5 things to verify before buying. Written by the founder.</p>
+        <div class="email-input-row">
+          <input type="email" id="email-input" placeholder="your@email.com" autocomplete="email">
+          <button class="btn-primary" id="email-send-btn">Send my report →</button>
+        </div>
+        <p class="email-note">No mailing list. Just your report.</p>
+        <p class="email-sent-msg" id="email-sent-msg">✓ Report on its way — check your inbox in a few minutes.</p>
+        <p class="email-error-msg" id="email-error-msg"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">CamperDNA</span>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/buying-a-van/">Buying a Van</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 CamperDNA</span>
+    </div>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
