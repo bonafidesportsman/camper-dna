@@ -7,7 +7,8 @@ const QUESTION_LABELS = {
   van_generation: { t6: 'T6 (2015+, ULEZ-compliant)', t5: 'T5 (2009–2015)', undecided: 'Not sure yet' },
   mileage:      { 'under-50k': 'Under 50,000 miles preferred', '100-150k': 'Happy with 100–150k with full history', depends: 'Depends on price and history' },
   van_source:   { 'vw-approved': 'VW Approved Used', private: 'Private sale', converter: 'Via conversion company', undecided: 'Not sure' },
-  spec_level:   { highline: 'Highline', trendline: 'Trendline/Startline', na: 'Already have a van / N/A' },
+  spec_level:   { highline: 'Highline', sportline: 'Sportline', trendline: 'Trendline/Startline', na: 'Already have a van / N/A' },
+  transmission: { '6-manual': '6-speed manual', dsg: '7-speed DSG automatic', '5-manual': '5-speed manual', undecided: 'Not decided yet' },
   seating:      { '2-rear': '2 rear seats (wider bed, more storage)', '3-rear': '3 rear seats (ISOfix for 3 children)', unsure: 'Not sure' },
   doors:        { barn: 'Barn doors', tailgate: 'Tailgate', unsure: 'Not sure' },
   roof:         { 'pop-top': 'Pop-top (elevating roof)', 'high-roof': 'High-roof (fixed raised)', standard: 'Standard roof' },
@@ -18,7 +19,7 @@ const QUESTION_LABELS = {
   electrical:   { essential: 'Essential — wild camp, no mains hookup', useful: 'Useful — mix of wild and sites', 'not-important': 'Not important — mostly hookup sites' },
 };
 
-const REQUIRED_KEYS = ['budget', 'buying_route', 'van_generation', 'mileage', 'van_source', 'spec_level', 'seating', 'doors', 'roof', 'bed', 'activities', 'awning', 'heating', 'electrical'];
+const REQUIRED_KEYS = ['budget', 'buying_route', 'van_generation', 'mileage', 'van_source', 'spec_level', 'transmission', 'seating', 'doors', 'roof', 'bed', 'activities', 'awning', 'heating', 'electrical'];
 
 export async function onRequestPost(context) {
   const { request, env } = context;

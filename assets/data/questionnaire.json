@@ -1,0 +1,855 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "lastUpdated": "2026-03-22",
+    "notes": "Master questionnaire data for both quiz phases. Edit questionnaire-editor.xlsx in Google Drive, not this file directly. Phase 1 = the 15-question spec guide (added transmission Q7). Phase 2 = the detailed conversion spec sheet (accordion checkboxes). showIf rules: { source: 'phase1'|'phase2', sectionId: string, anyOf: [values] } — item only renders if referenced section has one of the listed values selected."
+  },
+
+  "phase1": {
+    "title": "Your CamperDNA",
+    "subtitle": "15 questions. Personalised spec in your inbox.",
+    "questions": [
+      {
+        "id": "budget",
+        "question": "What's your total budget for the van and any conversion work?",
+        "helper": "This covers everything — the base van plus any conversion costs. It's the master filter for everything else.",
+        "type": "single-choice",
+        "options": [
+          { "value": "under-20k", "label": "Under £20,000" },
+          { "value": "20-30k",    "label": "£20,000–30,000" },
+          { "value": "30-45k",    "label": "£30,000–45,000" },
+          { "value": "45k-plus",  "label": "£45,000+" }
+        ]
+      },
+      {
+        "id": "buying_route",
+        "question": "How are you planning to buy?",
+        "helper": "Each route produces a completely different report — inspection advice, converter selection, or self-build guidance.",
+        "type": "single-choice",
+        "options": [
+          { "value": "preconverted",    "label": "Buy a pre-converted van (already fitted out by someone else)" },
+          { "value": "donor-converter", "label": "Buy a donor van and commission a conversion company" },
+          { "value": "donor-selfbuild", "label": "Buy a donor van and self-build (or partial self-build)" },
+          { "value": "undecided",       "label": "Not decided yet" }
+        ]
+      },
+      {
+        "id": "van_generation",
+        "question": "Are you considering a T5 or T6 — or not sure yet?",
+        "helper": "This affects emissions compliance, AdBlue requirements, and long-term urban driving cost.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Show T5 vs T6 details",
+          "body": "T6.1 (2019+) is fully Euro 6 and ULEZ-compliant. T6 (2015–2018) requires checking — those built from September 2016 onwards are likely Euro 6 and compliant, but earlier T6s and some late 2016 vans were still Euro 5. Always verify using the TfL ULEZ checker or the V5C before buying. T5 (Euro 5) is not ULEZ-compliant — attracts daily charges in London, Bath, Bristol, Birmingham and a growing list of others. T5 offers more van for the money if you never drive into these zones."
+        },
+        "options": [
+          { "value": "t6",        "label": "T6 / T6.1 (2015 or newer) — check ULEZ compliance by build date" },
+          { "value": "t5",        "label": "T5 (2009–2015) — no AdBlue, excellent reliability, better value" },
+          { "value": "undecided", "label": "Not sure — help me understand the difference" }
+        ]
+      },
+      {
+        "id": "mileage",
+        "question": "How do you feel about buying a higher-mileage van?",
+        "helper": "Service history matters far more than the number on the clock.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Why service history matters more than mileage",
+          "body": "A T6 TDI with 140,000 miles and a complete VW stamped service history is a better buy than a 60,000 mile van with gaps. These engines are proven at high mileage when properly maintained. Under 50K is rare below £40K — be realistic about what your budget allows."
+        },
+        "options": [
+          { "value": "under-50k",  "label": "Under 50,000 miles — better resale, more years ahead" },
+          { "value": "100-150k",   "label": "Happy with 100–150,000 with full service history — much better value" },
+          { "value": "depends",    "label": "Depends on price and history" }
+        ]
+      },
+      {
+        "id": "van_source",
+        "question": "Where are you planning to buy the base van?",
+        "helper": "Each source has different guarantees, processes, and price implications.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "About each source",
+          "body": "VW Approved Used: 12-month warranty + 115-point inspection including bodywork. Wales & North of England tends to have cheapest stock. Private sale: budget £250–400 for an independent inspection — always worth it. Via conversion company: convenient and they know what makes a good donor, but their markup is often built into the conversion quote."
+        },
+        "options": [
+          { "value": "vw-approved", "label": "VW Approved Used (12-month warranty, 115-point check — recommended)" },
+          { "value": "private",     "label": "Private sale (better prices, less comeback if something goes wrong)" },
+          { "value": "converter",   "label": "Conversion company sourcing it (convenient, they know what to look for)" },
+          { "value": "undecided",   "label": "Not sure yet" }
+        ]
+      },
+      {
+        "id": "spec_level",
+        "question": "If buying a T6 donor, what trim level are you targeting?",
+        "helper": "One decision that's very hard and expensive to fix later.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Why Highline matters",
+          "body": "Aircon is essentially impossible to retrofit economically (£1,500–2,500+). The Highline includes it as standard, plus heated front windscreen (genuinely useful for camping mornings) and front/rear parking sensors. The price premium at base van level is nearly always smaller than the retrofit cost. Always buy the Highline if you can."
+        },
+        "options": [
+          { "value": "highline",  "label": "Highline (recommended — aircon standard, heated windscreen, parking sensors)" },
+          { "value": "sportline",  "label": "Sportline (lifestyle grade above Highline — 204PS DSG, lowered sports suspension, premium interior. Note: lowered suspension is a disadvantage for campsites and rough tracks; interior gets stripped in a conversion so the premium may not be worth it)" },
+          { "value": "trendline", "label": "Trendline or Startline (budget — aircon often missing, needs retrofitting)" },
+          { "value": "na",        "label": "Already have a van / not applicable" }
+        ]
+      },
+      {
+        "id": "transmission",
+        "question": "What gearbox are you looking for?",
+        "helper": "This affects price, engine availability, and day-to-day driving feel — especially on urban routes and for towing.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Manual vs DSG explained",
+          "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009 — a world first for a medium van at the time. Available on 150PS and 204PS engines only; the 102PS entry engine comes with a 5-speed manual only. Most conversion buyers choose between 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes stop-start urban driving and towing significantly smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check service history carefully."
+        },
+        "options": [
+          { "value": "6-manual",  "label": "6-speed manual — most common, reliable, lower purchase price (available with 150PS and 204PS engines)" },
+          { "value": "dsg",       "label": "7-speed DSG automatic — smoother in traffic and towing, higher purchase price (150PS or 204PS only)" },
+          { "value": "5-manual",  "label": "5-speed manual — older T5 or 102PS engine, lowest cost, very reliable" },
+          { "value": "undecided", "label": "Not decided yet" }
+        ]
+      },
+      {
+        "id": "seating",
+        "question": "How many seats do you need in the back of the van?",
+        "helper": "This affects bed width, storage, and kitchen space — more than most people expect.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Seating vs. living space trade-off",
+          "body": "3 front seats and 2 rear is the right default. Going to 3 rear costs more to convert, narrows the bed by ~10cm, and significantly reduces storage and kitchen space. Unless you genuinely need to seat 3 children in the back, the 2-rear layout is better in almost every way."
+        },
+        "options": [
+          { "value": "2-rear", "label": "2 rear seats (recommended — wider bed, more kitchen and storage space)" },
+          { "value": "3-rear", "label": "3 rear seats (ISOfix for three children, but loses storage)" },
+          { "value": "unsure", "label": "Not sure" }
+        ]
+      },
+      {
+        "id": "doors",
+        "question": "Barn doors or tailgate?",
+        "helper": "This affects bike rack compatibility and day-to-day family use more than anything else.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Barn door vs. tailgate comparison",
+          "body": "Barn doors: easier for families, compatible with towbar bike racks that swing open around them, no problem if someone parks close behind you. Tailgate: provides rain shelter when open, slightly cleaner look, easier single-handed loading. Summary: barn doors for families, either works for couples or solo."
+        },
+        "options": [
+          { "value": "barn",     "label": "Barn doors (two doors opening sideways)" },
+          { "value": "tailgate", "label": "Tailgate (single door lifting upward)" },
+          { "value": "unsure",   "label": "Not sure — explain the difference" }
+        ]
+      },
+      {
+        "id": "roof",
+        "question": "What roof setup do you want?",
+        "helper": "Affects headroom, cost, whether you can use multi-storey car parks, and extra sleeping space.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Roof options in detail",
+          "body": "Pop-top: sweet spot for most buyers — extra sleeping space without losing multi-storey car park access (stays under 2m). Only consider quality-tested roofs — these maintain body integrity. High-roof: maximum headroom, mechanically simple, but taller driving profile and some car parks become inaccessible. Standard/Day Van: lowest cost, accept that you'll always be changing at a slight crouch."
+        },
+        "options": [
+          { "value": "pop-top",   "label": "Pop-top (elevating roof — extra sleeping, stays under 2m for car parks)" },
+          { "value": "high-roof", "label": "High-roof (fixed raised — full standing height, no mechanism to maintain)" },
+          { "value": "standard",  "label": "Standard roof (no modification — lowest cost, limited headroom)" }
+        ]
+      },
+      {
+        "id": "bed",
+        "question": "What's your priority for the main sleeping area?",
+        "helper": "Each option involves real trade-offs between crash safety, comfort, and boot space.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Bed options in detail",
+          "body": "RIB Altair (recommended for families): purpose-designed as a travel seat first, bed second. Available in 2-seat (112cm wide — the most common choice) and 3-seat (129cm wide) versions. Note: the 3-seat version significantly reduces the space available for kitchen units. Pull-tested to ECE R14 (M1 standard), meaning car seats can be legally fitted. ISOfix is standard. Raises up to create usable boot storage underneath.\n\nRock and Roll bed: traditional fold-flat rear bench. Simpler and cheaper. Budget versions are not M1 crash-tested (car seats cannot legally be fitted). Premium options — Reimo Variostar, Rusty Lee — are now also M1 pull-tested and offer ISOfix. Worth specifying a premium unit if children will travel in the van.\n\nFixed bed: always made up but eats into boot space — best if you never need the boot for large items (bikes, boards, buggies)."
+        },
+        "options": [
+          { "value": "rib",       "label": "RIB bed (folds from rear seat — ISOfix points, crash tested, storage underneath)" },
+          { "value": "rock-roll", "label": "Rock and Roll bed (fold-flat — simple, widely available)" },
+          { "value": "fixed",     "label": "Fixed bed (always made up — maximum convenience, less boot space)" },
+          { "value": "undecided", "label": "Not sure" }
+        ]
+      },
+      {
+        "id": "activities",
+        "question": "What do you mainly do outdoors?",
+        "helper": "This drives rack, storage, and accessory spec — gets this right at conversion time rather than retrofitting.",
+        "type": "single-choice",
+        "options": [
+          { "value": "watersports", "label": "Surfing or water sports (board storage, roof rack, rinse shower)" },
+          { "value": "cycling",     "label": "Cycling or mountain biking (bike rack essential)" },
+          { "value": "hiking",      "label": "Hiking, climbing or trail running (lighter gear, less storage intensive)" },
+          { "value": "general",     "label": "General use — no specific sport or large kit" }
+        ]
+      },
+      {
+        "id": "awning",
+        "question": "Do you want external shelter attached to the van?",
+        "helper": "These are very different products serving very different needs.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Awning comparison",
+          "body": "Retractable awning: extends out in seconds for shade and light rain cover — great for impromptu stops. Awning rail: a track on the van's side that lets you pitch a drive-away tent which stays when you drive off — useful for families who want the van for sleeping but extra space for the kids."
+        },
+        "options": [
+          { "value": "retractable", "label": "Retractable awning (extends out for shade and light rain cover)" },
+          { "value": "rail",        "label": "Awning rail (rail on van side — drive-away tent slots in and stays when you drive off)" },
+          { "value": "none",        "label": "No awning needed" }
+        ]
+      },
+      {
+        "id": "heating",
+        "question": "Do you need a diesel night heater?",
+        "helper": "Year-round use is transformative — but not essential for summer-only camping.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Diesel heater details",
+          "body": "~£1,000 fitted as part of a conversion. Draws from the van's fuel tank. Runs quietly on 3–5 amps. Phone-controllable with the right controller — you can warm the van before you get up. If your partner is coming, this is usually the dealbreaker. Specify at conversion time — retrofitting is messier and pricier."
+        },
+        "options": [
+          { "value": "yes",   "label": "Yes — year-round use, cold nights, want to warm the van remotely" },
+          { "value": "maybe", "label": "Probably — but not sure what's involved" },
+          { "value": "no",    "label": "No — mainly summer use, campsites with electricity" }
+        ]
+      },
+      {
+        "id": "electrical",
+        "question": "How important is it to camp without a mains hookup?",
+        "helper": "This determines your solar panel and battery spec — decisions that need to happen at conversion time.",
+        "type": "single-choice",
+        "expand": {
+          "summary": "Solar and battery details",
+          "body": "A solar panel and leisure battery (~£600 fitted as part of a conversion) means you're generating and storing your own power — so you're not dependent on a hookup at all.\n\nThis matters in more situations than just wild camping. If you're joining friends who are tent camping, there's no hookup option on a standard grass pitch — you either have power or you don't. And on campsites that do offer hookup, it typically costs £5–10 extra per night and usually puts you on a hard-standing pitch rather than grass. For families who want a softer, quieter spot, that's often not ideal.\n\nA well-specified system (100–200W panel, 100Ah lithium battery) will comfortably run LED lighting, a compressor fridge, phone charging, and a diesel heater fan for several days without sun. It won't run a kettle or hair dryer — those need hookup or a separate inverter.\n\nThe key reason to decide now: solar requires cutting a hole in the roof and running cables during the build. Retrofitting after the van is finished means disturbing the ceiling lining, re-routing cables, and paying for labour twice. Specify it at conversion time."
+        },
+        "options": [
+          { "value": "essential",     "label": "Essential — I want to wild camp and never rely on campsites" },
+          { "value": "useful",        "label": "Useful — mix of wild camping and campsites" },
+          { "value": "not-important", "label": "Not important — I'll mostly use sites with electric hookup" }
+        ]
+      }
+    ]
+  },
+
+  "phase2": {
+    "title": "Full Conversion Spec",
+    "subtitle": "Build your brief. Take it to a conversion company.",
+    "description": "Tick everything you want included. Each section is independent — skip any that don't apply. When you're done, we'll send your spec sheet to the same email address you used in the questionnaire.",
+    "emailLogic": {
+      "note": "If the user completed Phase 1, their email is stored in sessionStorage under 'camperdna_email'. Phase 2 should check for this on load. If found, show a confirmation line ('We'll send your spec to [email] — not you? Update below') with an optional override field. If not found, show a required email input field before allowing submission."
+    },
+    "sections": [
+
+      {
+        "id": "roof",
+        "title": "Roof",
+        "icon": "🏠",
+        "helper": "The roof choice affects headroom, sleeping capacity, driving profile, and whether you can access multi-storey car parks. Decide this early — it affects the rest of the conversion.",
+        "type": "single-choice",
+        "note": "Choose one",
+        "items": [
+          {
+            "id": "roof-standard",
+            "label": "Standard roof",
+            "helper": "No modification to the factory roof. Lowest cost option. Limited headroom — you'll always be at a slight crouch inside. Fine if budget is tight."
+          },
+          {
+            "id": "roof-pop-top",
+            "label": "Pop-top roof",
+            "helper": "A hinged roof section that lifts to create extra headroom and sleeping space above the main van. Stays under 2m when closed so multi-storey car parks remain accessible. Usually includes a sleeping platform and canvas sides. Quality matters — specify a tested unit."
+          },
+          {
+            "id": "roof-high-fixed",
+            "label": "High-roof (fixed raised)",
+            "helper": "A permanently raised fibreglass or steel roof giving full standing height throughout the van. Mechanically simple (no mechanism to maintain). Taller driving profile — some car parks and ferries become inaccessible. Popular with full-time van lifers."
+          }
+        ]
+      },
+
+      {
+        "id": "roof-extras",
+        "title": "Roof Extras",
+        "icon": "💨",
+        "helper": "Additional roof features beyond the basic structure.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "roof-vent-fan",
+            "label": "Electric ventilation fan",
+            "helper": "An electrically powered roof fan that extracts cooking smells and condensation. Can also run in reverse to push air in. Far better than a passive vent. Usually 12v, draws 3–5 amps."
+          },
+          {
+            "id": "roof-skylight",
+            "label": "Skylight / roof light (non-opening)",
+            "helper": "A fixed clear or smoked acrylic panel in the roof that admits natural light. Cheaper than a fan, no moving parts, but no ventilation benefit."
+          },
+          {
+            "id": "roof-rack",
+            "label": "Roof rack",
+            "helper": "Load-carrying rack on top of the van. Useful for surfboards, kayaks, ladders, or additional storage. Check compatibility with your roof choice — not all pop-tops accept a roof rack on top. Raises driving height."
+          }
+        ]
+      },
+
+      {
+        "id": "sleeping",
+        "title": "Sleeping",
+        "icon": "🛏️",
+        "helper": "The bed configuration is one of the most important decisions — it affects crash safety (especially if children are travelling), boot storage, and day-to-day livability.",
+        "type": "single-choice",
+        "note": "Choose one main bed type",
+        "items": [
+          {
+            "id": "bed-rib",
+            "label": "RIB bed (crash-tested, ISOfix points)",
+            "helper": "A proprietary rear seat system that folds flat into a bed. Crash tested to M1 standard, which means car seats can be legally fitted. Raises up at an angle to create usable boot storage underneath. The recommended choice for families. Comes in various widths — specify at conversion time."
+          },
+          {
+            "id": "bed-rock-roll",
+            "label": "Rock and Roll bed",
+            "helper": "A traditional fold-flat rear bench where the back hinges down to create a flat sleeping surface. Simple, robust, widely available second-hand. Not crash tested to M1 standard (car seats cannot be legally fitted). Works well for couples or solo use."
+          },
+          {
+            "id": "bed-fixed",
+            "label": "Fixed bed (always made up)",
+            "helper": "A permanent bed that never needs folding. Maximum sleeping convenience — you can get straight in. Reduces boot/rear storage significantly. Best if you never need the boot for large items (bikes, boards, buggies)."
+          },
+          {
+            "id": "bed-single-twin",
+            "label": "Single / twin bed layout",
+            "helper": "Two single beds, usually longitudinal (running front-to-back). Requires a wider van or specific layout. Common in larger campervans and motorhomes. Unusual in T5/T6 standard wheelbase."
+          }
+        ]
+      },
+
+      {
+        "id": "sleeping-extras",
+        "title": "Sleeping Extras",
+        "icon": "💤",
+        "helper": "Additional sleeping features.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "bed-pop-top-bunk",
+            "label": "Pop-top sleeping platform",
+            "helper": "A platform in the elevated pop-top section. Usually fits one adult or two children. Includes a thin mattress that stays in the roof when collapsed. Requires a pop-top roof.",
+            "showIf": { "source": "phase2", "sectionId": "roof", "anyOf": ["roof-pop-top"] }
+          },
+          {
+            "id": "bed-mattress-topper",
+            "label": "Mattress topper / comfort layer",
+            "helper": "An additional foam layer on top of the main bed surface. The factory-spec bed foam is usually 50–75mm — fine for a night, noticeable after several. A good topper makes a meaningful difference. Specify one that folds with the bed."
+          },
+          {
+            "id": "bed-wide-112",
+            "label": "Bed width: standard (~112cm)",
+            "helper": "The standard RIB 2-seat / Rock and Roll width in a T5/T6. Comfortable for one adult, manageable for two.",
+            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-rib", "bed-rock-roll"] }
+          },
+          {
+            "id": "bed-wide-129",
+            "label": "Bed width: wide (~129cm — 3-seat RIB)",
+            "helper": "The 3-seat RIB Altair configuration. Wider sleeping surface but significantly reduces the space available for kitchen units. Suitable if seating 3 in the rear is a priority.",
+            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-rib"] }
+          },
+          {
+            "id": "bed-wide-150",
+            "label": "Bed width: full-width (~150cm)",
+            "helper": "Full van width, usually only achievable with a fixed bed or specific Rock and Roll configuration in a long-wheelbase van. Maximum sleeping comfort for two.",
+            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-fixed", "bed-rock-roll"] }
+          }
+        ]
+      },
+
+      {
+        "id": "seating",
+        "title": "Seating",
+        "icon": "🪑",
+        "helper": "Seating configuration affects living space, storage, and whether the van can legally carry the passengers you need.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "seat-2-rear",
+            "label": "2-seat rear bench",
+            "helper": "Two rear passenger seats. Recommended for most buyers — allows wider bed, more kitchen space, and more storage. Standard in most conversion layouts.",
+            "showIf": { "source": "phase2", "sectionId": "sleeping-extras", "anyOf": ["bed-wide-112"] }
+          },
+          {
+            "id": "seat-3-rear",
+            "label": "3-seat rear bench",
+            "helper": "Three rear passenger seats with three seatbelts. Allows seating for more passengers. Narrows the available living space and bed width. Usually required if carrying three children.",
+            "showIf": { "source": "phase2", "sectionId": "sleeping-extras", "anyOf": ["bed-wide-129", "bed-wide-150"] }
+          },
+          {
+            "id": "seat-swivel-driver",
+            "label": "Swivel front seat (driver)",
+            "helper": "The driver's cab seat rotates 180° to face the living area when parked. Creates a much more social layout — four people can sit facing each other around a table. Adds cost, requires a swivel base plate."
+          },
+          {
+            "id": "seat-swivel-passenger",
+            "label": "Swivel front seat (passenger)",
+            "helper": "The double passenger cab seat rotates 180°. Usually done alongside the driver swivel for a full face-to-face seating configuration."
+          },
+          {
+            "id": "seat-captain",
+            "label": "Captain seat (single front passenger)",
+            "helper": "A single armchair-style seat in the front passenger position instead of a bench. More comfortable for long drives. Loses the option of seating a second front passenger."
+          },
+          {
+            "id": "seat-retrim",
+            "label": "Seat upholstery re-trim",
+            "helper": "Recovering the cab and/or rear seats in a fabric or material of your choice to match the conversion interior. Usually done at conversion time — easier and cheaper than retrofitting."
+          },
+          {
+            "id": "seat-isofix",
+            "label": "ISOfix child seat points",
+            "helper": "Factory ISOfix anchor points for child car seats. Confirm your bed system includes M1-rated ISOfix points — this is what allows legal child seat fitting on the bed/seat."
+          }
+        ]
+      },
+
+      {
+        "id": "kitchen",
+        "title": "Kitchen",
+        "icon": "🍳",
+        "helper": "How much kitchen you need depends entirely on how you camp. A simple hob and cold water tap suits most weekend users. A full fitted kitchen with fridge, hob, sink, and hot water is worth specifying if you use the van regularly.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "kitchen-none",
+            "label": "No fitted kitchen",
+            "helper": "No permanent cooking facilities. Relies on a portable camp stove and cool box. Lowest cost, maximum flexibility. Common in weekender/surf van conversions."
+          },
+          {
+            "id": "kitchen-hob-single",
+            "label": "Single gas hob",
+            "helper": "One gas burner/electric hob. Usually Gas runs from a small (907) gas bottle stored in a ventilated locker. Enough for boiling a kettle or basic cooking. Requires a dropout gas vent in the van body."
+          },
+          {
+            "id": "kitchen-hob-twin",
+            "label": "Twin gas hob",
+            "helper": "Two gas burners/electric hobs — much more practical for cooking proper meals. Same gas supply and safety requirements as single hob. The standard for most fitted conversions."
+          },
+          {
+            "id": "kitchen-hob-sink-combo",
+            "label": "Hob + sink combination unit",
+            "helper": "A single unit combining a twin hob and sink in one worktop cutout. Space-efficient — the most common kitchen configuration in T5/T6 conversions. Saves ~200mm of worktop length versus separate units."
+          },
+          {
+            "id": "kitchen-water-cold",
+            "label": "Cold water tap (electric pump)",
+            "helper": "A 12v electric pump draws from the fresh water tank to the tap. Cold water only. Standard in most conversions. Fresh/grey water tank is usually 12–25 litres and located under the sink or in one of the storage units."
+          },
+          {
+            "id": "kitchen-water-hot-cold",
+            "label": "Hot and cold water",
+            "helper": "Adds a water heater (usually 12v or gas-powered) to provide hot water at the tap. Adds cost and complexity. Worthwhile for longer trips or if a shower is included."
+          },
+          {
+            "id": "kitchen-fridge-top",
+            "label": "Compressor fridge (top-loading)",
+            "helper": "A top-opening compressor fridge — the most energy-efficient option. Holds cold better when opened (cold air doesn't fall out). Usually 40–50L. More expensive than a front-loading fridge. Requires 12v power."
+          },
+          {
+            "id": "kitchen-fridge-front",
+            "label": "Compressor fridge (front-loading)",
+            "helper": "A swing-door fridge that fits under the worktop like a standard kitchen fridge. Easier access than top-loading, slightly less efficient. Usually 40–50L. Requires 12v power."
+          },
+          {
+            "id": "kitchen-coolbox",
+            "label": "Portable cool box (no fitted fridge)",
+            "helper": "A removable 12v cool box rather than a fitted compressor fridge. Lower cost, more flexible, but less efficient and less convenient than a compressor fridge. Good for occasional/weekender use."
+          },
+          {
+            "id": "kitchen-gas-locker",
+            "label": "Gas bottle locker with dropout vent",
+            "helper": "A dedicated sealed locker for the gas bottle with a vent that opens to outside the van. Required for any gas installation — gas must not be able to accumulate inside the van."
+          }
+        ]
+      },
+
+      {
+        "id": "heating",
+        "title": "Heating",
+        "icon": "🔥",
+        "helper": "Heating options range from none (summer use only) to a fully controllable diesel heater you can operate from your phone before getting out of bed.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "heating-none",
+            "label": "No dedicated heating",
+            "helper": "No fitted heater. Suitable for summer-only use or campsites with electric heating. You can always add a portable electric heater on hookup."
+          },
+          {
+            "id": "heating-diesel",
+            "label": "Diesel night heater",
+            "helper": "Draws diesel from the van's main fuel tank — no separate fuel supply needed. Runs quietly, draws 3–5 amps from the leisure battery. Fully heats the van within 10–15 minutes. The standard choice for year-round use. Specify at conversion time — retrofitting is messy and more expensive."
+          },
+          {
+            "id": "heating-diesel-phone",
+            "label": "Phone / app-controllable heater timer",
+            "helper": "An additional controller that allows you to set temperature, schedule wake-up times, and control the heater from your phone. Works via Bluetooth or SIM card depending on the controller. Roughly £120–200 on top of the heater unit. Genuinely transforms the experience."
+          },
+          {
+            "id": "heating-gas",
+            "label": "Gas heater",
+            "helper": "A gas-fired heater fed from the van's gas bottle. Simple and cheap. Less efficient than diesel for van use — you're carrying a separate fuel supply. Requires gas safety certification."
+          }
+        ]
+      },
+
+      {
+        "id": "electrics",
+        "title": "Electrics",
+        "icon": "⚡",
+        "helper": "The electrical system is what makes wild camping possible. Specify this carefully — retrofitting solar and wiring is the most disruptive and expensive post-conversion upgrade.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "elec-battery-agm-100",
+            "label": "AGM leisure battery 100Ah",
+            "helper": "Lead-acid AGM (absorbent glass mat) battery. 100Ah capacity but only ~50Ah usable before damaging the battery. Proven, widely serviced, lower upfront cost. 3–5 year lifespan. Fine for light use."
+          },
+          {
+            "id": "elec-battery-agm-200",
+            "label": "AGM leisure battery 200Ah+",
+            "helper": "Larger AGM bank for more demanding use — fridge, diesel heater, lighting. Still limited to 50% depth of discharge. Heavy."
+          },
+          {
+            "id": "elec-battery-lithium-100",
+            "label": "Lithium (LiFePO4) battery 100Ah",
+            "helper": "Lithium iron phosphate battery. 100Ah fully usable (vs 50Ah for AGM of same rating). Lasts 2,000+ charge cycles. Half the weight of AGM. 3× higher upfront cost. The upgrade that makes off-grid van life genuinely comfortable. Recommended if you plan to keep the van."
+          },
+          {
+            "id": "elec-battery-lithium-200",
+            "label": "Lithium (LiFePO4) battery 200Ah+",
+            "helper": "200Ah+ lithium bank for full off-grid capability — fridge, diesel heater, large inverter, multi-day no-sun operation. Serious capacity for serious use."
+          },
+          {
+            "id": "elec-split-charge",
+            "label": "Split charge relay (basic alternator charging)",
+            "helper": "A relay that connects the leisure battery to the van's alternator when the engine is running. Simple, cheap. Less efficient than a DC-DC charger — doesn't protect the starter battery as well under high load."
+          },
+          {
+            "id": "elec-dc-dc",
+            "label": "DC-DC charger (B2B charger — recommended)",
+            "helper": "A smart battery-to-battery charger that efficiently charges the leisure battery from the alternator. Properly protects the starter battery. The correct choice for lithium batteries. Worth specifying over a basic split charge relay."
+          },
+          {
+            "id": "elec-solar-100",
+            "label": "Solar panel 100W",
+            "helper": "Entry-level solar. Keeps the battery topped up in summer. Unlikely to run a fridge in low sun. Good for light use — lighting, charging, diesel heater fan only."
+          },
+          {
+            "id": "elec-solar-200",
+            "label": "Solar panel 200W",
+            "helper": "Standard single-panel setup. Enough for most light off-grid use in UK spring/summer — fridge, lighting, phone charging, diesel heater. Usually two 100W panels wired in parallel."
+          },
+          {
+            "id": "elec-solar-400",
+            "label": "Solar panel 400W+",
+            "helper": "Full off-grid setup. Two 200W panels. Enough for year-round use including winter. Overkill for summer-only use, perfect if you use the van in autumn and winter."
+          },
+          {
+            "id": "elec-mppt",
+            "label": "MPPT solar charge controller",
+            "helper": "Regulates the charge from solar panels into the battery. MPPT (Maximum Power Point Tracking) is more efficient than PWM — extracts up to 30% more power in low light. Bluetooth monitoring on quality units means you can see real-time solar input from your phone."
+          },
+          {
+            "id": "elec-hookup",
+            "label": "240v mains hookup socket",
+            "helper": "An external socket that accepts a campsite 'shore power' cable. Allows you to charge the leisure battery and run 240v appliances directly from campsite power. A 16-amp blue socket is standard."
+          },
+          {
+            "id": "elec-sockets-240",
+            "label": "240v mains sockets (internal)",
+            "helper": "Standard UK 3-pin sockets inside the van — powered via hookup or inverter. Useful for charging laptops, running appliances. Usually fitted near the kitchen or seating area."
+          },
+          {
+            "id": "elec-sockets-12v",
+            "label": "12v cigar-lighter sockets",
+            "helper": "Standard 12v outlets for running 12v accessories — kettles, portable fans, etc."
+          },
+          {
+            "id": "elec-sockets-usb",
+            "label": "USB sockets (A and/or C)",
+            "helper": "Dedicated USB charging points. USB-C is increasingly important for modern phones, laptops, and headphones. Specify both A and C if possible."
+          },
+          {
+            "id": "elec-power-panel",
+            "label": "Touchscreen power management panel",
+            "helper": "A display panel that shows battery state, solar input, and controls leisure power circuits. Not essential but gives good visibility of your electrical system. Some systems allow remote monitoring via phone."
+          }
+        ]
+      },
+
+      {
+        "id": "lighting",
+        "title": "Lighting",
+        "icon": "💡",
+        "helper": "Lighting is often an afterthought but makes a significant difference to how liveable the van feels. All lighting should be LED and 12v — no exceptions.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "light-ceiling-spots",
+            "label": "LED ceiling spotlights",
+            "helper": "Recessed or surface-mounted LED spotlights as the main van lighting. Usually 3–5 spots in a T5/T6. Wired to a switched circuit from the leisure battery."
+          },
+          {
+            "id": "light-dimmable",
+            "label": "Dimmable lighting",
+            "helper": "A dimmer switch or dimmable LED drivers so ceiling lights can be set to any level. Particularly useful for evenings — harsh full brightness is uncomfortable in a small space."
+          },
+          {
+            "id": "light-task-kitchen",
+            "label": "Under-cupboard task lighting",
+            "helper": "LED strip or small spots under the overhead lockers, above the kitchen worktop. Makes cooking and prep much easier in the evening."
+          },
+          {
+            "id": "light-bed-reading",
+            "label": "Reading light over bed",
+            "helper": "A directed light over the sleeping area for reading. Can be a small directional spot or a flexible neck light. Very useful — avoids disturbing a sleeping partner."
+          },
+          {
+            "id": "light-ambient-strip",
+            "label": "Ambient / mood LED strip",
+            "helper": "LED strip lighting along the ceiling perimeter, under cabinets, or behind furniture for indirect ambient light. Creates atmosphere. Can be RGB/colour-changing or warm white only."
+          },
+          {
+            "id": "light-pop-top",
+            "label": "Pop-top interior light",
+            "helper": "A light inside the pop-top sleeping area. Small LED light for the upper bunk area. Essential if children sleep up top.",
+            "showIf": { "source": "phase2", "sectionId": "roof", "anyOf": ["roof-pop-top"] }
+          },
+          {
+            "id": "light-exterior-step",
+            "label": "Exterior step / door light",
+            "helper": "A small LED light at the sliding door step — very useful at night when getting in and out. Low power draw, triggered by door opening."
+          }
+        ]
+      },
+
+      {
+        "id": "storage",
+        "title": "Storage",
+        "icon": "📦",
+        "helper": "Storage in a van is never enough. Plan it carefully at conversion time — retrofitting shelves and drawers is easy, retrofitting an overhead locker rail or under-floor storage is not.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "storage-overhead-lockers",
+            "label": "Overhead lockers (above hob/sink)",
+            "helper": "Cupboards running along the upper walls of the van, above the hob/sink usually. Most valuable storage in the van for clothes, food, and light items. Usually 2–3 separate locker sections."
+          },
+          {
+            "id": "storage-overhead-lockers-rear",
+            "label": "Overhead lockers rear (above bed)",
+            "helper": "Shallow cupboards running across the rear of the van above the bed. Valuable extra storage for light items you can easily reach when in bed. Usually 2–3 separate locker sections."
+          },
+          {
+            "id": "storage-under-bed-drawers",
+            "label": "Under-bed pull-out drawers",
+            "helper": "Drawers that slide out from underneath the bed platform. Good for clothing, kitchen equipment, and items you need regular access to without lifting the bed. Stops items sliding around when driving."
+          },
+          {
+            "id": "storage-under-bed-open",
+            "label": "Under-bed open storage (lift-up access)",
+            "helper": "A lifting bed panel that reveals storage below — accessed less easily than drawers but gives a larger, more flexible storage area. Good for bulky or less-used items."
+          },
+          {
+            "id": "storage-wardrobe-hanging",
+            "label": "Wardrobe with hanging rail",
+            "helper": "A tall locker with a rail for hanging clothes. Usually in the rear corner beside the bed. Useful for longer trips — keeps clothes uncrumpled."
+          },
+          {
+            "id": "storage-wardrobe-shelves",
+            "label": "Wardrobe with shelving",
+            "helper": "A tall locker with fixed shelves instead of a hanging rail. More versatile for mixed items — folded clothes, shoes, equipment."
+          },
+          {
+            "id": "storage-spice-rack",
+            "label": "Kitchen rail / spice rack",
+            "helper": "A mounted rail or small shelf in the kitchen area for frequently used items — bottles, spices, utensils. Small but makes kitchen use much more practical."
+          }
+        ]
+      },
+
+      {
+        "id": "windows",
+        "title": "Windows & Privacy",
+        "icon": "🪟",
+        "helper": "Privacy and blackout capability are essential for comfortable overnight stays. Condensation management (good ventilation + insulation) is equally important.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "windows-opening-side",
+            "label": "Opening side window",
+            "helper": "A hinged or sliding window in the van's side wall usually above the hob so heat and cooking fumes can escape. Provides ventilation when parked. Usually added on one or both sides. Essential for hot weather."
+          },
+          {
+            "id": "windows-fixed-tinted",
+            "label": "Fixed tinted privacy windows",
+            "helper": "Non-opening windows with dark tint (privacy glass). Allows light in while making it difficult to see in from outside. Often fitted on the non-opening side."
+          },
+          {
+            "id": "windows-blinds-roller",
+            "label": "Roller blinds (window-fit)",
+            "helper": "Slim roller blinds that fit precisely into each window aperture. Block light, provide privacy, reduce condensation. Neater than external covers but less effective as thermal insulation."
+          },
+          {
+            "id": "windows-blinds-pleated",
+            "label": "Pleated blinds",
+            "helper": "Pleated fabric blinds that fold flat when not in use. Better thermal properties than roller blinds. Some systems provide both a sheer layer (daytime privacy) and a blackout layer."
+          },
+          {
+            "id": "windows-screen-wrap",
+            "label": "Cab screen wrap / cover (driver + passenger)",
+            "helper": "Covers for the two front cab windows. Essential for full blackout. Cheap options don't possess thermal qualities."
+          },
+          {
+            "id": "windows-cab-divider",
+            "label": "Cab divider / bulkhead curtain",
+            "helper": "A curtain or panel between the cab and living area. Helps retain heat in the living area, improves privacy, and reduces condensation from the cab windows."
+          },
+          {
+            "id": "windows-insulation-full",
+            "label": "Full insulation lining (walls and ceiling)",
+            "helper": "Closed-cell foam insulation applied to all van walls and ceiling, covered by a lining material (usually carpet or fabric). Significantly reduces condensation and improves heat retention. Should be standard in any quality conversion."
+          },
+          {
+            "id": "windows-acoustic",
+            "label": "Acoustic insulation (sound deadening)",
+            "helper": "Butyl rubber sound deadening sheets applied to the van panels before lining. Reduces road and engine noise considerably. Adds cost and a small amount of weight. Should be standard in any quality conversion."
+          }
+        ]
+      },
+
+      {
+        "id": "exterior",
+        "title": "Exterior",
+        "icon": "🚐",
+        "helper": "Exterior fittings that affect day-to-day use, bike/board carrying, and campsite setup.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "ext-barn-doors",
+            "label": "Barn doors (rear)",
+            "helper": "Two rear doors opening sideways. Easier family access, compatible with swing-out towbar bike racks (bikes can remain in situ). Less issue with access if someone parks close behind you."
+          },
+          {
+            "id": "ext-tailgate",
+            "label": "Tailgate (rear)",
+            "helper": "A single door that lifts upward. Provides a rain canopy when open, and potential option for shower fitting. Slightly cleaner look. Any towbar rack works with a tailgate (the door opens upward, not sideways — but you will need to remove the bikes first)."
+          },
+          {
+            "id": "ext-rear-window",
+            "label": "Rear door window (glass insert)",
+            "helper": "A glass window in the rear barn door or tailgate. Adds light to the interior, improves rearward visibility. Tinted versions available."
+          },
+          {
+            "id": "ext-awning-retractable",
+            "label": "Retractable awning",
+            "helper": "A permanently mounted awning on the van's roof rail that rolls out to provide 2–3m of canopy. Deploys quickly with no additional equipment needed. Great for shade and light rain cover."
+          },
+          {
+            "id": "ext-awning-rail",
+            "label": "Awning rail (for drive-away tent)",
+            "helper": "An aluminium track bonded to the van's side wall. Compatible drive-away tents slot in and remain pitched when you drive off. More versatile for families wanting extra sleeping/living space on site."
+          },
+          {
+            "id": "ext-step",
+            "label": "Fold-down entry step",
+            "helper": "A fold-down step at the sliding door opening. Lowers the step height into the van — useful for children and shorter adults. Some versions deploy automatically when the door opens."
+          },
+          {
+            "id": "ext-towbar-fixed",
+            "label": "Towbar (fixed)",
+            "helper": "A permanent fixed towbar. Cheaper than detachable. Always visible when not in use. Compatible with bike racks and lightweight trailers. 13-pin electrics for trailer boards."
+          },
+          {
+            "id": "ext-towbar-detachable",
+            "label": "Towbar (detachable)",
+            "helper": "A towbar with a removable neck — stows away when not needed. Cleaner appearance, higher cost. Useful if aesthetics matter and towing is occasional."
+          }
+        ]
+      },
+
+      {
+        "id": "safety",
+        "title": "Safety",
+        "icon": "🛡️",
+        "helper": "Basic safety items that are required at many campsites and on some ferry crossings.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "safety-fire-extinguisher",
+            "label": "Fire extinguisher",
+            "helper": "A small dry powder or CO2 extinguisher mounted accessibly near the door. Required for many campsites and some ferry crossings. 1kg minimum."
+          },
+          {
+            "id": "safety-first-aid",
+            "label": "First aid kit",
+            "helper": "A basic first aid kit mounted in an accessible location. Required for some campsites. Practical for any trip."
+          }
+        ]
+      },
+
+      {
+        "id": "finish",
+        "title": "Finish & Cosmetics",
+        "icon": "🎨",
+        "helper": "The finishing choices — furniture material, floor, and lining. These define how the van looks and feels. They're easier to change post-conversion than structural elements, but it's still worth deciding upfront.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "finish-furniture-wood",
+            "label": "Furniture finish: wood grain / natural effect",
+            "helper": "Warm, classic look. Various wood species available — oak, walnut, birch are common. More traditional feel. Popular for family vans."
+          },
+          {
+            "id": "finish-furniture-white",
+            "label": "Furniture finish: gloss white",
+            "helper": "Clean, modern look. Makes the interior feel larger and lighter. Shows marks more than wood. Popular for contemporary conversions."
+          },
+          {
+            "id": "finish-furniture-grey",
+            "label": "Furniture finish: grey / slate",
+            "helper": "Neutral, modern. Hides marks better than white. Versatile with most interior colours."
+          },
+          {
+            "id": "finish-furniture-bespoke",
+            "label": "Furniture finish: bespoke / painted",
+            "helper": "Custom colour match or painted furniture to a specific RAL or sample colour. Adds cost and lead time. For buyers who want a specific look."
+          },
+          {
+            "id": "finish-floor-vinyl",
+            "label": "Floor covering: vinyl / LVT",
+            "helper": "Luxury vinyl tile or sheet vinyl. Waterproof, easy to clean, warm underfoot, available in many designs. The most practical choice for van use. Recommended."
+          },
+          {
+            "id": "finish-floor-rubber",
+            "label": "Floor covering: rubber / checker plate",
+            "helper": "Rubber or pressed aluminium checker plate. Extremely durable, easy to clean, very practical for working/surf vans where mud and sand are regular. Less comfortable underfoot."
+          },
+          {
+            "id": "finish-ceiling-fabric",
+            "label": "Ceiling lining: fabric / carpet",
+            "helper": "Fabric or carpet headlining on the ceiling. Warm, soft, reduces condensation noise. The standard finish for most conversions."
+          },
+          {
+            "id": "finish-walls-carpet",
+            "label": "Wall lining: carpet",
+            "helper": "Carpet covering the van's metal walls. Warm, reduces condensation noise, good acoustic properties. The standard for most quality conversions."
+          },
+          {
+            "id": "finish-walls-ply",
+            "label": "Wall lining: ply panels",
+            "helper": "Smooth ply panels on the walls. Easier to clean than carpet, modern look, can be painted. Popular with builders going for a cleaner interior aesthetic."
+          }
+        ]
+      }
+
+    ]
+  }
+}

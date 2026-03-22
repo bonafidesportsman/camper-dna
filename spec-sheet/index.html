@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Conversion Spec — CamperDNA</title>
+  <meta name="description" content="Tick off exactly what you want in your VW camper conversion. We'll format it as a brief you can send straight to a converter.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="spec-page">
+
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/" class="site-logo">CamperDNA</a>
+      <ul class="nav-links">
+        <li><a href="/your-camperdna/">Your CamperDNA</a></li>
+        <li><a href="/kit/">Kit &amp; Gear</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/buying-a-van/">Buying a Van</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="spec-hero">
+    <h1>Build Your Conversion Spec</h1>
+    <p>Tick everything you want included. Each section is independent — skip any that don't apply. We'll email you a formatted brief you can send straight to a converter.</p>
+  </div>
+
+  <div class="spec-wrapper">
+
+    <!-- Email bar (shown at top, sticky) -->
+    <div class="spec-email-bar" id="spec-email-bar">
+      <div class="spec-email-bar-inner">
+        <div id="spec-email-confirm" style="display:none;">
+          <span class="spec-email-label">We'll send your spec to</span>
+          <strong id="spec-email-display"></strong>
+          <button class="spec-email-change-btn" onclick="showEmailInput()">Change</button>
+        </div>
+        <div id="spec-email-input-wrap">
+          <label for="spec-email-input" class="spec-email-label">Your email address</label>
+          <input type="email" id="spec-email-input" placeholder="your@email.com" autocomplete="email">
+        </div>
+      </div>
+    </div>
+
+    <!-- Spec sections rendered by spec-sheet.js -->
+    <div id="spec-sections"></div>
+
+    <!-- Submit -->
+    <div class="spec-submit-area">
+      <button class="btn-primary btn-large" id="spec-submit-btn">Email me my spec sheet →</button>
+      <p class="spec-submit-note">We'll format your selections into a clean brief and email it to you. No mailing list.</p>
+      <p class="spec-sent-msg" id="spec-sent-msg" style="display:none;">✓ Spec sheet on its way — check your inbox in a few minutes.</p>
+      <p class="spec-error-msg" id="spec-error-msg" style="display:none;"></p>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">CamperDNA</span>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/your-camperdna/">Your CamperDNA</a></li>
+        <li><a href="/kit/">Kit &amp; Gear</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 CamperDNA</span>
+    </div>
+  </footer>
+
+  <script src="spec-sheet.js"></script>
+</body>
+</html>
