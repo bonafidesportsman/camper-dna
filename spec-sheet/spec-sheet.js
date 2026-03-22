@@ -93,7 +93,6 @@ function buildSection(section) {
 
   wrapper.innerHTML = `
     <div class="spec-section-header">
-      <span class="spec-section-icon">${section.icon || ''}</span>
       <h2 class="spec-section-title">${section.title}</h2>
       ${typeNote}
     </div>
