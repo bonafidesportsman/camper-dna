@@ -848,6 +848,51 @@
             "helper": "Smooth ply panels on the walls. Easier to clean than carpet, modern look, can be painted. Popular with builders going for a cleaner interior aesthetic."
           }
         ]
+      },
+
+      {
+        "id": "nice-to-haves",
+        "title": "Nice to Haves",
+        "icon": "✨",
+        "helper": "Accessories and aesthetic upgrades that aren't core to the conversion but make a meaningful difference to the look and daily experience. Most can be added after the conversion — though some are easier and cheaper to specify upfront.",
+        "type": "multi-choice",
+        "items": [
+          {
+            "id": "acc-carplay",
+            "label": "Wireless Apple CarPlay / Android Auto",
+            "helper": "T6.1 (2019+) Highline and above often includes CarPlay wired as standard — a wireless retrofit adapter (£40–80) removes the cable. Older T6 and T5 need a head unit replacement: a quality double-DIN unit with wireless CarPlay and Android Auto runs £250–450 fitted. One of the most practical upgrades for day-to-day use — navigation, music, and calls without touching your phone."
+          },
+          {
+            "id": "acc-running-boards",
+            "label": "Side running boards",
+            "helper": "Aluminium or steel steps mounted below the sliding door sill. Lower the step height into the van — useful for shorter adults and children. Some versions fold flat when not in use. Cost: £150–350 supply and fit depending on material and style. Check clearance if you use the van off-road or on rough tracks."
+          },
+          {
+            "id": "acc-bodykit-splitter",
+            "label": "Body kit — front splitter",
+            "helper": "A front lip spoiler fitted below the standard front bumper. Adds an aggressive, lowered look. Available in gloss black, carbon-effect ABS, or colour-coded to the van. Popular options from specialist suppliers including ABT Sportsline and Caractère. Cost: £200–600 supply and fit. Note: lowers the front ground clearance slightly — worth considering if you use the van on rough tracks or steep drives."
+          },
+          {
+            "id": "acc-bodykit-spoiler",
+            "label": "Body kit — rear spoiler",
+            "helper": "A roof-mounted or tailgate spoiler in ABS plastic or fibreglass. Adds visual height and a sportier profile to the rear. Available in OE finish or colour-coded. Mainly aesthetic — marginal aerodynamic benefit in real-world van use. Easier to fit on a standard or high-roof than a pop-top. Cost: £180–500 supply and fit."
+          },
+          {
+            "id": "acc-alloys",
+            "label": "Alloy wheels",
+            "helper": "T6 Highline includes alloys as standard (17\"). T5 and lower-spec T6 vans often come on steel wheels with plastic trims. An alloy upgrade transforms the look considerably. Quality van-rated alloys from Keskin, BBS, or OZ in 17–18\" typically cost £600–1,200 for a set of four including tyres. Stick to 17–18\" for a loaded van — larger diameters reduce sidewall height and can be harsh on poorer road surfaces."
+          },
+          {
+            "id": "acc-reversing-camera",
+            "label": "Reversing camera",
+            "helper": "A rear-facing camera that feeds an image to the head unit or a dedicated screen when reversing. Extremely useful on a van — blind spots are significant. Can be mounted on the number plate, tailgate, or barn door handle. Works with most aftermarket CarPlay head units. T6.1 top-spec trims include a factory camera; T5 and most T6 need a retrofit. Cost: £150–350 supply and fit depending on integration with the head unit."
+          },
+          {
+            "id": "acc-led-headlights",
+            "label": "LED headlights",
+            "helper": "T6.1 (2019+) includes LED daytime running lights as standard on most trims; full LED headlights on higher specs. T5 and T6 typically have halogen headlights — an LED upgrade makes a significant difference to night driving quality and gives the van a more modern, premium look. Direct-fit LED bulb replacements run £80–150; full LED headlight assemblies (better beam pattern and legality) run £400–700 supply and fit."
+          }
+        ]
       }
 
     ]

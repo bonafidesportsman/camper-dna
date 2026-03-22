@@ -17,6 +17,7 @@ const SECTION_LABELS = {
   'exterior':        'Exterior',
   'safety':          'Safety',
   'finish':          'Finish & Cosmetics',
+  'nice-to-haves':   'Nice to Haves',
 };
 
 const PHASE1_LABELS = {
