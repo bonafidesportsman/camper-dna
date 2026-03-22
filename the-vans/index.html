@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T5, T6 & T6.1 — Know Your Van | CamperDNA</title>
+  <meta name="description" content="A buyer's-eye view of the VW T5, T6 and T6.1 as base vans and as campervans — plus an honest take on long vs short wheelbase.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+
+    /* ── Page hero ─────────────────────────────────────── */
+    .vans-hero {
+      background: var(--color-slate);
+      padding: 72px 24px 64px;
+      text-align: center;
+      color: var(--color-white);
+    }
+    .vans-hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-rust);
+      margin-bottom: 16px;
+    }
+    .vans-hero h1 {
+      color: var(--color-white);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .vans-hero p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.0625rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* ── Van blocks ─────────────────────────────────────── */
+    .vans-section {
+      background: var(--color-off-white);
+    }
+
+    .van-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+      border-bottom: 1px solid rgba(55,65,81,0.1);
+    }
+    .van-block--flip {
+      direction: rtl;
+    }
+    .van-block--flip > * {
+      direction: ltr;
+    }
+
+    /* Image side */
+    .van-block-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+    }
+    .van-photo-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .van-photo-placeholder--t5 {
+      background: linear-gradient(135deg, #2d2018 0%, #4a3020 50%, #3a2818 100%);
+      color: rgba(255,255,255,0.3);
+    }
+    .van-photo-placeholder--t6 {
+      background: linear-gradient(135deg, #1a2230 0%, #2d3748 50%, #1F2937 100%);
+      color: rgba(255,255,255,0.3);
+    }
+    .van-photo-placeholder--t61 {
+      background: linear-gradient(135deg, #1e1e1e 0%, #333 50%, #2a2a2a 100%);
+      color: rgba(255,255,255,0.3);
+    }
+
+    .van-generation-badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .van-block--flip .van-generation-badge {
+      left: auto;
+      right: 24px;
+    }
+    .van-year-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      color: rgba(255,255,255,0.9);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+    .van-ulez-tag {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 3px;
+    }
+    .van-ulez-tag--fail {
+      background: rgba(212, 112, 79, 0.25);
+      color: #f4a07a;
+      border: 1px solid rgba(212,112,79,0.4);
+    }
+    .van-ulez-tag--pass {
+      background: rgba(72, 187, 120, 0.2);
+      color: #6ee7a0;
+      border: 1px solid rgba(72,187,120,0.3);
+    }
+
+    /* Content side */
+    .van-block-content {
+      padding: 52px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--color-white);
+    }
+    .van-model-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rust);
+      margin-bottom: 10px;
+    }
+    .van-block-content h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    /* Stats strip */
+    .van-stats {
+      display: flex;
+      gap: 0;
+      margin-bottom: 24px;
+      border: 1px solid rgba(55,65,81,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .van-stat {
+      flex: 1;
+      padding: 10px 14px;
+      border-right: 1px solid rgba(55,65,81,0.12);
+    }
+    .van-stat:last-child { border-right: none; }
+    .van-stat span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--color-gray);
+      margin-bottom: 3px;
+    }
+    .van-stat strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-slate);
+    }
+
+    .van-block-content p {
+      font-size: 0.9375rem;
+      color: var(--color-charcoal);
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+    .van-block-content p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Best for */
+    .van-best-for {
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: var(--color-off-white);
+      border-left: 3px solid var(--color-rust);
+      border-radius: 0 4px 4px 0;
+    }
+    .van-best-for-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-rust);
+      margin-bottom: 6px;
+    }
+    .van-best-for p {
+      font-size: 0.875rem !important;
+      color: var(--color-charcoal) !important;
+      margin: 0 !important;
+    }
+
+    /* ── LWB vs SWB ─────────────────────────────────────── */
+    .lwb-section {
+      background: var(--color-slate);
+      padding: 80px 0 0;
+    }
+    .lwb-section-header {
+      text-align: center;
+      padding: 0 24px 56px;
+    }
+    .lwb-section-header .vans-hero-eyebrow {
+      display: block;
+      margin-bottom: 12px;
+    }
+    .lwb-section-header h2 {
+      color: var(--color-white);
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      margin-bottom: 16px;
+    }
+    .lwb-section-header p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .lwb-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .lwb-panel {
+      padding: 48px 52px 56px;
+    }
+    .lwb-panel--swb {
+      background: rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .lwb-panel--lwb {
+      background: rgba(255,255,255,0.025);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .lwb-panel-tag {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rust);
+      margin-bottom: 8px;
+    }
+    .lwb-panel h3 {
+      color: var(--color-white);
+      font-size: 1.75rem;
+      margin-bottom: 8px;
+    }
+    .lwb-panel-sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      font-family: var(--font-body);
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .lwb-dim-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .lwb-dim-visual {
+      height: 6px;
+      background: var(--color-rust);
+      border-radius: 3px;
+      opacity: 0.7;
+    }
+    .lwb-dim-visual--swb { width: 120px; }
+    .lwb-dim-visual--lwb { width: 148px; }
+    .lwb-dim-label {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+    }
+
+    .lwb-pros {
+      list-style: none;
+      margin: 0 0 24px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lwb-pros li {
+      display: flex;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+    }
+    .lwb-pros li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      min-width: 5px;
+      background: var(--color-rust);
+      border-radius: 50%;
+      margin-top: 0.6em;
+    }
+
+    .lwb-panel p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+    }
+
+    /* Verdict bar */
+    .lwb-verdict {
+      padding: 36px 52px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .lwb-verdict-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-rust);
+      white-space: nowrap;
+      padding-top: 2px;
+      min-width: 60px;
+    }
+    .lwb-verdict p {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.75);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 860px) {
+      .van-block {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .van-block-image {
+        min-height: 260px;
+      }
+      .van-block--flip .van-generation-badge {
+        left: 24px;
+        right: auto;
+      }
+      .van-block-content {
+        padding: 36px 24px;
+      }
+      .van-stats {
+        flex-wrap: wrap;
+      }
+      .van-stat {
+        flex: 1 1 33%;
+      }
+      .lwb-split {
+        grid-template-columns: 1fr;
+      }
+      .lwb-panel--swb {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      .lwb-panel {
+        padding: 36px 24px;
+      }
+      .lwb-verdict {
+        flex-direction: column;
+        padding: 28px 24px;
+        gap: 10px;
+      }
+      .vans-hero {
+        padding: 52px 24px 44px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/" class="site-logo">CamperDNA</a>
+      <ul class="nav-links">
+        <li><a href="/your-camperdna/">Your CamperDNA</a></li>
+        <li><a href="/the-vans/" class="active">The Vans</a></li>
+        <li><a href="/spec-sheet/">Spec Sheet</a></li>
+        <li><a href="/buying-a-van/">Buying a Van</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ── Hero ── -->
+  <section class="vans-hero">
+    <p class="vans-hero-eyebrow">The Platform</p>
+    <h1>T5, T6 &amp; T6.1 — Know Your Van</h1>
+    <p>Three generations, one platform, and a decision that shapes everything that comes after. Here's what actually matters.</p>
+  </section>
+
+
+  <!-- ── T5 ── -->
+  <article class="van-block">
+
+    <div class="van-block-image">
+      <div class="van-photo-placeholder van-photo-placeholder--t5">T5 photo</div>
+      <div class="van-generation-badge">
+        <span class="van-year-tag">2003 – 2015</span>
+        <span class="van-ulez-tag van-ulez-tag--fail">Not ULEZ</span>
+      </div>
+    </div>
+
+    <div class="van-block-content">
+      <p class="van-model-label">VW T5</p>
+      <h2>Proven, Plentiful, and Priced Right</h2>
+      <div class="van-stats">
+        <div class="van-stat"><span>Price guide</span><strong>£5k–15k</strong></div>
+        <div class="van-stat"><span>Engine</span><strong>1.9 / 2.0 TDI</strong></div>
+        <div class="van-stat"><span>Emissions</span><strong>Euro 5</strong></div>
+        <div class="van-stat"><span>DSG available</span><strong>From 2009</strong></div>
+      </div>
+      <p>The van that started the modern campervan obsession. The T5 is abundant, affordable, and proven — which is exactly why it still dominates the conversion market. Buying one means your entire conversion budget goes further, with a huge parts and independent specialist ecosystem to support it.</p>
+      <p>The 2.0 TDI four-cylinder (introduced in the 2010 facelift) is the sweet spot: simpler than the older V6 units, strong enough for a loaded camper, and understood by any competent mechanic. Earlier 1.9 TDI engines are similarly bulletproof but show their age on motorways. As a camper, a well-built T5 is virtually indistinguishable from a newer van on the road — all the same layouts, bed systems, and roof options fit identically. The one hard reality: T5s are not ULEZ-compliant, so check coverage maps if London or other clean air zones are in your plans.</p>
+      <div class="van-best-for">
+        <span class="van-best-for-label">Best for</span>
+        <p>Buyers who want maximum conversion budget for a given total spend, or who aren't going anywhere near a ULEZ zone.</p>
+      </div>
+    </div>
+
+  </article>
+
+
+  <!-- ── T6 ── -->
+  <article class="van-block van-block--flip">
+
+    <div class="van-block-image">
+      <div class="van-photo-placeholder van-photo-placeholder--t6">T6 photo</div>
+      <div class="van-generation-badge">
+        <span class="van-year-tag">2015 – 2019</span>
+        <span class="van-ulez-tag van-ulez-tag--pass">ULEZ compliant*</span>
+      </div>
+    </div>
+
+    <div class="van-block-content">
+      <p class="van-model-label">VW T6</p>
+      <h2>The Industry Workhorse</h2>
+      <div class="van-stats">
+        <div class="van-stat"><span>Price guide</span><strong>£10k–22k</strong></div>
+        <div class="van-stat"><span>Engine</span><strong>2.0 TDI</strong></div>
+        <div class="van-stat"><span>Emissions</span><strong>Euro 6*</strong></div>
+        <div class="van-stat"><span>DSG available</span><strong>150 / 204PS</strong></div>
+      </div>
+      <p>A significant mechanical update on the T5 platform — same body, modernised engines, and Euro 6 emissions compliance. That last point is the critical one for most buyers. <strong>Check the V5 carefully:</strong> T6 models built before September 2016 are Euro 5. Euro 6 compliance only applies from that date onward.</p>
+      <p>The 2.0 TDI 150PS is the conversion sweet spot — strong, efficient, and available with DSG automatic on 150PS and 204PS variants (a genuine quality-of-life upgrade on long drives). The T6 is the current workhorse of the professional conversion industry: wide second-hand stock, high build quality, and the optional Sportline trim if you want lowered suspension and factory body kit from the outset.</p>
+      <div class="van-best-for">
+        <span class="van-best-for-label">Best for</span>
+        <p>Buyers who want Euro 6 compliance, modern running gear, and the broadest choice of second-hand stock at a sensible price.</p>
+      </div>
+    </div>
+
+  </article>
+
+
+  <!-- ── T6.1 ── -->
+  <article class="van-block">
+
+    <div class="van-block-image">
+      <div class="van-photo-placeholder van-photo-placeholder--t61">T6.1 photo</div>
+      <div class="van-generation-badge">
+        <span class="van-year-tag">2019 – present</span>
+        <span class="van-ulez-tag van-ulez-tag--pass">ULEZ compliant</span>
+      </div>
+    </div>
+
+    <div class="van-block-content">
+      <p class="van-model-label">VW T6.1</p>
+      <h2>Current Gen — the Refresh That Matters</h2>
+      <div class="van-stats">
+        <div class="van-stat"><span>Price guide</span><strong>£18k–30k+</strong></div>
+        <div class="van-stat"><span>Engine</span><strong>2.0 TDI</strong></div>
+        <div class="van-stat"><span>Emissions</span><strong>Euro 6</strong></div>
+        <div class="van-stat"><span>CarPlay</span><strong>Highline std.</strong></div>
+      </div>
+      <p>Same platform as the T6, but with a meaningful cosmetic and tech refresh. The front face is sharper and more car-like, the digital cockpit is standard on higher trims, and Highline spec includes wireless Apple CarPlay and Android Auto — saving you a retrofit if you're keeping the factory dash.</p>
+      <p>As a camper the T6.1's conversion options are identical to the T6 — every roof kit, bed system, and furniture profile fits the same. For most buyers the premium over a clean T6 won't be justified by the conversion output. But if you want the newest-looking van on the drive and the factory infotainment to match, it's worth it. The one honest caveat: there's less second-hand stock at sensible prices compared to T6, so you may end up paying more for fewer options.</p>
+      <div class="van-best-for">
+        <span class="van-best-for-label">Best for</span>
+        <p>Buyers prioritising current-generation aesthetics, factory infotainment tech, and who have the budget to suit.</p>
+      </div>
+    </div>
+
+  </article>
+
+
+  <!-- ── LWB vs SWB ── -->
+  <section class="lwb-section">
+
+    <div class="lwb-section-header">
+      <span class="vans-hero-eyebrow">The Dimension Decision</span>
+      <h2>Long Wheelbase vs Short</h2>
+      <p>The single most important decision before anything else is fixed. Get this right first.</p>
+    </div>
+
+    <div class="lwb-split">
+
+      <!-- SWB -->
+      <div class="lwb-panel lwb-panel--swb">
+        <span class="lwb-panel-tag">Short Wheelbase</span>
+        <h3>SWB</h3>
+        <p class="lwb-panel-sub">Overall length ~4,890mm · Load area ~2,600mm</p>
+        <div class="lwb-dim-bar">
+          <div class="lwb-dim-visual lwb-dim-visual--swb"></div>
+          <span class="lwb-dim-label">4,890mm</span>
+        </div>
+        <ul class="lwb-pros">
+          <li>Fits standard UK multi-storey car parks</li>
+          <li>Noticeably easier to manoeuvre on narrow campsites and country lanes</li>
+          <li>Parks like a large car in everyday life</li>
+          <li>Full-length bed, kitchen, and storage all fit with a well-planned layout</li>
+          <li>Wider choice of second-hand stock and professional conversion experience</li>
+        </ul>
+        <p>The most popular choice for weekends-and-holidays use. Efficient layouts make the 2,600mm load area more than enough for most people.</p>
+      </div>
+
+      <!-- LWB -->
+      <div class="lwb-panel lwb-panel--lwb">
+        <span class="lwb-panel-tag">Long Wheelbase</span>
+        <h3>LWB</h3>
+        <p class="lwb-panel-sub">Overall length ~5,290mm · Load area ~3,000mm</p>
+        <div class="lwb-dim-bar">
+          <div class="lwb-dim-visual lwb-dim-visual--lwb"></div>
+          <span class="lwb-dim-label">5,290mm</span>
+        </div>
+        <ul class="lwb-pros">
+          <li>~400mm more in the load area — enough for a rear seating area alongside the bed</li>
+          <li>More generous kitchen runs and easier to incorporate a wet room</li>
+          <li>Better suited to full-time or extended travel</li>
+          <li>Easier to carry a fourth person without compromising the layout</li>
+        </ul>
+        <p>The right choice if you need the space — but the compromise is real. Noticeably more awkward in towns, tight campsites will cause friction, and you'll feel the length every time you park in a city.</p>
+      </div>
+
+    </div>
+
+    <!-- Verdict -->
+    <div class="lwb-verdict">
+      <span class="lwb-verdict-label">Verdict</span>
+      <p>Most people buying a weekends-and-holidays campervan are better served by a well-planned SWB. Go LWB if you're frequently travelling with four people, want a dedicated toilet cubicle, or are planning extended travel — not because you vaguely feel like more space is better.</p>
+    </div>
+
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">CamperDNA</span>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/your-camperdna/">Your CamperDNA</a></li>
+        <li><a href="/spec-sheet/">Spec Sheet</a></li>
+        <li><a href="/buying-a-van/">Buying a Van</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 CamperDNA</span>
+    </div>
+  </footer>
+
+</body>
+</html>
