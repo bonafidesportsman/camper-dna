@@ -46,7 +46,7 @@ section { padding: 72px 0; }
 .nav-links a:hover, .nav-links a.active { color: var(--color-rust); }
 .nav-cta { font-size: var(--fs-small) !important; padding: 8px 18px; background: var(--color-rust); color: var(--color-white) !important; border-radius: 4px; font-weight: 600 !important; text-transform: none !important; letter-spacing: 0 !important; }
 .nav-cta:hover { background: #c4622a; color: var(--color-white) !important; text-decoration: none !important; }
-.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; margin-right: -8px; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; margin-right: -8px; color: var(--color-rust); }
 .nav-toggle svg { display: block; }
 .nav-toggle .icon-close { display: none; }
 
