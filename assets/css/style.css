@@ -37,8 +37,9 @@ section { padding: 72px 0; }
 /* Nav */
 .site-header { background: var(--color-white); border-bottom: 1px solid rgba(55,65,81,0.12); position: sticky; top: 0; z-index: 100; }
 .site-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: var(--max-width); margin: 0 auto; }
-.site-logo { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-slate); text-decoration: none; }
-.site-logo img { height: 32px; display: block; }
+.site-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-slate); text-decoration: none; line-height: 1; }
+.site-logo img { height: 44px; width: auto; display: block; flex-shrink: 0; }
+.site-logo span { display: block; }
 .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
 .nav-links a { font-size: var(--fs-small); font-weight: 500; color: var(--color-charcoal); letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: color 0.15s; }
 .nav-links a:hover, .nav-links a.active { color: var(--color-rust); }
@@ -314,7 +315,8 @@ input[type="radio"] ~ .spec-item-check { border-radius: 50%; }
 /* Footer */
 .site-footer { background: var(--color-slate); color: rgba(255,255,255,0.7); padding: 44px 0; font-size: var(--fs-small); }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-.footer-brand { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; color: var(--color-white); }
+.footer-brand { display: flex; align-items: center; gap: 9px; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; color: var(--color-white); }
+.footer-brand img { height: 36px; width: auto; display: block; flex-shrink: 0; }
 .footer-links { display: flex; gap: 24px; list-style: none; }
 .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.15s; }
 .footer-links a:hover { color: var(--color-white); }
