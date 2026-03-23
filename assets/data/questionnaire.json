@@ -4,7 +4,6 @@
     "lastUpdated": "2026-03-22",
     "notes": "Master questionnaire data for both quiz phases. Edit questionnaire-editor.xlsx in Google Drive, not this file directly. Phase 1 = the 15-question spec guide (added transmission Q7). Phase 2 = the detailed conversion spec sheet (accordion checkboxes). showIf rules: { source: 'phase1'|'phase2', sectionId: string, anyOf: [values] } — item only renders if referenced section has one of the listed values selected."
   },
-
   "phase1": {
     "title": "Your CamperDNA",
     "subtitle": "15 questions. Personalised spec in your inbox.",
@@ -15,10 +14,22 @@
         "helper": "This covers everything — the base van plus any conversion costs. It's the master filter for everything else.",
         "type": "single-choice",
         "options": [
-          { "value": "under-20k", "label": "Under £20,000" },
-          { "value": "20-30k",    "label": "£20,000–30,000" },
-          { "value": "30-45k",    "label": "£30,000–45,000" },
-          { "value": "45k-plus",  "label": "£45,000+" }
+          {
+            "value": "under-20k",
+            "label": "Under £20,000"
+          },
+          {
+            "value": "20-30k",
+            "label": "£20,000–30,000"
+          },
+          {
+            "value": "30-45k",
+            "label": "£30,000–45,000"
+          },
+          {
+            "value": "45k-plus",
+            "label": "£45,000+"
+          }
         ]
       },
       {
@@ -27,10 +38,22 @@
         "helper": "Each route produces a completely different report — inspection advice, converter selection, or self-build guidance.",
         "type": "single-choice",
         "options": [
-          { "value": "preconverted",    "label": "Buy a pre-converted van (already fitted out by someone else)" },
-          { "value": "donor-converter", "label": "Buy a donor van and commission a conversion company" },
-          { "value": "donor-selfbuild", "label": "Buy a donor van and self-build (or partial self-build)" },
-          { "value": "undecided",       "label": "Not decided yet" }
+          {
+            "value": "preconverted",
+            "label": "Buy a pre-converted van (already fitted out by someone else)"
+          },
+          {
+            "value": "donor-converter",
+            "label": "Buy a donor van and commission a conversion company"
+          },
+          {
+            "value": "donor-selfbuild",
+            "label": "Buy a donor van and self-build (or partial self-build)"
+          },
+          {
+            "value": "undecided",
+            "label": "Not decided yet"
+          }
         ]
       },
       {
@@ -40,13 +63,25 @@
         "type": "single-choice",
         "expand": {
           "summary": "Show generation details",
-          "body": "T6.1 (2019+) is fully Euro 6 and ULEZ-compliant. T6 (2015–2019) requires checking — models built from September 2016 onwards are Euro 6 compliant, but earlier T6s and some late 2016 vans were still Euro 5. Always verify using the TfL ULEZ checker or the V5C before buying. T5 (Euro 5) is not ULEZ-compliant — attracts daily charges in London, Bath, Bristol, Birmingham and a growing list of others. T5 offers more van for the money if you never drive into these zones.\n\nT7 Transporter (unveiled 2024, UK deliveries from mid-2026) is a completely different vehicle — co-developed with Ford on the Transit Custom platform. UK orders open Spring 2026. Available with diesel, PHEV, and electric powertrains. The conversion ecosystem (roof kits, RIB beds, furniture profiles) built around T5/T6/T6.1 doesn't carry over. There are no established conversion templates and virtually no converter experience on the platform yet. Only worth considering if you're buying in late 2026 or beyond and want a brand-new van."
+          "body": "T6.1 (2019+) is fully Euro 6 and ULEZ-compliant. T6 (2015–2019) requires checking — models built from September 2016 onwards are Euro 6 compliant, but earlier T6s and some late 2016 vans were still Euro 5. Always verify using the TfL ULEZ checker or the V5C before buying. T5 (Euro 5) is not ULEZ-compliant — attracts daily charges in London, Bath, Bristol, Birmingham and a growing list of others. T5 offers more van for the money if you never drive into these zones.\n\nT7 Transporter (unveiled 2024, UK deliveries from 2025) is a completely different vehicle — co-developed with Ford on the Transit Custom platform. UK orders are open. Available with diesel, PHEV, and electric powertrains. The conversion ecosystem (roof kits, RIB beds, furniture profiles) built around T5/T6/T6.1 doesn't carry over. There are no established conversion templates and virtually no converter experience on the platform yet. Worth considering if you want a brand-new van on the latest platform."
         },
         "options": [
-          { "value": "t6",        "label": "T6 / T6.1 (2015 or newer) — Euro 6 compliant, widest conversion ecosystem" },
-          { "value": "t5",        "label": "T5 (2009–2015) — excellent reliability, better value, not ULEZ-compliant" },
-          { "value": "t7",        "label": "T7 Transporter (UK from mid-2026) — new platform, barely arrived, no conversion ecosystem yet" },
-          { "value": "undecided", "label": "Not sure — help me understand the differences" }
+          {
+            "value": "t6",
+            "label": "T6 / T6.1 (2015 or newer) — Euro 6 compliant, widest conversion ecosystem"
+          },
+          {
+            "value": "t5",
+            "label": "T5 (2009–2015) — excellent reliability, better value, not ULEZ-compliant"
+          },
+          {
+            "value": "t7",
+            "label": "T7 Transporter (UK from 2025) — new platform, conversion ecosystem still forming"
+          },
+          {
+            "value": "undecided",
+            "label": "Not sure — help me understand the differences"
+          }
         ]
       },
       {
@@ -59,9 +94,18 @@
           "body": "A T6 TDI with 140,000 miles and a complete VW stamped service history is a better buy than a 60,000 mile van with gaps. These engines are proven at high mileage when properly maintained. Under 50K is rare below £40K — be realistic about what your budget allows."
         },
         "options": [
-          { "value": "under-50k",  "label": "Under 50,000 miles — better resale, more years ahead" },
-          { "value": "100-150k",   "label": "Happy with 100–150,000 with full service history — much better value" },
-          { "value": "depends",    "label": "Depends on price and history" }
+          {
+            "value": "under-50k",
+            "label": "Under 50,000 miles — better resale, more years ahead"
+          },
+          {
+            "value": "100-150k",
+            "label": "Happy with 100–150,000 with full service history — much better value"
+          },
+          {
+            "value": "depends",
+            "label": "Depends on price and history"
+          }
         ]
       },
       {
@@ -74,10 +118,22 @@
           "body": "VW Approved Used: 12-month warranty + 115-point inspection including bodywork. Wales & North of England tends to have cheapest stock. Private sale: budget £250–400 for an independent inspection — always worth it. Via conversion company: convenient and they know what makes a good donor, but their markup is often built into the conversion quote."
         },
         "options": [
-          { "value": "vw-approved", "label": "VW Approved Used (12-month warranty, 115-point check — recommended)" },
-          { "value": "private",     "label": "Private sale (better prices, less comeback if something goes wrong)" },
-          { "value": "converter",   "label": "Conversion company sourcing it (convenient, they know what to look for)" },
-          { "value": "undecided",   "label": "Not sure yet" }
+          {
+            "value": "vw-approved",
+            "label": "VW Approved Used (12-month warranty, 115-point check — recommended)"
+          },
+          {
+            "value": "private",
+            "label": "Private sale (better prices, less comeback if something goes wrong)"
+          },
+          {
+            "value": "converter",
+            "label": "Conversion company sourcing it (convenient, they know what to look for)"
+          },
+          {
+            "value": "undecided",
+            "label": "Not sure yet"
+          }
         ]
       },
       {
@@ -90,10 +146,22 @@
           "body": "Aircon is essentially impossible to retrofit economically (£1,500–2,500+). The Highline includes it as standard, plus heated front windscreen (genuinely useful for camping mornings) and front/rear parking sensors. The price premium at base van level is nearly always smaller than the retrofit cost. Always buy the Highline if you can."
         },
         "options": [
-          { "value": "highline",  "label": "Highline (recommended — aircon standard, heated windscreen, parking sensors)" },
-          { "value": "sportline",  "label": "Sportline (lifestyle grade above Highline — 204PS DSG, lowered sports suspension, premium interior. Note: lowered suspension is a disadvantage for campsites and rough tracks; interior gets stripped in a conversion so the premium may not be worth it)" },
-          { "value": "trendline", "label": "Trendline or Startline (budget — aircon often missing, needs retrofitting)" },
-          { "value": "na",        "label": "Already have a van / not applicable" }
+          {
+            "value": "highline",
+            "label": "Highline (recommended — aircon standard, heated windscreen, parking sensors)"
+          },
+          {
+            "value": "sportline",
+            "label": "Sportline (lifestyle grade above Highline — 204PS DSG, lowered sports suspension, premium interior. Note: lowered suspension is a disadvantage for campsites and rough tracks; interior gets stripped in a conversion so the premium may not be worth it)"
+          },
+          {
+            "value": "trendline",
+            "label": "Trendline or Startline (budget — aircon often missing, needs retrofitting)"
+          },
+          {
+            "value": "na",
+            "label": "Already have a van / not applicable"
+          }
         ]
       },
       {
@@ -106,10 +174,22 @@
           "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009 — a world first for a medium van at the time. Available on 150PS and 204PS engines only; the 102PS entry engine comes with a 5-speed manual only. Most conversion buyers choose between 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes stop-start urban driving and towing significantly smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check service history carefully."
         },
         "options": [
-          { "value": "6-manual",  "label": "6-speed manual — most common, reliable, lower purchase price (available with 150PS and 204PS engines)" },
-          { "value": "dsg",       "label": "7-speed DSG automatic — smoother in traffic and towing, higher purchase price (150PS or 204PS only)" },
-          { "value": "5-manual",  "label": "5-speed manual — older T5 or 102PS engine, lowest cost, very reliable" },
-          { "value": "undecided", "label": "Not decided yet" }
+          {
+            "value": "6-manual",
+            "label": "6-speed manual — most common, reliable, lower purchase price (available with 150PS and 204PS engines)"
+          },
+          {
+            "value": "dsg",
+            "label": "7-speed DSG automatic — smoother in traffic and towing, higher purchase price (150PS or 204PS only)"
+          },
+          {
+            "value": "5-manual",
+            "label": "5-speed manual — older T5 or 102PS engine, lowest cost, very reliable"
+          },
+          {
+            "value": "undecided",
+            "label": "Not decided yet"
+          }
         ]
       },
       {
@@ -122,9 +202,18 @@
           "body": "3 front seats and 2 rear is the right default. Going to 3 rear costs more to convert, narrows the bed by ~10cm, and significantly reduces storage and kitchen space. Unless you genuinely need to seat 3 children in the back, the 2-rear layout is better in almost every way."
         },
         "options": [
-          { "value": "2-rear", "label": "2 rear seats (recommended — wider bed, more kitchen and storage space)" },
-          { "value": "3-rear", "label": "3 rear seats (ISOfix for three children, but loses storage)" },
-          { "value": "unsure", "label": "Not sure" }
+          {
+            "value": "2-rear",
+            "label": "2 rear seats (recommended — wider bed, more kitchen and storage space)"
+          },
+          {
+            "value": "3-rear",
+            "label": "3 rear seats (ISOfix for three children, but loses storage)"
+          },
+          {
+            "value": "unsure",
+            "label": "Not sure"
+          }
         ]
       },
       {
@@ -137,9 +226,18 @@
           "body": "Barn doors: easier for families, compatible with towbar bike racks that swing open around them, no problem if someone parks close behind you. Tailgate: provides rain shelter when open, slightly cleaner look, easier single-handed loading. Summary: barn doors for families, either works for couples or solo."
         },
         "options": [
-          { "value": "barn",     "label": "Barn doors (two doors opening sideways)" },
-          { "value": "tailgate", "label": "Tailgate (single door lifting upward)" },
-          { "value": "unsure",   "label": "Not sure — explain the difference" }
+          {
+            "value": "barn",
+            "label": "Barn doors (two doors opening sideways)"
+          },
+          {
+            "value": "tailgate",
+            "label": "Tailgate (single door lifting upward)"
+          },
+          {
+            "value": "unsure",
+            "label": "Not sure — explain the difference"
+          }
         ]
       },
       {
@@ -152,9 +250,18 @@
           "body": "Pop-top: sweet spot for most buyers — extra sleeping space without losing multi-storey car park access (stays under 2m). Only consider quality-tested roofs — these maintain body integrity. High-roof: maximum headroom, mechanically simple, but taller driving profile and some car parks become inaccessible. Standard/Day Van: lowest cost, accept that you'll always be changing at a slight crouch."
         },
         "options": [
-          { "value": "pop-top",   "label": "Pop-top (elevating roof — extra sleeping, stays under 2m for car parks)" },
-          { "value": "high-roof", "label": "High-roof (fixed raised — full standing height, no mechanism to maintain)" },
-          { "value": "standard",  "label": "Standard roof (no modification — lowest cost, limited headroom)" }
+          {
+            "value": "pop-top",
+            "label": "Pop-top (elevating roof — extra sleeping, stays under 2m for car parks)"
+          },
+          {
+            "value": "high-roof",
+            "label": "High-roof (fixed raised — full standing height, no mechanism to maintain)"
+          },
+          {
+            "value": "standard",
+            "label": "Standard roof (no modification — lowest cost, limited headroom)"
+          }
         ]
       },
       {
@@ -167,10 +274,22 @@
           "body": "RIB Altair (recommended for families): purpose-designed as a travel seat first, bed second. Available in 2-seat (112cm wide — the most common choice) and 3-seat (129cm wide) versions. Note: the 3-seat version significantly reduces the space available for kitchen units. Pull-tested to ECE R14 (M1 standard), meaning car seats can be legally fitted. ISOfix is standard. Raises up to create usable boot storage underneath.\n\nRock and Roll bed: traditional fold-flat rear bench. Simpler and cheaper. Budget versions are not M1 crash-tested (car seats cannot legally be fitted). Premium options — Reimo Variostar, Rusty Lee — are now also M1 pull-tested and offer ISOfix. Worth specifying a premium unit if children will travel in the van.\n\nFixed bed: always made up but eats into boot space — best if you never need the boot for large items (bikes, boards, buggies)."
         },
         "options": [
-          { "value": "rib",       "label": "RIB bed (folds from rear seat — ISOfix points, crash tested, storage underneath)" },
-          { "value": "rock-roll", "label": "Rock and Roll bed (fold-flat — simple, widely available)" },
-          { "value": "fixed",     "label": "Fixed bed (always made up — maximum convenience, less boot space)" },
-          { "value": "undecided", "label": "Not sure" }
+          {
+            "value": "rib",
+            "label": "RIB bed (folds from rear seat — ISOfix points, crash tested, storage underneath)"
+          },
+          {
+            "value": "rock-roll",
+            "label": "Rock and Roll bed (fold-flat — simple, widely available)"
+          },
+          {
+            "value": "fixed",
+            "label": "Fixed bed (always made up — maximum convenience, less boot space)"
+          },
+          {
+            "value": "undecided",
+            "label": "Not sure"
+          }
         ]
       },
       {
@@ -179,10 +298,22 @@
         "helper": "This drives rack, storage, and accessory spec — gets this right at conversion time rather than retrofitting.",
         "type": "single-choice",
         "options": [
-          { "value": "watersports", "label": "Surfing or water sports (board storage, roof rack, rinse shower)" },
-          { "value": "cycling",     "label": "Cycling or mountain biking (bike rack essential)" },
-          { "value": "hiking",      "label": "Hiking, climbing or trail running (lighter gear, less storage intensive)" },
-          { "value": "general",     "label": "General use — no specific sport or large kit" }
+          {
+            "value": "watersports",
+            "label": "Surfing or water sports (board storage, roof rack, rinse shower)"
+          },
+          {
+            "value": "cycling",
+            "label": "Cycling or mountain biking (bike rack essential)"
+          },
+          {
+            "value": "hiking",
+            "label": "Hiking, climbing or trail running (lighter gear, less storage intensive)"
+          },
+          {
+            "value": "general",
+            "label": "General use — no specific sport or large kit"
+          }
         ]
       },
       {
@@ -195,9 +326,18 @@
           "body": "Retractable awning: extends out in seconds for shade and light rain cover — great for impromptu stops. Awning rail: a track on the van's side that lets you pitch a drive-away tent which stays when you drive off — useful for families who want the van for sleeping but extra space for the kids."
         },
         "options": [
-          { "value": "retractable", "label": "Retractable awning (extends out for shade and light rain cover)" },
-          { "value": "rail",        "label": "Awning rail (rail on van side — drive-away tent slots in and stays when you drive off)" },
-          { "value": "none",        "label": "No awning needed" }
+          {
+            "value": "retractable",
+            "label": "Retractable awning (extends out for shade and light rain cover)"
+          },
+          {
+            "value": "rail",
+            "label": "Awning rail (rail on van side — drive-away tent slots in and stays when you drive off)"
+          },
+          {
+            "value": "none",
+            "label": "No awning needed"
+          }
         ]
       },
       {
@@ -210,9 +350,18 @@
           "body": "~£1,000 fitted as part of a conversion. Draws from the van's fuel tank. Runs quietly on 3–5 amps. Phone-controllable with the right controller — you can warm the van before you get up. If your partner is coming, this is usually the dealbreaker. Specify at conversion time — retrofitting is messier and pricier."
         },
         "options": [
-          { "value": "yes",   "label": "Yes — year-round use, cold nights, want to warm the van remotely" },
-          { "value": "maybe", "label": "Probably — but not sure what's involved" },
-          { "value": "no",    "label": "No — mainly summer use, campsites with electricity" }
+          {
+            "value": "yes",
+            "label": "Yes — year-round use, cold nights, want to warm the van remotely"
+          },
+          {
+            "value": "maybe",
+            "label": "Probably — but not sure what's involved"
+          },
+          {
+            "value": "no",
+            "label": "No — mainly summer use, campsites with electricity"
+          }
         ]
       },
       {
@@ -225,14 +374,22 @@
           "body": "A solar panel and leisure battery (~£600 fitted as part of a conversion) means you're generating and storing your own power — so you're not dependent on a hookup at all.\n\nThis matters in more situations than just wild camping. If you're joining friends who are tent camping, there's no hookup option on a standard grass pitch — you either have power or you don't. And on campsites that do offer hookup, it typically costs £5–10 extra per night and usually puts you on a hard-standing pitch rather than grass. For families who want a softer, quieter spot, that's often not ideal.\n\nA well-specified system (100–200W panel, 100Ah lithium battery) will comfortably run LED lighting, a compressor fridge, phone charging, and a diesel heater fan for several days without sun. It won't run a kettle or hair dryer — those need hookup or a separate inverter.\n\nThe key reason to decide now: solar requires cutting a hole in the roof and running cables during the build. Retrofitting after the van is finished means disturbing the ceiling lining, re-routing cables, and paying for labour twice. Specify it at conversion time."
         },
         "options": [
-          { "value": "essential",     "label": "Essential — I want to wild camp and never rely on campsites" },
-          { "value": "useful",        "label": "Useful — mix of wild camping and campsites" },
-          { "value": "not-important", "label": "Not important — I'll mostly use sites with electric hookup" }
+          {
+            "value": "essential",
+            "label": "Essential — I want to wild camp and never rely on campsites"
+          },
+          {
+            "value": "useful",
+            "label": "Useful — mix of wild camping and campsites"
+          },
+          {
+            "value": "not-important",
+            "label": "Not important — I'll mostly use sites with electric hookup"
+          }
         ]
       }
     ]
   },
-
   "phase2": {
     "title": "Full Conversion Spec",
     "subtitle": "Build your brief. Take it to a conversion company.",
@@ -241,7 +398,6 @@
       "note": "If the user completed Phase 1, their email is stored in sessionStorage under 'camperdna_email'. Phase 2 should check for this on load. If found, show a confirmation line ('We'll send your spec to [email] — not you? Update below') with an optional override field. If not found, show a required email input field before allowing submission."
     },
     "sections": [
-
       {
         "id": "roof",
         "title": "Roof",
@@ -267,7 +423,6 @@
           }
         ]
       },
-
       {
         "id": "roof-extras",
         "title": "Roof Extras",
@@ -292,7 +447,6 @@
           }
         ]
       },
-
       {
         "id": "sleeping",
         "title": "Sleeping",
@@ -323,7 +477,6 @@
           }
         ]
       },
-
       {
         "id": "sleeping-extras",
         "title": "Sleeping Extras",
@@ -335,7 +488,13 @@
             "id": "bed-pop-top-bunk",
             "label": "Pop-top sleeping platform",
             "helper": "A platform in the elevated pop-top section. Usually fits one adult or two children. Includes a thin mattress that stays in the roof when collapsed. Requires a pop-top roof.",
-            "showIf": { "source": "phase2", "sectionId": "roof", "anyOf": ["roof-pop-top"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "roof",
+              "anyOf": [
+                "roof-pop-top"
+              ]
+            }
           },
           {
             "id": "bed-mattress-topper",
@@ -346,23 +505,42 @@
             "id": "bed-wide-112",
             "label": "Bed width: standard (~112cm)",
             "helper": "The standard RIB 2-seat / Rock and Roll width in a T5/T6. Comfortable for one adult, manageable for two.",
-            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-rib", "bed-rock-roll"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "sleeping",
+              "anyOf": [
+                "bed-rib",
+                "bed-rock-roll"
+              ]
+            }
           },
           {
             "id": "bed-wide-129",
             "label": "Bed width: wide (~129cm — 3-seat RIB)",
             "helper": "The 3-seat RIB Altair configuration. Wider sleeping surface but significantly reduces the space available for kitchen units. Suitable if seating 3 in the rear is a priority.",
-            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-rib"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "sleeping",
+              "anyOf": [
+                "bed-rib"
+              ]
+            }
           },
           {
             "id": "bed-wide-150",
             "label": "Bed width: full-width (~150cm)",
             "helper": "Full van width, usually only achievable with a fixed bed or specific Rock and Roll configuration in a long-wheelbase van. Maximum sleeping comfort for two.",
-            "showIf": { "source": "phase2", "sectionId": "sleeping", "anyOf": ["bed-fixed", "bed-rock-roll"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "sleeping",
+              "anyOf": [
+                "bed-fixed",
+                "bed-rock-roll"
+              ]
+            }
           }
         ]
       },
-
       {
         "id": "seating",
         "title": "Seating",
@@ -374,13 +552,26 @@
             "id": "seat-2-rear",
             "label": "2-seat rear bench",
             "helper": "Two rear passenger seats. Recommended for most buyers — allows wider bed, more kitchen space, and more storage. Standard in most conversion layouts.",
-            "showIf": { "source": "phase2", "sectionId": "sleeping-extras", "anyOf": ["bed-wide-112"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "sleeping-extras",
+              "anyOf": [
+                "bed-wide-112"
+              ]
+            }
           },
           {
             "id": "seat-3-rear",
             "label": "3-seat rear bench",
             "helper": "Three rear passenger seats with three seatbelts. Allows seating for more passengers. Narrows the available living space and bed width. Usually required if carrying three children.",
-            "showIf": { "source": "phase2", "sectionId": "sleeping-extras", "anyOf": ["bed-wide-129", "bed-wide-150"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "sleeping-extras",
+              "anyOf": [
+                "bed-wide-129",
+                "bed-wide-150"
+              ]
+            }
           },
           {
             "id": "seat-swivel-driver",
@@ -409,7 +600,6 @@
           }
         ]
       },
-
       {
         "id": "kitchen",
         "title": "Kitchen",
@@ -469,7 +659,6 @@
           }
         ]
       },
-
       {
         "id": "heating",
         "title": "Heating",
@@ -499,7 +688,6 @@
           }
         ]
       },
-
       {
         "id": "electrics",
         "title": "Electrics",
@@ -584,7 +772,6 @@
           }
         ]
       },
-
       {
         "id": "lighting",
         "title": "Lighting",
@@ -621,7 +808,13 @@
             "id": "light-pop-top",
             "label": "Pop-top interior light",
             "helper": "A light inside the pop-top sleeping area. Small LED light for the upper bunk area. Essential if children sleep up top.",
-            "showIf": { "source": "phase2", "sectionId": "roof", "anyOf": ["roof-pop-top"] }
+            "showIf": {
+              "source": "phase2",
+              "sectionId": "roof",
+              "anyOf": [
+                "roof-pop-top"
+              ]
+            }
           },
           {
             "id": "light-exterior-step",
@@ -630,7 +823,6 @@
           }
         ]
       },
-
       {
         "id": "storage",
         "title": "Storage",
@@ -675,7 +867,6 @@
           }
         ]
       },
-
       {
         "id": "windows",
         "title": "Windows & Privacy",
@@ -725,7 +916,6 @@
           }
         ]
       },
-
       {
         "id": "exterior",
         "title": "Exterior",
@@ -775,7 +965,6 @@
           }
         ]
       },
-
       {
         "id": "safety",
         "title": "Safety",
@@ -795,7 +984,6 @@
           }
         ]
       },
-
       {
         "id": "finish",
         "title": "Finish & Cosmetics",
@@ -850,7 +1038,6 @@
           }
         ]
       },
-
       {
         "id": "nice-to-haves",
         "title": "Nice to Haves",
@@ -895,7 +1082,6 @@
           }
         ]
       }
-
     ]
   }
 }
