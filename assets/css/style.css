@@ -148,11 +148,11 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 /* Homepage */
 .home-hero { background: var(--color-slate) url('/assets/images/home-hero.jpg') center 30% / cover no-repeat; padding: 100px 24px 88px; text-align: center; }
 .home-hero-inner { max-width: 680px; margin: 0 auto; }
-.hero-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-rust); margin-bottom: 20px; }
-.home-hero h1 { color: var(--color-white); font-size: 3.75rem; margin-bottom: 20px; }
-.hero-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.72); margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
+.hero-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-white); margin-bottom: 20px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+.home-hero h1 { color: var(--color-white); font-size: 3.75rem; margin-bottom: 20px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+.hero-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.85); margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
 .btn-hero { padding: 16px 40px; font-size: 1.0625rem; }
-.hero-note { font-size: var(--fs-small); color: rgba(255,255,255,0.4); margin-top: 14px; }
+.hero-note { font-size: var(--fs-small); color: rgba(255,255,255,0.72); margin-top: 14px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
 .how-it-works { background: var(--color-off-white); }
 .hiw-inner { max-width: var(--max-width); margin: 0 auto; padding: 72px 24px; text-align: center; }
 .hiw-inner h2 { margin-bottom: 48px; }
