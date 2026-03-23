@@ -35,17 +35,18 @@
       },
       {
         "id": "van_generation",
-        "question": "Are you considering a T5 or T6 — or not sure yet?",
-        "helper": "This affects emissions compliance, AdBlue requirements, and long-term urban driving cost.",
+        "question": "Which generation are you considering — or not sure yet?",
+        "helper": "This affects emissions compliance, platform, conversion ecosystem, and long-term running cost.",
         "type": "single-choice",
         "expand": {
-          "summary": "Show T5 vs T6 details",
-          "body": "T6.1 (2019+) is fully Euro 6 and ULEZ-compliant. T6 (2015–2018) requires checking — those built from September 2016 onwards are likely Euro 6 and compliant, but earlier T6s and some late 2016 vans were still Euro 5. Always verify using the TfL ULEZ checker or the V5C before buying. T5 (Euro 5) is not ULEZ-compliant — attracts daily charges in London, Bath, Bristol, Birmingham and a growing list of others. T5 offers more van for the money if you never drive into these zones."
+          "summary": "Show generation details",
+          "body": "T6.1 (2019+) is fully Euro 6 and ULEZ-compliant. T6 (2015–2019) requires checking — models built from September 2016 onwards are Euro 6 compliant, but earlier T6s and some late 2016 vans were still Euro 5. Always verify using the TfL ULEZ checker or the V5C before buying. T5 (Euro 5) is not ULEZ-compliant — attracts daily charges in London, Bath, Bristol, Birmingham and a growing list of others. T5 offers more van for the money if you never drive into these zones.\n\nT7 (2021+) is a different platform entirely — car-derived MQB underpinnings rather than the traditional Transporter setup. The conversion ecosystem (pop-top roofs, RIB bed systems, furniture profiles) doesn't carry over from T5/T6/T6.1. Fewer professional converters work on T7s yet, prices are significantly higher, and the PHEV option adds charging complexity to off-grid living. Worth considering only if budget is not a constraint and a brand-new van matters more than conversion choice."
         },
         "options": [
-          { "value": "t6",        "label": "T6 / T6.1 (2015 or newer) — check ULEZ compliance by build date" },
-          { "value": "t5",        "label": "T5 (2009–2015) — no AdBlue, excellent reliability, better value" },
-          { "value": "undecided", "label": "Not sure — help me understand the difference" }
+          { "value": "t6",        "label": "T6 / T6.1 (2015 or newer) — Euro 6 compliant, widest conversion ecosystem" },
+          { "value": "t5",        "label": "T5 (2009–2015) — excellent reliability, better value, not ULEZ-compliant" },
+          { "value": "t7",        "label": "T7 Multivan (2021+) — new platform, brand new, significantly higher price point" },
+          { "value": "undecided", "label": "Not sure — help me understand the differences" }
         ]
       },
       {
