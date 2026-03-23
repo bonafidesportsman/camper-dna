@@ -4,7 +4,7 @@
 const QUESTION_LABELS = {
   budget:       { 'under-20k': 'Under £20,000', '20-30k': '£20,000–30,000', '30-45k': '£30,000–45,000', '45k-plus': '£45,000+' },
   buying_route: { preconverted: 'Buy pre-converted', 'donor-converter': 'Donor van + conversion company', 'donor-selfbuild': 'Donor van + self-build', undecided: 'Not decided' },
-  van_generation: { t6: 'T6 / T6.1 (2015+, ULEZ-compliant)', t5: 'T5 (2009–2015)', t7: 'T7 Multivan (2022+, new platform)', undecided: 'Not sure yet' },
+  van_generation: { t6: 'T6 / T6.1 (2015+, ULEZ-compliant)', t5: 'T5 (2009–2015)', t7: 'T7 Transporter (UK from mid-2026, Ford Transit Custom platform)', undecided: 'Not sure yet' },
   mileage:      { 'under-50k': 'Under 50,000 miles preferred', '100-150k': 'Happy with 100–150k with full history', depends: 'Depends on price and history' },
   van_source:   { 'vw-approved': 'VW Approved Used', private: 'Private sale', converter: 'Via conversion company', undecided: 'Not sure' },
   spec_level:   { highline: 'Highline', sportline: 'Sportline', trendline: 'Trendline/Startline', na: 'Already have a van / N/A' },
