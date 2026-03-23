@@ -114,6 +114,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .post-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .post-card-body { padding: 20px; }
 .post-tag { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-rust); margin-bottom: 8px; }
+.post-header-meta .post-tag { margin-bottom: 0; }
 .post-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .post-card h3 a { color: var(--color-slate); text-decoration: none; }
 .post-card h3 a:hover { color: var(--color-rust); }
