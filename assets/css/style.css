@@ -323,6 +323,29 @@ input[type="radio"] ~ .spec-item-check { border-radius: 50%; }
 .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.15s; }
 .footer-links a:hover { color: var(--color-white); }
 .footer-copy { color: rgba(255,255,255,0.35); font-size: 0.75rem; }
+.footer-legal { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 28px; padding-top: 20px; }
+.footer-legal-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-legal a { font-size: 0.7rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.15s; letter-spacing: 0.02em; }
+.footer-legal a:hover { color: rgba(255,255,255,0.65); }
+
+/* Policy pages */
+.policy-page { background: var(--color-off-white); }
+.policy-hero { background: var(--color-slate); padding: 56px 24px 48px; text-align: center; color: var(--color-white); }
+.policy-hero h1 { color: var(--color-white); font-size: 2.25rem; margin-bottom: 8px; }
+.policy-hero p { color: rgba(255,255,255,0.55); font-size: 0.875rem; }
+.policy-body { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+.policy-body h2 { font-size: 1.25rem; margin: 40px 0 12px; color: var(--color-slate); }
+.policy-body h2:first-child { margin-top: 0; }
+.policy-body p { font-size: 0.9375rem; color: var(--color-charcoal); line-height: 1.7; margin-bottom: 1rem; }
+.policy-body ul { margin: 0 0 1rem 1.25rem; }
+.policy-body li { font-size: 0.9375rem; color: var(--color-charcoal); line-height: 1.7; margin-bottom: 0.4rem; }
+.policy-body table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.875rem; }
+.policy-body th { text-align: left; padding: 8px 12px; background: var(--color-slate); color: var(--color-white); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.policy-body td { padding: 9px 12px; border-bottom: 1px solid rgba(55,65,81,0.1); color: var(--color-charcoal); vertical-align: top; }
+.policy-body tr:last-child td { border-bottom: none; }
+.policy-body tr:nth-child(even) td { background: rgba(55,65,81,0.03); }
+.policy-note { background: var(--color-white); border: 1px solid rgba(55,65,81,0.1); border-radius: 4px; padding: 20px 24px; margin-bottom: 1.5rem; }
+.policy-note p { margin: 0; font-size: 0.875rem; }
 
 /* Responsive */
 @media (max-width: 1024px) {
