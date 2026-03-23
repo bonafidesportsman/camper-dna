@@ -155,7 +155,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .how-it-works { background: var(--color-off-white); }
 .hiw-inner { max-width: var(--max-width); margin: 0 auto; padding: 72px 24px; text-align: center; }
 .hiw-inner h2 { margin-bottom: 48px; }
-.hiw-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 48px; text-align: left; }
+.hiw-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px; text-align: left; }
 .hiw-step { background: var(--color-white); border-radius: 8px; padding: 28px; }
 .hiw-step-num { width: 36px; height: 36px; background: var(--color-rust); color: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.875rem; margin-bottom: 16px; font-family: var(--font-body); }
 .hiw-step h3 { font-size: 1.25rem; margin-bottom: 8px; }
