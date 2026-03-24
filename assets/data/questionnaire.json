@@ -138,8 +138,8 @@
       },
       {
         "id": "spec_level",
-        "question": "If buying a T6 donor, what trim level are you targeting?",
-        "helper": "One decision that's very hard and expensive to fix later.",
+        "question": "What trim level are you targeting?",
+        "helper": "Trim level determines which features come as standard. This mostly applies to T6 and T6.1 — T5 trims are simpler, and the T7 has its own trim structure.",
         "type": "single-choice",
         "expand": {
           "summary": "Why Highline matters",
@@ -171,7 +171,7 @@
         "type": "single-choice",
         "expand": {
           "summary": "Manual vs DSG explained",
-          "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009 — a world first for a medium van at the time. Available on 150PS and 204PS engines only; the 102PS entry engine comes with a 5-speed manual only. Most conversion buyers choose between 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes stop-start urban driving and towing significantly smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check service history carefully."
+          "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009. Available on 150PS and 204PS engines only — the 102PS entry engine comes with a 5-speed manual. Most conversion buyers choose between the 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes urban driving and towing noticeably smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check the service history carefully.\n\nIf you selected the T7 Transporter, this question is less relevant — the T7 uses an 8-speed torque-converter automatic (standard on the 168PS) or a 6-speed manual on lower-powered engines. The DSG is not available on the T7."
         },
         "options": [
           {
@@ -817,9 +817,9 @@
             }
           },
           {
-            "id": "light-exterior-step",
-            "label": "Exterior step / door light",
-            "helper": "A small LED light at the sliding door step — very useful at night when getting in and out. Low power draw, triggered by door opening."
+            "id": "light-awning",
+            "label": "Awning / exterior light strip",
+            "helper": "An LED light strip mounted under the awning rail or above the sliding door. Lights up the area outside the van when parked — useful for cooking, socialising, or finding your way back at night."
           }
         ]
       },
@@ -891,8 +891,8 @@
           },
           {
             "id": "windows-blinds-pleated",
-            "label": "Pleated blinds",
-            "helper": "Pleated fabric blinds that fold flat when not in use. Better thermal properties than roller blinds. Some systems provide both a sheer layer (daytime privacy) and a blackout layer."
+            "label": "Curtains (pleated / concertina)",
+            "helper": "Fabric curtains that slide along a rail and fold flat when drawn back, secured with poppers. Better thermal properties than roller blinds. Available in blackout or lined fabric. The most popular choice for rear and side windows."
           },
           {
             "id": "windows-screen-wrap",
@@ -985,60 +985,6 @@
         ]
       },
       {
-        "id": "finish",
-        "title": "Finish & Cosmetics",
-        "icon": "🎨",
-        "helper": "The finishing choices — furniture material, floor, and lining. These define how the van looks and feels. They're easier to change post-conversion than structural elements, but it's still worth deciding upfront.",
-        "type": "multi-choice",
-        "items": [
-          {
-            "id": "finish-furniture-wood",
-            "label": "Furniture finish: wood grain / natural effect",
-            "helper": "Warm, classic look. Various wood species available — oak, walnut, birch are common. More traditional feel. Popular for family vans."
-          },
-          {
-            "id": "finish-furniture-white",
-            "label": "Furniture finish: gloss white",
-            "helper": "Clean, modern look. Makes the interior feel larger and lighter. Shows marks more than wood. Popular for contemporary conversions."
-          },
-          {
-            "id": "finish-furniture-grey",
-            "label": "Furniture finish: grey / slate",
-            "helper": "Neutral, modern. Hides marks better than white. Versatile with most interior colours."
-          },
-          {
-            "id": "finish-furniture-bespoke",
-            "label": "Furniture finish: bespoke / painted",
-            "helper": "Custom colour match or painted furniture to a specific RAL or sample colour. Adds cost and lead time. For buyers who want a specific look."
-          },
-          {
-            "id": "finish-floor-vinyl",
-            "label": "Floor covering: vinyl / LVT",
-            "helper": "Luxury vinyl tile or sheet vinyl. Waterproof, easy to clean, warm underfoot, available in many designs. The most practical choice for van use. Recommended."
-          },
-          {
-            "id": "finish-floor-rubber",
-            "label": "Floor covering: rubber / checker plate",
-            "helper": "Rubber or pressed aluminium checker plate. Extremely durable, easy to clean, very practical for working/surf vans where mud and sand are regular. Less comfortable underfoot."
-          },
-          {
-            "id": "finish-ceiling-fabric",
-            "label": "Ceiling lining: fabric / carpet",
-            "helper": "Fabric or carpet headlining on the ceiling. Warm, soft, reduces condensation noise. The standard finish for most conversions."
-          },
-          {
-            "id": "finish-walls-carpet",
-            "label": "Wall lining: carpet",
-            "helper": "Carpet covering the van's metal walls. Warm, reduces condensation noise, good acoustic properties. The standard for most quality conversions."
-          },
-          {
-            "id": "finish-walls-ply",
-            "label": "Wall lining: ply panels",
-            "helper": "Smooth ply panels on the walls. Easier to clean than carpet, modern look, can be painted. Popular with builders going for a cleaner interior aesthetic."
-          }
-        ]
-      },
-      {
         "id": "nice-to-haves",
         "title": "Nice to Haves",
         "icon": "✨",
@@ -1079,6 +1025,11 @@
             "id": "acc-led-headlights",
             "label": "LED headlights",
             "helper": "T6.1 (2019+) includes LED daytime running lights as standard on most trims; full LED headlights on higher specs. T5 and T6 typically have halogen headlights — an LED upgrade makes a significant difference to night driving quality and gives the van a more modern, premium look. Direct-fit LED bulb replacements run £80–150; full LED headlight assemblies (better beam pattern and legality) run £400–700 supply and fit."
+          },
+          {
+            "id": "acc-rear-speakers",
+            "label": "Rear speakers / audio",
+            "helper": "Panel vans leave the factory without rear speakers — it is a commercial vehicle after all. Adding a pair of speakers in the rear quarters or overhead lockers makes a real difference when parked up. Usually wired back to the head unit during the conversion. Cost: £80–200 supply and fit depending on speaker quality and wiring complexity."
           }
         ]
       }
