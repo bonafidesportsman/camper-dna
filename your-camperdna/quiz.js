@@ -17,7 +17,7 @@ const RESULT_LABELS = {
   van_source:     { 'vw-approved':'VW Approved Used', private:'Private sale', converter:'Via converter', undecided:'To be decided' },
   transmission:   { '6-manual':'6-speed manual', dsg:'DSG automatic', '5-manual':'5-speed manual', undecided:'To be decided' },
   roof:           { 'pop-top':'Pop-top roof', 'high-roof':'High-roof', standard:'Standard roof' },
-  bed:            { rib:'RIB bed (ISOfix)', 'rock-roll':'Rock and Roll', fixed:'Fixed bed', undecided:'To be decided' },
+  bed:            { rib:'RIB bed', 'rock-roll':'Rock and Roll', fixed:'Fixed bed', undecided:'To be decided' },
   doors:          { barn:'Barn doors', tailgate:'Tailgate', unsure:'Either' },
   heating:        { yes:'Diesel heater', maybe:'Diesel heater (likely)', no:'Not required' },
   electrical:     { essential:'Solar + 100Ah+ battery', useful:'Solar recommended', 'not-important':'Hookup sites' },

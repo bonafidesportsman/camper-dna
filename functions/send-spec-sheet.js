@@ -27,7 +27,7 @@ const PHASE1_LABELS = {
   transmission:   { '6-manual': '6-speed manual', dsg: 'DSG automatic', '5-manual': '5-speed manual', undecided: 'Not decided' },
   spec_level:     { highline: 'Highline', sportline: 'Sportline', trendline: 'Trendline/Startline', na: 'Already have a van' },
   roof:           { 'pop-top': 'Pop-top', 'high-roof': 'High-roof', standard: 'Standard roof' },
-  bed:            { rib: 'RIB bed (ISOfix)', 'rock-roll': 'Rock and Roll', fixed: 'Fixed bed', undecided: 'Not decided' },
+  bed:            { rib: 'RIB bed', 'rock-roll': 'Rock and Roll', fixed: 'Fixed bed', undecided: 'Not decided' },
   heating:        { yes: 'Diesel heater (yes)', maybe: 'Diesel heater (likely)', no: 'Not required' },
   electrical:     { essential: 'Solar essential', useful: 'Solar useful', 'not-important': 'Hookup sites' },
 };

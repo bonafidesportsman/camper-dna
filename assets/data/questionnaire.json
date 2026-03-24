@@ -208,7 +208,7 @@
           },
           {
             "value": "3-rear",
-            "label": "3 rear seats (ISOfix for three children, but loses storage)"
+            "label": "3 rear seats (accommodates three passengers, but loses storage)"
           },
           {
             "value": "unsure",
@@ -267,16 +267,16 @@
       {
         "id": "bed",
         "question": "What's your priority for the main sleeping area?",
-        "helper": "Each option involves real trade-offs between crash safety, comfort, and boot space.",
+        "helper": "Each option involves real trade-offs between comfort, practicality, and boot space.",
         "type": "single-choice",
         "expand": {
           "summary": "Bed options in detail",
-          "body": "RIB Altair (recommended for families): purpose-designed as a travel seat first, bed second. Available in 2-seat (112cm wide — the most common choice) and 3-seat (129cm wide) versions. Note: the 3-seat version significantly reduces the space available for kitchen units. Pull-tested to ECE R14 (M1 standard), meaning car seats can be legally fitted. ISOfix is standard. Raises up to create usable boot storage underneath.\n\nRock and Roll bed: traditional fold-flat rear bench. Simpler and cheaper. Budget versions are not M1 crash-tested (car seats cannot legally be fitted). Premium options — Reimo Variostar, Rusty Lee — are now also M1 pull-tested and offer ISOfix. Worth specifying a premium unit if children will travel in the van.\n\nFixed bed: always made up but eats into boot space — best if you never need the boot for large items (bikes, boards, buggies)."
+          "body": "RIB Altair (recommended for families): purpose-designed as a travel seat first, bed second. Available in 2-seat (112cm wide — the most common choice) and 3-seat (129cm wide) versions. Note: the 3-seat version significantly reduces the space available for kitchen units. ISOfix points are included as standard. Raises up to create usable boot storage underneath.\n\nRock and Roll bed: traditional fold-flat rear bench. Simpler and cheaper. Premium options such as the Reimo Variostar and Rusty Lee also include ISOfix points. Worth specifying a premium unit if children will travel in the van.\n\nFixed bed: always made up but eats into boot space — best if you never need the boot for large items (bikes, boards, buggies)."
         },
         "options": [
           {
             "value": "rib",
-            "label": "RIB bed (folds from rear seat — ISOfix points, crash tested, storage underneath)"
+            "label": "RIB bed (folds from rear seat — ISOfix points, storage underneath)"
           },
           {
             "value": "rock-roll",
@@ -451,19 +451,19 @@
         "id": "sleeping",
         "title": "Sleeping",
         "icon": "🛏️",
-        "helper": "The bed configuration is one of the most important decisions — it affects crash safety (especially if children are travelling), boot storage, and day-to-day livability.",
+        "helper": "The bed configuration is one of the most important decisions — it affects comfort, boot storage, and day-to-day livability.",
         "type": "single-choice",
         "note": "Choose one main bed type",
         "items": [
           {
             "id": "bed-rib",
-            "label": "RIB bed (crash-tested, ISOfix points)",
-            "helper": "A proprietary rear seat system that folds flat into a bed. Crash tested to M1 standard, which means car seats can be legally fitted. Raises up at an angle to create usable boot storage underneath. The recommended choice for families. Comes in various widths — specify at conversion time."
+            "label": "RIB bed (ISOfix points available)",
+            "helper": "A proprietary rear seat system that folds flat into a bed. ISOfix points are included as standard, accommodating child car seats. Raises up at an angle to create usable boot storage underneath. A popular choice for families. Comes in various widths — specify at conversion time."
           },
           {
             "id": "bed-rock-roll",
             "label": "Rock and Roll bed",
-            "helper": "A traditional fold-flat rear bench where the back hinges down to create a flat sleeping surface. Simple, robust, widely available second-hand. Not crash tested to M1 standard (car seats cannot be legally fitted). Works well for couples or solo use."
+            "helper": "A traditional fold-flat rear bench where the back hinges down to create a flat sleeping surface. Simple, robust, widely available second-hand. Works well for couples or solo use."
           },
           {
             "id": "bed-fixed",
@@ -596,7 +596,7 @@
           {
             "id": "seat-isofix",
             "label": "ISOfix child seat points",
-            "helper": "Factory ISOfix anchor points for child car seats. Confirm your bed system includes M1-rated ISOfix points — this is what allows legal child seat fitting on the bed/seat."
+            "helper": "ISOfix anchor points for child car seats. Available on RIB beds and some premium rock and roll systems. Confirm compatibility with your chosen bed system at conversion time."
           }
         ]
       },
