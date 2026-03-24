@@ -140,7 +140,7 @@ function buildSpecSheetEmail(email, phase1Answers, phase2Selections) {
 
     phase1HTML = `
       <div style="background:#F9F8F6;padding:20px 24px;border-radius:6px;margin-bottom:28px;">
-        <h3 style="margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#6B7280;">From Your CamperDNA Quiz</h3>
+        <h3 style="margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#6B7280;">From Your CamperDNA Profile</h3>
         <table style="width:100%;border-collapse:collapse;font-size:14px;">
           ${rows.map(([label, val]) => `
             <tr>
@@ -219,7 +219,7 @@ function buildSpecSheetText(email, phase1Answers, phase2Selections) {
   let lines = ['Your CamperDNA Conversion Spec', '==============================', ''];
 
   if (phase1Answers && Object.keys(phase1Answers).length > 0) {
-    lines.push('FROM YOUR QUIZ', '--------------');
+    lines.push('FROM YOUR PROFILE', '--------------');
     if (phase1Answers.van_generation) lines.push(`Van Type: ${PHASE1_LABELS.van_generation?.[phase1Answers.van_generation] || phase1Answers.van_generation}`);
     if (phase1Answers.buying_route) lines.push(`Buying Route: ${PHASE1_LABELS.buying_route?.[phase1Answers.buying_route] || phase1Answers.buying_route}`);
     if (phase1Answers.transmission) lines.push(`Gearbox: ${PHASE1_LABELS.transmission?.[phase1Answers.transmission] || phase1Answers.transmission}`);

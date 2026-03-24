@@ -311,7 +311,7 @@ function buildEmailHTML(reportHTML, specRows, email) {
     <div style="background:#1F2937;padding:36px 32px;text-align:center;">
       <div style="font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#D4704F;margin-bottom:10px;">CamperDNA</div>
       <h1 style="margin:0;font-size:26px;font-weight:700;color:#F9F8F6;line-height:1.3;">Your personalised van buying guide</h1>
-      <p style="margin:12px 0 0;font-size:14px;color:#9CA3AF;">Based on your CamperDNA quiz answers</p>
+      <p style="margin:12px 0 0;font-size:14px;color:#9CA3AF;">Based on your CamperDNA profile</p>
     </div>
 
     <!-- Spec Summary -->
@@ -349,7 +349,7 @@ function buildEmailHTML(reportHTML, specRows, email) {
     <!-- Footer -->
     <div style="background:#1F2937;padding:20px 32px;text-align:center;">
       <p style="margin:0;font-size:12px;color:#6B7280;">CamperDNA · Real advice for VW van buyers · <a href="https://camper-dna.com" style="color:#9CA3AF;text-decoration:none;">camper-dna.com</a></p>
-      <p style="margin:8px 0 0;font-size:11px;color:#4B5563;">This is a transactional email sent in response to your quiz submission.</p>
+      <p style="margin:8px 0 0;font-size:11px;color:#4B5563;">This is a transactional email sent in response to your CamperDNA profile submission.</p>
     </div>
   </div>
 </body>
