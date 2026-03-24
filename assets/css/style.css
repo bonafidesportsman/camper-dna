@@ -274,9 +274,8 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 
 .spec-wrapper { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
 
-/* Email bar */
-.spec-email-bar { background: var(--color-white); border: 1px solid rgba(55,65,81,0.12); border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-.spec-email-bar-inner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+/* Email inline (in submit area) */
+.spec-email-inline { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
 .spec-email-label { font-size: 0.875rem; color: var(--color-gray); }
 #spec-email-confirm { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 #spec-email-confirm strong { color: var(--color-slate); font-size: 0.9375rem; }

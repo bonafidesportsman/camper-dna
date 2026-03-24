@@ -28,26 +28,25 @@
 
   <div class="spec-wrapper">
 
-    <!-- Email bar (only shown if no email from Phase 1) -->
-    <div class="spec-email-bar" id="spec-email-bar">
-      <div class="spec-email-bar-inner">
-        <div id="spec-email-confirm" style="display:none;">
-          <span class="spec-email-label">Your spec sheet will go to</span>
-          <strong id="spec-email-display"></strong>
-          <button class="spec-email-change-btn" onclick="showEmailInput()">Change</button>
-        </div>
-        <div id="spec-email-input-wrap">
-          <label for="spec-email-input" class="spec-email-label">Your email address</label>
-          <input type="email" id="spec-email-input" placeholder="your@email.com" autocomplete="email">
-        </div>
-      </div>
-    </div>
-
     <!-- Spec sections rendered by spec-sheet.js -->
     <div id="spec-sections"></div>
 
-    <!-- Submit -->
+    <!-- Submit area — email collected here, not at the top -->
     <div class="spec-submit-area">
+
+      <!-- Email: confirm line (shown if email came from quiz) -->
+      <div id="spec-email-confirm" class="spec-email-inline" style="display:none;">
+        <span class="spec-email-label">We'll send your spec sheet to</span>
+        <strong id="spec-email-display"></strong>
+        <button class="spec-email-change-btn" id="spec-email-change-btn">Change</button>
+      </div>
+
+      <!-- Email: input (shown if no email from quiz, or user clicks Change) -->
+      <div id="spec-email-input-wrap" class="spec-email-inline" style="display:none;">
+        <label for="spec-email-input" class="spec-email-label">Your email address</label>
+        <input type="email" id="spec-email-input" placeholder="your@email.com" autocomplete="email">
+      </div>
+
       <button class="btn-primary btn-large" id="spec-submit-btn">Email me my spec sheet →</button>
       <p class="spec-submit-note">We'll format your selections into a clean brief and email it to you. No mailing list.</p>
       <p class="spec-sent-msg" id="spec-sent-msg" style="display:none;">✓ Spec sheet on its way — check your inbox in a few minutes.</p>

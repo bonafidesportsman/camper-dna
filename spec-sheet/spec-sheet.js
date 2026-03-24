@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('spec-submit-btn').addEventListener('click', submitSpec);
 });
 
-// --- Email bar ---
+// --- Email (inline at bottom, near submit) ---
 function setupEmailBar() {
   const confirmEl   = document.getElementById('spec-email-confirm');
   const inputWrap   = document.getElementById('spec-email-input-wrap');
@@ -48,20 +48,23 @@ function setupEmailBar() {
   const inputEl     = document.getElementById('spec-email-input');
 
   if (phase1Session?.email) {
+    // User already gave email in the quiz — show quiet confirm line
     displayEl.textContent = phase1Session.email;
     inputEl.value = phase1Session.email;
     confirmEl.style.display = 'flex';
     inputWrap.style.display = 'none';
   } else {
+    // No email yet — show input
     confirmEl.style.display = 'none';
     inputWrap.style.display = 'flex';
   }
-}
 
-function showEmailInput() {
-  document.getElementById('spec-email-confirm').style.display = 'none';
-  document.getElementById('spec-email-input-wrap').style.display = 'flex';
-  document.getElementById('spec-email-input').focus();
+  // "Change" button handler
+  document.getElementById('spec-email-change-btn').addEventListener('click', () => {
+    confirmEl.style.display = 'none';
+    inputWrap.style.display = 'flex';
+    inputEl.focus();
+  });
 }
 
 function getEmail() {
@@ -215,8 +218,11 @@ async function submitSpec() {
   // Validate email
   const email = getEmail();
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    errMsg.textContent = 'Please enter a valid email address at the top of the page.';
+    errMsg.textContent = 'Please enter a valid email address.';
     errMsg.style.display = 'block';
+    // Make sure the input is visible and focus it
+    document.getElementById('spec-email-confirm').style.display = 'none';
+    document.getElementById('spec-email-input-wrap').style.display = 'flex';
     document.getElementById('spec-email-input').focus();
     return;
   }
