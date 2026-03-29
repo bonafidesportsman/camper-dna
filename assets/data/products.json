@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-03-21",
-    "version": 1,
-    "note": "Affiliate links are placeholders — update with real tracked URLs before launch"
+    "lastUpdated": "2026-03-29",
+    "version": 3,
+    "note": "Amazon links use tag camperdna-21. Heating products link to Amazon search (not sold direct on Amazon UK)."
   },
   "categories": {
     "heating": [
@@ -11,7 +11,7 @@
         "name": "Autoterm Comfort Controller",
         "description": "Phone-controllable diesel heater controller with timer, thermostat and remote temperature sensor.",
         "price_gbp": 120,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=autoterm+comfort+controller",
+        "affiliate_url": "https://www.amazon.co.uk/s?k=autoterm+comfort+controller&tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["heating", "diesel-heater", "comfort", "accessories"],
@@ -22,7 +22,7 @@
         "name": "Webasto DBW 2000 Diesel Heater",
         "description": "Premium diesel heater. Quiet, reliable, low 12V draw (~3A). Used in OEM VW Transporters.",
         "price_gbp": 450,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=webasto+diesel+heater+van",
+        "affiliate_url": "https://www.amazon.co.uk/s?k=webasto+diesel+heater+van&tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["heating", "diesel-heater", "premium"],
@@ -33,7 +33,7 @@
         "name": "Planar 2D Diesel Heater",
         "description": "Russian-made diesel heater, popular in van conversions. 2kW output, compact footprint.",
         "price_gbp": 320,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=planar+2d+diesel+heater",
+        "affiliate_url": "https://www.amazon.co.uk/s?k=planar+2d+diesel+heater&tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": ["heating", "diesel-heater", "budget"],
@@ -57,11 +57,24 @@
         "name": "Victron SmartSolar MPPT 100/20",
         "description": "Bluetooth-enabled MPPT charge controller. Monitors via Victron Connect app.",
         "price_gbp": 90,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=victron+smartsolar+mppt+100+20",
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07FXR5FLW?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71WqZ4ezcNL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["solar", "electrical", "mppt"],
         "notes": "The standard for van builds. See real-time solar input from your phone."
+      },
+      {
+        "id": "ctek-d250se-dc-dc",
+        "name": "CTEK D250SE DC-DC Charger",
+        "description": "Smart DC-DC charger with MPPT solar input. The community standard for charging leisure batteries from smart alternators. 20A output.",
+        "price_gbp": 200,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07X4YTP1P?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51Xrvg-ulFL._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["solar", "electrical", "dc-dc", "charging"],
+        "notes": "Essential for T6/T6.1 smart alternators. Also has solar MPPT input — can replace a separate controller for smaller panels."
       }
     ],
     "batteries": [
@@ -77,11 +90,23 @@
         "notes": "The upgrade that makes off-grid van life genuinely comfortable. Worth the premium."
       },
       {
+        "id": "fogstar-drift-105ah-lifepo4",
+        "name": "Fogstar Drift 105Ah LiFePO4 Leisure Battery",
+        "description": "UK-designed LiFePO4 battery. 105Ah usable, built-in BMS, Bluetooth monitoring. Compact under-seat fitment for T6.",
+        "price_gbp": 380,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0FQNWQB9K?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51hHA3DyjmL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["battery", "electrical", "lithium", "energy-independence"],
+        "notes": "Very popular in the van community. UK company with good support. Competes directly with Bimble."
+      },
+      {
         "id": "renogy-100ah-agm",
         "name": "Renogy 100Ah AGM Deep Cycle Battery",
         "description": "Budget leisure battery option. 100Ah AGM, maintenance-free. ~50Ah usable capacity.",
         "price_gbp": 120,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=renogy+100ah+agm+leisure+battery",
+        "affiliate_url": "https://www.amazon.co.uk/s?k=renogy+100ah+agm+leisure+battery&tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": ["battery", "electrical", "agm", "budget"],
@@ -94,7 +119,8 @@
         "name": "Atera Strada Vario 3 Bike Rack",
         "description": "Towbar-mounted rack for up to 3 bikes. Works with barn doors — folds away cleanly. 60kg capacity.",
         "price_gbp": 380,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=atera+strada+vario+3+bike+rack",
+        "affiliate_url": "https://www.amazon.co.uk/dp/B005F2YPO0?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["bikes", "outdoor-activities", "rack", "cycling"],
@@ -105,7 +131,8 @@
         "name": "Thule EPos 2 Bike Towbar Rack",
         "description": "Premium towbar-mounted rack for 2 bikes. Tool-free bike fastening, 60kg capacity.",
         "price_gbp": 650,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=thule+epos+2+bike+towbar",
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0C487LG1D?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61oAFEN2QdL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": ["bikes", "outdoor-activities", "rack", "premium"],
@@ -131,7 +158,8 @@
         "name": "Fiamma F45S Retractable Awning",
         "description": "Wall-mounted retractable awning for VW Transporters. 2.5m or 3m width. UV-stabilised canopy.",
         "price_gbp": 490,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=fiamma+f45s+awning+vw+transporter",
+        "affiliate_url": "https://www.amazon.co.uk/dp/B004NDVBHQ?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/31RyqebdsBL._AC_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["awning", "outdoor-living", "retractable"],
@@ -147,6 +175,18 @@
         "founder_recommended": false,
         "tags": ["awning", "awning-rail", "drive-away"],
         "notes": "Essential if you want a drive-away tent. Fits most T5/T6 — check compatibility with your tent."
+      },
+      {
+        "id": "vango-kela-v-air-low",
+        "name": "Vango Kela V Air Low Drive-Away Awning",
+        "description": "Inflatable drive-away awning for T5/T6. Fits via Kador channel or awning rail. 180–210cm fixing height. Adds a full room to the van.",
+        "price_gbp": 450,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0CY5R6NPY?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51WdfhzM88L._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["awning", "drive-away", "family", "camping"],
+        "notes": "The most popular drive-away awning in the T6 community. Pairs with the Kiravans rail. Air beam setup — no poles needed."
       }
     ],
     "insurance": [
@@ -160,6 +200,61 @@
         "founder_recommended": true,
         "tags": ["insurance", "legal", "essential"],
         "notes": "Consistently best value for T5/T6. Get a quote before committing elsewhere."
+      },
+      {
+        "id": "lexham-campervan-insurance",
+        "name": "Lexham Insurance Campervan Policy",
+        "description": "Specialist campervan and motorhome insurer. Agreed value, conversion cover, European breakdown included.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.lexhaminsurance.co.uk/campervan-insurance/",
+        "affiliate_programme": "referral",
+        "founder_recommended": true,
+        "tags": ["insurance", "legal", "essential"],
+        "notes": "Good value, straightforward claims process. Worth getting a quote alongside Brentacre."
+      },
+      {
+        "id": "safeguard-campervan-insurance",
+        "name": "Safeguard Campervan Insurance",
+        "description": "Independent specialist insurer for campervans and motorhomes. Covers self-builds and professional conversions.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.safeguarduk.co.uk/",
+        "affiliate_programme": "referral",
+        "founder_recommended": true,
+        "tags": ["insurance", "legal", "essential"],
+        "notes": "Independent specialist. Solid for T5/T6 conversions. Originally found via camper forums."
+      },
+      {
+        "id": "adrian-flux-campervan-insurance",
+        "name": "Adrian Flux Campervan Insurance",
+        "description": "Bespoke campervan cover. Specialist in modified vehicles, agreed value, EU cover. Well-known name in the VW community.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.adrianflux.co.uk/campervan-insurance/",
+        "affiliate_programme": "referral",
+        "founder_recommended": false,
+        "tags": ["insurance", "legal", "modified-vehicles"],
+        "notes": "Large insurer, strong brand. Mentioned frequently in forums. Check if they have a formal referral programme."
+      },
+      {
+        "id": "comfort-insurance-campervan",
+        "name": "Comfort Insurance Campervan Cover",
+        "description": "Award-winning specialist. 30+ years covering campervans. Campervan Insurance Provider of the Year 2025.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.comfort-insurance.co.uk/campervan-insurance",
+        "affiliate_programme": "referral",
+        "founder_recommended": false,
+        "tags": ["insurance", "legal", "award-winning"],
+        "notes": "Won industry award 2025. Covers most UK conversion companies. Good reputation on T6 Forum."
+      },
+      {
+        "id": "howdens-campervan-insurance",
+        "name": "Howdens Campervan Insurance",
+        "description": "Specialist van and campervan insurer (formerly A-Plan Thatcham). Covers professional and self-build conversions, agreed value.",
+        "price_gbp": 0,
+        "affiliate_url": "https://www.howdens-insurance.co.uk/campervan-insurance/",
+        "affiliate_programme": "referral",
+        "founder_recommended": false,
+        "tags": ["insurance", "legal", "specialist"],
+        "notes": "Frequently recommended on T6 Forum. Speak to the Thatcham branch — they're the van specialists."
       }
     ],
     "inspection": [
@@ -199,13 +294,78 @@
         "notes": "The difference between 'camping sleep' and actual sleep. Buy this at conversion time."
       }
     ],
+    "electronics-stereos": [
+      {
+        "id": "kenwood-dmx8021dabs",
+        "name": "Kenwood DMX8021DABS Double-Din Stereo",
+        "description": "Wireless CarPlay & Android Auto, DAB+, 7\" capacitive touchscreen. The T6 Forum favourite. Retains steering wheel controls with adapter.",
+        "price_gbp": 500,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0BSV7N2DR?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71iB5tUtZPL._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["electronics", "audio", "stereo", "carplay"],
+        "notes": "Most recommended head unit on T6 Forum. Fitting kits widely available for T5.1 and T6."
+      },
+      {
+        "id": "pioneer-sph-evo93dab",
+        "name": "Pioneer SPH-EVO93DAB 9\" Floating Touchscreen",
+        "description": "9\" floating capacitive touchscreen, wireless CarPlay & Android Auto, DAB+, HDMI input. Single-din chassis fits where double-din can't.",
+        "price_gbp": 550,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0888P224B?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51J9OGRoXHL._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["electronics", "audio", "stereo", "carplay", "floating-screen"],
+        "notes": "Single-din chassis with floating 9\" screen. Great for T5.1 where double-din is a tight fit."
+      },
+      {
+        "id": "kenwood-dnx9190dabs",
+        "name": "Kenwood DNX9190DABS Navigation Stereo",
+        "description": "HD 6.8\" screen with built-in Garmin navigation, wireless CarPlay & Android Auto, DAB+. Premium option with offline maps.",
+        "price_gbp": 750,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07SBHDGK9?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71eAXTz9B4L._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["electronics", "audio", "stereo", "navigation", "premium"],
+        "notes": "The premium choice if you want built-in sat nav that works without phone signal. Useful for wild camping."
+      }
+    ],
+    "electronics-projectors": [
+      {
+        "id": "nebula-capsule-3-laser",
+        "name": "Nebula Capsule 3 Laser Portable Projector",
+        "description": "Ultra-portable laser projector (900g). Auto-focus, built-in Android TV, Netflix/Prime ready. Projects onto van side or pop-top interior.",
+        "price_gbp": 450,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0BDCQP6ZZ?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/619NJGBXTvL._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["electronics", "projector", "entertainment", "portable"],
+        "notes": "Can-sized, runs off USB-C power bank. Google TV built in. 200 ANSI lumens — fine for evening use."
+      },
+      {
+        "id": "benq-gs50-outdoor",
+        "name": "BenQ GS50 Outdoor Portable Projector",
+        "description": "Full HD 1080p, 500 lumens, splash-proof (IPX2), 2.5hr built-in battery. Premium outdoor projector with excellent colour.",
+        "price_gbp": 550,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B09BTTVJLX?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51mAvJnPbDL._AC_SX679_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["electronics", "projector", "entertainment", "outdoor", "premium"],
+        "notes": "Brighter than Nebula at 500 lumens. Splash-proof for outdoor use. Heavier at 3.6kg but picture quality is excellent."
+      }
+    ],
     "towbars": [
       {
         "id": "westfalia-detachable-towbar",
         "name": "Westfalia Detachable Towbar (T6)",
         "description": "OEM-quality detachable towbar for VW T6. 13-pin electrics, 2000kg towing capacity.",
         "price_gbp": 520,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=westfalia+towbar+vw+t6",
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0CTJ2SH46?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61qubfqTXbL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
         "tags": ["towbar", "bikes", "accessories"],

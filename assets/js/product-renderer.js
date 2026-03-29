@@ -40,14 +40,21 @@ class ProductRenderer {
       : '';
     const programmeLabel = { amazon: 'Amazon', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View';
 
+    const imageHTML = product.image_url
+      ? `<div class="product-card-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
+      : '';
+
     return `
-      <div class="product-card" data-product-id="${this.esc(product.id)}">
+      <div class="product-card${product.image_url ? ' has-image' : ''}" data-product-id="${this.esc(product.id)}">
         ${badgeHTML ? `<div class="product-card-badge">${badgeHTML}</div>` : ''}
-        <h3 class="product-name">${this.esc(product.name)}</h3>
-        <p class="product-description">${this.esc(product.description)}</p>
-        ${priceHTML}
-        <p class="product-note">${this.esc(product.notes)}</p>
-        <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel} →</a>
+        ${imageHTML}
+        <div class="product-card-body">
+          <h3 class="product-name">${this.esc(product.name)}</h3>
+          <p class="product-description">${this.esc(product.description)}</p>
+          ${priceHTML}
+          <p class="product-note">${this.esc(product.notes)}</p>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel} →</a>
+        </div>
       </div>`;
   }
 
