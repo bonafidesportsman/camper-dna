@@ -185,7 +185,7 @@ async function submitEmail() {
   errMsg.style.display = 'none';
 
   try {
-    const res = await fetch('/functions/generate-report', {
+    const res = await fetch('/generate-report', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, answers })

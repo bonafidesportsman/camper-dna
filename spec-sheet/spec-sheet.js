@@ -242,7 +242,7 @@ async function submitSpec() {
   errMsg.style.display = 'none';
 
   try {
-    const res = await fetch('/functions/send-spec-sheet', {
+    const res = await fetch('/send-spec-sheet', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
