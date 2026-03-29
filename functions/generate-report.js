@@ -191,7 +191,7 @@ ${answerLines}
   const emailText = buildEmailText(markdownReport, specRows, email);
 
   // Send via Resend
-  const fromEmail = env.RESEND_FROM_EMAIL || 'reports@camper-dna.com';
+  const fromEmail = env.RESEND_FROM_EMAIL || 'campfire@camper-dna.com';
   try {
     const resendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -205,7 +205,7 @@ ${answerLines}
         subject: `Your CamperDNA Profile — personalised van buying guide`,
         html: emailHTML,
         text: emailText,
-        reply_to: 'hello@camper-dna.com',
+        reply_to: 'campfire@camper-dna.com',
       }),
     });
 

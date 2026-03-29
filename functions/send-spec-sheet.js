@@ -82,7 +82,7 @@ export async function onRequestPost(context) {
   const emailText = buildSpecSheetText(email, phase1Answers, phase2Selections);
 
   // Send via Resend
-  const fromEmail = env.RESEND_FROM_EMAIL || 'spec@camper-dna.com';
+  const fromEmail = env.RESEND_FROM_EMAIL || 'campfire@camper-dna.com';
   try {
     const resendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -96,7 +96,7 @@ export async function onRequestPost(context) {
         subject: `Your CamperDNA Conversion Spec`,
         html: emailHTML,
         text: emailText,
-        reply_to: 'hello@camper-dna.com',
+        reply_to: 'campfire@camper-dna.com',
       }),
     });
 
