@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-03-30",
-    "version": 4,
-    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, pending approval). RAC via Awin (MID 3790). Publisher ID 2832996."
+    "lastUpdated": "2026-03-31",
+    "version": 5,
+    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, pending approval). RAC via Awin (MID 3790). Publisher ID 2832996. Bimble Solar affiliate tracking code pending approval — replace TRACKING_PENDING in both bimble entries once code is confirmed."
   },
   "categories": {
     "heating": [
@@ -46,7 +46,7 @@
         "name": "Bimble Solar 400W Starter Kit",
         "description": "Complete solar setup: 2x 200W panels, MPPT controller, cables, fixings, and instructions.",
         "price_gbp": 650,
-        "affiliate_url": "https://bimblesolar.com/solar-panels/solar-kits/",
+        "affiliate_url": "https://www.bimblesolar.com/offgrid/complete-packages?tracking=TRACKING_PENDING",
         "affiliate_programme": "direct",
         "founder_recommended": true,
         "tags": ["solar", "electrical", "energy-independence"],
@@ -83,7 +83,7 @@
         "name": "Bimble 100Ah LiFePO4 Leisure Battery",
         "description": "Lithium iron phosphate battery. 100Ah usable (vs ~50Ah in lead-acid). 2000+ cycle life.",
         "price_gbp": 380,
-        "affiliate_url": "https://bimblesolar.com/batteries/lithium-batteries/",
+        "affiliate_url": "https://www.bimblesolar.com/batteries/12vbatts/12v-lithium-batteries?tracking=TRACKING_PENDING",
         "affiliate_programme": "direct",
         "founder_recommended": true,
         "tags": ["battery", "electrical", "lithium", "energy-independence"],

@@ -192,7 +192,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .post-grid-home { margin-bottom: 28px; }
 .post-card { background: var(--color-white); border: 1px solid rgba(55,65,81,0.1); border-radius: 6px; padding: 24px; overflow: hidden; transition: box-shadow 0.15s, transform 0.15s; }
-.post-card-img { margin: -24px -24px 20px -24px; aspect-ratio: 16/9; overflow: hidden; }
+.post-card-img { margin: -24px -24px 20px -24px; aspect-ratio: 3/2; overflow: hidden; }
 .post-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
 .post-card:hover .post-card-img img { transform: scale(1.04); }
 .post-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); transform: translateY(-2px); }
