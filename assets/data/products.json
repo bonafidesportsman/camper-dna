@@ -295,31 +295,21 @@
         "founder_recommended": false,
         "tags": ["bikes", "door-mounted", "2-bike", "no-towbar", "lightweight"],
         "notes": "Aluminium version — lighter at 7.7kg. Easier to handle and less strain on the door hinges."
+      },
+      {
+        "id": "thule-wanderway-t6",
+        "name": "Thule WanderWay VW T6",
+        "description": "Premium rear-door rack for VW T6 tailgate. 2 bikes as standard, expandable to 4. 60kg capacity, 30kg per bike. Handles e-bikes.",
+        "price_gbp": 550,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0D8MNX4TC?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61A8+UhDP6L._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["bikes", "door-mounted", "2-bike", "e-bike", "no-towbar", "premium"],
+        "notes": "The premium door-mounted option. T6-specific, handles e-bikes, tailgate opens with rack fitted. Expandable to 4 bikes with adapters."
       }
     ],
     "rack-accessories": [
-      {
-        "id": "atera-spacer-2nd-bike",
-        "name": "Atera Strada Spacer (2nd Bike)",
-        "description": "Replacement or additional holding arm spacer for 2nd bike position on Atera Strada racks.",
-        "price_gbp": 31,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0068M5EWS?tag=camperdna-21",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": ["bikes", "accessory", "atera", "spare"],
-        "notes": "Spare or replacement spacer arm. Useful if you've lost or damaged the original."
-      },
-      {
-        "id": "atera-spacer-3rd-bike",
-        "name": "Atera Strada Spacer (3rd Bike)",
-        "description": "Holding arm spacer for 3rd bike position on Atera Strada racks.",
-        "price_gbp": 49,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0068M5FAY?tag=camperdna-21",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": ["bikes", "accessory", "atera", "spare"],
-        "notes": "For the 3rd bike slot. Check compatibility with your specific Strada model."
-      },
       {
         "id": "atera-dl3-4th-bike-extension",
         "name": "Atera Strada DL 3 Extension Kit (4th Bike)",
@@ -330,6 +320,28 @@
         "founder_recommended": false,
         "tags": ["bikes", "accessory", "atera", "extension", "4-bike"],
         "notes": "Turns your DL 3 into a 4-bike rack. Check total weight doesn't exceed your towbar's nose weight."
+      },
+      {
+        "id": "thule-wanderway-3rd-bike-adapter",
+        "name": "Thule WanderWay 3rd Bike Adapter",
+        "description": "Adds a 3rd bike position to the Thule WanderWay. Clips onto the existing rack frame.",
+        "price_gbp": 140,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0D99FPNPQ?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "accessory", "thule", "extension", "3-bike"],
+        "notes": "Expands the WanderWay from 2 to 3 bikes. Check weight limits — e-bikes may reduce capacity."
+      },
+      {
+        "id": "thule-wanderway-4th-bike-adapter",
+        "name": "Thule WanderWay 4th Bike Adapter",
+        "description": "Adds a 4th bike position to the Thule WanderWay. Requires 3rd bike adapter fitted first.",
+        "price_gbp": 130,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0D99FPLQ7?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "accessory", "thule", "extension", "4-bike"],
+        "notes": "Takes the WanderWay to full 4-bike capacity. Requires the 3rd bike adapter installed."
       }
     ],
     "roof-racks": [
