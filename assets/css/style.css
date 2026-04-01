@@ -138,7 +138,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 
 /* Products */
 .product-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
-.product-card { border: 1px solid rgba(55,65,81,0.15); border-radius: 6px; background: var(--color-white); overflow: hidden; transition: box-shadow 0.15s; display: flex; flex-direction: column; }
+.product-card { border: 1px solid rgba(55,65,81,0.15); border-radius: 6px; background: var(--color-white); overflow: hidden; transition: box-shadow 0.15s; display: flex; flex-direction: column; position: relative; }
 .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
 .product-card-image { background: #f8f8f8; display: flex; align-items: center; justify-content: center; padding: 16px; }
 .product-card-image img { max-width: 100%; max-height: 160px; object-fit: contain; }
@@ -153,6 +153,12 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .product-note { font-size: 0.75rem; color: var(--color-gray); font-style: italic; margin-bottom: 12px; }
 .product-link { font-size: var(--fs-small); font-weight: 600; color: var(--color-rust); text-decoration: none; }
 .product-link:hover { text-decoration: underline; }
+
+/* Capacity ribbon (diagonal, top-right corner of cards) */
+.product-ribbon { position: absolute; top: 14px; right: -30px; background: var(--color-rust); color: #fff; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 36px; transform: rotate(45deg); z-index: 2; box-shadow: 0 1px 3px rgba(0,0,0,0.15); pointer-events: none; }
+
+/* Capacity pill (inline, for list items) */
+.product-cap-pill { font-size: 0.6rem; font-weight: 600; color: var(--color-rust); background: rgba(180,80,40,0.08); padding: 2px 8px; border-radius: 3px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* Product grid: 3-column standard variant */
 .product-grid--3col { grid-template-columns: repeat(3,1fr); }

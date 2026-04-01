@@ -44,6 +44,19 @@ class ProductRenderer {
     }
   }
 
+  // Extract capacity label from tags (e.g. "2-bike" → "2 bikes")
+  capacityLabel(product) {
+    if (!product.tags) return '';
+    const cap = product.tags.find(t => /^\d-bike$/.test(t));
+    if (cap) {
+      const n = cap.charAt(0);
+      return n === '1' ? '1 bike' : `${n} bikes`;
+    }
+    if (product.tags.includes('e-bike')) return 'e-bike';
+    if (product.tags.includes('extension')) return 'extension';
+    return '';
+  }
+
   renderCard(product) {
     const priceHTML = product.price_gbp > 0
       ? `<p class="product-price">Price guide £${product.price_gbp}</p>`
@@ -52,6 +65,8 @@ class ProductRenderer {
       ? `<span class="badge-featured">Founder Pick</span>`
       : '';
     const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
+    const capacity = this.capacityLabel(product);
+    const ribbonHTML = capacity ? `<span class="product-ribbon">${this.esc(capacity)}</span>` : '';
 
     const imageHTML = product.image_url
       ? `<div class="product-card-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
@@ -59,6 +74,7 @@ class ProductRenderer {
 
     return `
       <div class="product-card${product.image_url ? ' has-image' : ''}" data-product-id="${this.esc(product.id)}">
+        ${ribbonHTML}
         ${badgeHTML ? `<div class="product-card-badge">${badgeHTML}</div>` : ''}
         ${imageHTML}
         <div class="product-card-body">
@@ -79,6 +95,8 @@ class ProductRenderer {
       ? `<span class="badge-featured badge-featured--small">Founder Pick</span>`
       : '';
     const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
+    const capacity = this.capacityLabel(product);
+    const capPillHTML = capacity ? `<span class="product-cap-pill">${this.esc(capacity)}</span>` : '';
 
     const imageHTML = product.image_url
       ? `<div class="product-list-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
@@ -90,6 +108,7 @@ class ProductRenderer {
         <div class="product-list-body">
           <div class="product-list-header">
             <h3 class="product-list-name">${this.esc(product.name)}</h3>
+            ${capPillHTML}
             ${badgeHTML}
           </div>
           <p class="product-list-desc">${this.esc(product.description)}</p>
