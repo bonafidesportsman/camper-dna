@@ -33,7 +33,7 @@ class ProductRenderer {
 
   renderCard(product) {
     const priceHTML = product.price_gbp > 0
-      ? `<p class="product-price">£${product.price_gbp}</p>`
+      ? `<p class="product-price">Price guide £${product.price_gbp}</p>`
       : '';
     const badgeHTML = product.founder_recommended
       ? `<span class="badge-featured">Founder Pick</span>`

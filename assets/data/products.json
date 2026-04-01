@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "lastUpdated": "2026-03-31",
-    "version": 5,
+    "lastUpdated": "2026-04-01",
+    "version": 6,
     "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, pending approval). RAC via Awin (MID 3790). Publisher ID 2832996. Bimble Solar affiliate tracking code pending approval — replace TRACKING_PENDING in both bimble entries once code is confirmed."
   },
   "categories": {
@@ -118,7 +118,7 @@
         "id": "atera-strada-vario-3",
         "name": "Atera Strada Vario 3 Bike Rack",
         "description": "Towbar-mounted rack for up to 3 bikes. Works with barn doors — folds away cleanly. 60kg capacity.",
-        "price_gbp": 380,
+        "price_gbp": 482,
         "affiliate_url": "https://www.amazon.co.uk/dp/B005F2YPO0?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
@@ -130,10 +130,10 @@
         "id": "thule-epos-2-bike",
         "name": "Thule EPos 2 Bike Towbar Rack",
         "description": "Premium towbar-mounted rack for 2 bikes. Tool-free bike fastening, 60kg capacity.",
-        "price_gbp": 650,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0C487LG1D?tag=camperdna-21",
+        "price_gbp": 1000,
+        "affiliate_url": "https://www.thule.com/en-gb/bike-rack/towbar-bike-racks/thule-epos-2bike-13pin-_-978200",
         "image_url": "https://m.media-amazon.com/images/I/61oAFEN2QdL._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
+        "affiliate_programme": "direct",
         "founder_recommended": false,
         "tags": ["bikes", "outdoor-activities", "rack", "premium"],
         "notes": "Premium choice if you're carrying e-bikes or value tool-free loading."
@@ -363,7 +363,7 @@
         "id": "westfalia-detachable-towbar",
         "name": "Westfalia Detachable Towbar (T6)",
         "description": "OEM-quality detachable towbar for VW T6. 13-pin electrics, 2000kg towing capacity.",
-        "price_gbp": 520,
+        "price_gbp": 295,
         "affiliate_url": "https://www.amazon.co.uk/dp/B0CTJ2SH46?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61qubfqTXbL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
