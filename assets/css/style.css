@@ -137,7 +137,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .cta-box p { margin-bottom: 16px; }
 
 /* Products */
-.product-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.product-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
 .product-card { border: 1px solid rgba(55,65,81,0.15); border-radius: 6px; background: var(--color-white); overflow: hidden; transition: box-shadow 0.15s; display: flex; flex-direction: column; }
 .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
 .product-card-image { background: #f8f8f8; display: flex; align-items: center; justify-content: center; padding: 16px; }
@@ -376,7 +376,7 @@ input[type="radio"] ~ .spec-item-check { border-radius: 50%; }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .card-grid, .blog-grid, .product-grid { grid-template-columns: repeat(2,1fr); }
+  .card-grid, .blog-grid { grid-template-columns: repeat(2,1fr); }
   .report-preview-inner { grid-template-columns: 1fr; }
   .hiw-steps { grid-template-columns: 1fr; }
 }
