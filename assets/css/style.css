@@ -154,6 +154,35 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .product-link { font-size: var(--fs-small); font-weight: 600; color: var(--color-rust); text-decoration: none; }
 .product-link:hover { text-decoration: underline; }
 
+/* Product grid: 3-column standard variant */
+.product-grid--3col { grid-template-columns: repeat(3,1fr); }
+
+/* Product list: compact browsable rows */
+.product-list { display: flex; flex-direction: column; gap: 0; border: 1px solid rgba(55,65,81,0.15); border-radius: 6px; overflow: hidden; }
+.product-list-item { display: flex; align-items: center; gap: 16px; padding: 14px 18px; background: var(--color-white); border-bottom: 1px solid rgba(55,65,81,0.08); transition: background 0.15s; }
+.product-list-item:last-child { border-bottom: none; }
+.product-list-item:hover { background: rgba(55,65,81,0.02); }
+.product-list-image { width: 64px; height: 64px; flex-shrink: 0; background: #f8f8f8; border-radius: 4px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.product-list-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.product-list-image--empty { background: #f0f0f0; }
+.product-list-body { flex: 1; min-width: 0; }
+.product-list-header { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+.product-list-name { font-size: var(--fs-small); font-weight: 600; margin: 0; font-family: var(--font-body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.product-list-desc { font-size: 0.75rem; color: var(--color-gray); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.product-list-action { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.product-list-price { font-size: var(--fs-small); font-weight: 600; color: var(--color-slate); white-space: nowrap; }
+.badge-featured--small { font-size: 0.6rem; padding: 1px 6px; background: rgba(180,80,40,0.08); border-radius: 3px; white-space: nowrap; }
+
+@media (max-width: 768px) {
+  .product-grid--3col { grid-template-columns: repeat(2,1fr); }
+  .product-list-item { flex-wrap: wrap; }
+  .product-list-action { width: 100%; justify-content: space-between; padding-top: 8px; }
+}
+@media (max-width: 540px) {
+  .product-grid--3col { grid-template-columns: 1fr; }
+  .product-list-desc { white-space: normal; }
+}
+
 /* Homepage */
 .home-hero { background: var(--color-slate) url('/assets/images/home-hero.jpg') center 30% / cover no-repeat; padding: 100px 24px 88px; text-align: center; }
 .home-hero-inner { max-width: 680px; margin: 0 auto; }
