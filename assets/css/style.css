@@ -260,7 +260,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .product-card { padding: 20px; }
 
 /* Kit disclaimer */
-.kit-disclaimer { background: var(--color-off-white); border: 1px solid rgba(55,65,81,0.1); border-radius: 4px; padding: 12px 16px; margin-bottom: 32px; font-size: var(--fs-small); color: var(--color-gray); }
+.kit-disclaimer { background: var(--color-off-white); border: 1px solid rgba(55,65,81,0.1); border-radius: 4px; padding: 12px 16px; margin-top: 32px; margin-bottom: 32px; font-size: var(--fs-small); color: var(--color-gray); }
 .kit-categories { margin-top: 0; }
 
 /* Buying a Van hub */
