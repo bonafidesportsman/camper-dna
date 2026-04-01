@@ -168,7 +168,7 @@ details.quiz-expand > div p { margin-bottom: 8px; }
 .product-list-body { flex: 1; min-width: 0; }
 .product-list-header { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
 .product-list-name { font-size: var(--fs-small); font-weight: 600; margin: 0; font-family: var(--font-body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.product-list-desc { font-size: 0.75rem; color: var(--color-gray); margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.product-list-desc { font-size: 0.75rem; color: var(--color-gray); margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .product-list-action { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .product-list-price { font-size: var(--fs-small); font-weight: 600; color: var(--color-slate); white-space: nowrap; }
 .badge-featured--small { font-size: 0.6rem; padding: 1px 6px; background: rgba(180,80,40,0.08); border-radius: 3px; white-space: nowrap; }

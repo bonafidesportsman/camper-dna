@@ -51,7 +51,7 @@ class ProductRenderer {
     const badgeHTML = product.founder_recommended
       ? `<span class="badge-featured">Founder Pick</span>`
       : '';
-    const programmeLabel = { amazon: 'Amazon', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View';
+    const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
 
     const imageHTML = product.image_url
       ? `<div class="product-card-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
@@ -78,7 +78,7 @@ class ProductRenderer {
     const badgeHTML = product.founder_recommended
       ? `<span class="badge-featured badge-featured--small">Founder Pick</span>`
       : '';
-    const programmeLabel = { amazon: 'Amazon', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View';
+    const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
 
     const imageHTML = product.image_url
       ? `<div class="product-list-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
