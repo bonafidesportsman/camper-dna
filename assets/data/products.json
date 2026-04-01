@@ -1,7 +1,7 @@
 {
   "metadata": {
     "lastUpdated": "2026-04-01",
-    "version": 6,
+    "version": 7,
     "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, pending approval). RAC via Awin (MID 3790). Publisher ID 2832996. Bimble Solar affiliate tracking code pending approval — replace TRACKING_PENDING in both bimble entries once code is confirmed."
   },
   "categories": {
@@ -113,30 +113,223 @@
         "notes": "Fine starting point. Upgrade to lithium when budget allows."
       }
     ],
-    "bike-racks": [
+    "towbar-racks": [
       {
-        "id": "atera-strada-vario-3",
-        "name": "Atera Strada Vario 3 Bike Rack",
-        "description": "Towbar-mounted rack for up to 3 bikes. Works with barn doors — folds away cleanly. 60kg capacity.",
+        "id": "atera-strada-sport-3",
+        "name": "Atera Strada Sport 3",
+        "description": "Towbar rack for 3 bikes. Swings out for barn door access. 60kg capacity. The go-to for T5/T6 barn door owners.",
         "price_gbp": 482,
         "affiliate_url": "https://www.amazon.co.uk/dp/B005F2YPO0?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
-        "tags": ["bikes", "outdoor-activities", "rack", "cycling"],
+        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "3-bike"],
         "notes": "Best option for barn door setups. Swings out around the doors — no need to remove it."
       },
       {
-        "id": "thule-epos-2-bike",
-        "name": "Thule EPos 2 Bike Towbar Rack",
-        "description": "Premium towbar-mounted rack for 2 bikes. Tool-free bike fastening, 60kg capacity.",
+        "id": "atera-strada-sport-2",
+        "name": "Atera Strada Sport 2",
+        "description": "Towbar rack for 2 bikes. Same swing-out design as the 3-bike. Lighter and more compact. 60kg capacity.",
+        "price_gbp": 474,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B005F2YPHC?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51TOt6epfDL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "2-bike"],
+        "notes": "If you only carry two bikes, this is lighter and easier to handle than the 3-bike version."
+      },
+      {
+        "id": "atera-strada-ebike-m",
+        "name": "Atera Strada E-Bike M",
+        "description": "Towbar rack built for e-bikes. Reinforced arms, lower loading height. 2 bikes, 60kg capacity.",
+        "price_gbp": 409,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B002Y20SEK?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/612MmKJMb6L._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "e-bike", "2-bike"],
+        "notes": "Purpose-built for heavier e-bikes. Lower loading height makes lifting easier."
+      },
+      {
+        "id": "atera-strada-ebike-ml",
+        "name": "Atera Strada Sport E-Bike ML",
+        "description": "Heavy-duty e-bike rack. 2 bikes, extended arms for wider frames. 60kg capacity.",
+        "price_gbp": 548,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B01EUSSBTE?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61vxmCK+dwL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "e-bike", "2-bike", "heavy-duty"],
+        "notes": "Extended arms for larger e-bike frames. The heavy-duty Atera option."
+      },
+      {
+        "id": "atera-strada-dl3",
+        "name": "Atera Strada DL 3",
+        "description": "Lightweight towbar rack for 3 bikes. Slides away from the van for full barn door access. 60kg capacity.",
+        "price_gbp": 525,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0053RF0JG?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51LXonBYS1L._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "3-bike", "lightweight"],
+        "notes": "Slides away from the van — gives full access to barn doors even with bikes loaded."
+      },
+      {
+        "id": "atera-strada-evo-3",
+        "name": "Atera Strada Evo 3",
+        "description": "Premium towbar rack for 3 bikes. Aluminium construction, tool-free assembly. 60kg capacity.",
+        "price_gbp": 668,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B007GACED8?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71M3kRPc4QL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "3-bike", "premium"],
+        "notes": "Premium Atera option. Lighter aluminium build, easier to handle. Worth the step up if budget allows."
+      },
+      {
+        "id": "atera-strada-evo-2",
+        "name": "Atera Strada Evo 2",
+        "description": "Premium towbar rack for 2 bikes. Aluminium, tool-free. Same Evo build quality as the 3-bike. 60kg capacity.",
+        "price_gbp": 670,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B007GA8NHE?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71M3kRPc4QL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "2-bike", "premium"],
+        "notes": "Premium 2-bike option. Same Evo quality, lighter than the 3-bike version."
+      },
+      {
+        "id": "atera-vario-3",
+        "name": "Atera Vario 3",
+        "description": "Top-of-range Atera towbar rack for 3 bikes. Fully adjustable wheel holders, premium build. 60kg capacity.",
+        "price_gbp": 809,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B007PBRU8M?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51NbY6hloiL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "3-bike", "premium", "top-range"],
+        "notes": "The flagship Atera rack. Fully adjustable, premium materials. For those who want the best."
+      },
+      {
+        "id": "thule-velospace-xt-3",
+        "name": "Thule VeloSpace XT 3",
+        "description": "Platform towbar rack for 3 bikes. Tilts for boot access. 13-pin. Extendable to 4 bikes. 60kg capacity.",
+        "price_gbp": 636,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B079NWVW3F?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71bWQvYQ1EL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "3-bike", "tailgate-friendly"],
+        "notes": "Thule's best rack for tailgate vans. Tilts down for boot access with bikes loaded."
+      },
+      {
+        "id": "thule-velocompact-2",
+        "name": "Thule VeloCompact 2",
+        "description": "Compact platform towbar rack for 2 bikes. 13-pin. Lightweight and folds flat for storage. 60kg capacity.",
+        "price_gbp": 400,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B09MTX1B3S?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/71f1SGiqcXL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "2-bike", "compact"],
+        "notes": "Good value Thule option. Compact when folded, easy to store in the van."
+      },
+      {
+        "id": "thule-epos-2",
+        "name": "Thule EPos 2",
+        "description": "Premium towbar rack for 2 bikes. Tool-free loading, fits all frame types including e-bikes. 30kg per bike.",
         "price_gbp": 1000,
         "affiliate_url": "https://www.thule.com/en-gb/bike-rack/towbar-bike-racks/thule-epos-2bike-13pin-_-978200",
         "image_url": "https://m.media-amazon.com/images/I/61oAFEN2QdL._AC_SX425_.jpg",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["bikes", "outdoor-activities", "rack", "premium"],
-        "notes": "Premium choice if you're carrying e-bikes or value tool-free loading."
+        "tags": ["bikes", "towbar-rack", "2-bike", "e-bike", "premium"],
+        "notes": "The premium choice. Tool-free, fits any bike frame. No UK Amazon listing — buy direct from Thule."
+      },
+      {
+        "id": "thule-hangon-3",
+        "name": "Thule Hang-On 3",
+        "description": "Budget towbar rack for 3 bikes. Hanging style, 45kg capacity. Simple and reliable.",
+        "price_gbp": 165,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B079T41QVK?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61XRUyIytCL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "3-bike", "budget"],
+        "notes": "Cheapest Thule option. Hanging design — less stable than platform racks but does the job."
+      },
+      {
+        "id": "thule-hangon-4",
+        "name": "Thule Hang-On 4 (9708)",
+        "description": "Budget towbar rack for 4 bikes. Hanging style with tilt. 60kg capacity.",
+        "price_gbp": 200,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B079T6CV3N?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61HF7VrY70L._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "towbar-rack", "4-bike", "budget"],
+        "notes": "4 bikes for £200 — hard to beat on value. Hanging design, less suitable for e-bikes."
+      }
+    ],
+    "door-mounted-racks": [
+      {
+        "id": "fiamma-carry-bike-t5t6",
+        "name": "Fiamma Carry-Bike VW T5/T6",
+        "description": "Rear-door mounted rack for 2 bikes. Bolts to tailgate or barn doors. No towbar needed. 35kg capacity.",
+        "price_gbp": 400,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07QQ38FBW?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/51r4qnF1fPL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "door-mounted", "2-bike", "no-towbar"],
+        "notes": "No towbar required. Mounts directly to the rear door. Expandable to 4 bikes with Fiamma accessories."
+      },
+      {
+        "id": "fiamma-carry-bike-t5t6-aluminium",
+        "name": "Fiamma Carry-Bike T5/T6 Aluminium",
+        "description": "Lightweight aluminium rear-door rack for 2 bikes. 35kg capacity. No drilling, no towbar needed.",
+        "price_gbp": 500,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0GH9J7MVF?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/315NbAoVskL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "door-mounted", "2-bike", "no-towbar", "lightweight"],
+        "notes": "Aluminium version — lighter at 7.7kg. Easier to handle and less strain on the door hinges."
+      }
+    ],
+    "rack-accessories": [
+      {
+        "id": "atera-spacer-2nd-bike",
+        "name": "Atera Strada Spacer (2nd Bike)",
+        "description": "Replacement or additional holding arm spacer for 2nd bike position on Atera Strada racks.",
+        "price_gbp": 31,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0068M5EWS?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "accessory", "atera", "spare"],
+        "notes": "Spare or replacement spacer arm. Useful if you've lost or damaged the original."
+      },
+      {
+        "id": "atera-spacer-3rd-bike",
+        "name": "Atera Strada Spacer (3rd Bike)",
+        "description": "Holding arm spacer for 3rd bike position on Atera Strada racks.",
+        "price_gbp": 49,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0068M5FAY?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "accessory", "atera", "spare"],
+        "notes": "For the 3rd bike slot. Check compatibility with your specific Strada model."
+      },
+      {
+        "id": "atera-dl3-4th-bike-extension",
+        "name": "Atera Strada DL 3 Extension Kit (4th Bike)",
+        "description": "Adds a 4th bike position to the Atera Strada DL 3. Includes wheel rail and spacer.",
+        "price_gbp": 124,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B00HFUPH88?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": ["bikes", "accessory", "atera", "extension", "4-bike"],
+        "notes": "Turns your DL 3 into a 4-bike rack. Check total weight doesn't exceed your towbar's nose weight."
       }
     ],
     "roof-racks": [
