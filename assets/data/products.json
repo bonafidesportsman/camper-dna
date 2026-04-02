@@ -273,6 +273,18 @@
     ],
     "door-mounted-racks": [
       {
+        "id": "thule-wanderway-t6",
+        "name": "Thule WanderWay VW T6",
+        "description": "Premium rear-door rack for VW T6 tailgate. 2 bikes as standard, expandable to 4. 60kg capacity, 30kg per bike. Handles e-bikes.",
+        "price_gbp": 550,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0D8MNX4TC?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61A8+UhDP6L._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["bikes", "door-mounted", "2-bike", "e-bike", "no-towbar", "premium"],
+        "notes": "The premium door-mounted option. T6-specific, handles e-bikes, tailgate opens with rack fitted. Expandable to 4 bikes with adapters."
+      },
+      {
         "id": "fiamma-carry-bike-t5t6",
         "name": "Fiamma Carry-Bike VW T5/T6",
         "description": "Rear-door mounted rack for 2 bikes. Bolts to tailgate or barn doors. No towbar needed. 35kg capacity.",
@@ -295,18 +307,6 @@
         "founder_recommended": false,
         "tags": ["bikes", "door-mounted", "2-bike", "no-towbar", "lightweight"],
         "notes": "Aluminium version — lighter at 7.7kg. Easier to handle and less strain on the door hinges."
-      },
-      {
-        "id": "thule-wanderway-t6",
-        "name": "Thule WanderWay VW T6",
-        "description": "Premium rear-door rack for VW T6 tailgate. 2 bikes as standard, expandable to 4. 60kg capacity, 30kg per bike. Handles e-bikes.",
-        "price_gbp": 550,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0D8MNX4TC?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/61A8+UhDP6L._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": true,
-        "tags": ["bikes", "door-mounted", "2-bike", "e-bike", "no-towbar", "premium"],
-        "notes": "The premium door-mounted option. T6-specific, handles e-bikes, tailgate opens with rack fitted. Expandable to 4 bikes with adapters."
       }
     ],
     "rack-accessories": [
@@ -346,15 +346,28 @@
     ],
     "roof-racks": [
       {
-        "id": "reimo-van-top-roof-rack",
-        "name": "Reimo Van Top Roof Rack",
-        "description": "Purpose-built roof rack for T5/T6. Powder-coated steel. Compatible with most pop-tops and high-roofs.",
-        "price_gbp": 280,
-        "affiliate_url": "https://www.reimo.com/en/products/van-systems/roof-systems",
-        "affiliate_programme": "direct",
+        "id": "thule-wingbar-evo-135",
+        "name": "Thule WingBar Evo 135 Black",
+        "description": "Low-profile aero roof bars for VW T5/T6. 135cm width, quiet at speed. Pairs with Thule footpack for factory roof rails.",
+        "price_gbp": 160,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07J2HYGSN?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/515Lw-pWeFL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
+        "founder_recommended": true,
+        "tags": ["roof-rack", "accessories", "watersports", "thule"],
+        "notes": "The standard choice for T5/T6 with factory roof rails. Needs Thule footpack (e.g. Evo Raised Rail 7104) sold separately."
+      },
+      {
+        "id": "fiamma-roof-rail-t5t6",
+        "name": "Fiamma Roof Rail for VW T5/T6",
+        "description": "Anodised aluminium roof rail kit for VW Transporter. Mounts to factory fixing points. Carries boards, kayaks, or cargo boxes.",
+        "price_gbp": 253,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07NJ1QTKR?tag=camperdna-21",
+        "image_url": "https://m.media-amazon.com/images/I/61XoQmjQRQL._AC_SX425_.jpg",
+        "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["roof-rack", "accessories", "watersports"],
-        "notes": "Good for boards, kayaks, or extra kit. Check pop-top compatibility before ordering."
+        "tags": ["roof-rack", "accessories", "watersports", "fiamma"],
+        "notes": "Solid Fiamma alternative. Anodised finish resists corrosion. Check compatibility with pop-top models before ordering."
       }
     ],
     "awnings": [
