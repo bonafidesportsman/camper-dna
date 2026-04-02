@@ -62,7 +62,7 @@ class ProductRenderer {
       ? `<p class="product-price">Price guide £${product.price_gbp}</p>`
       : '';
     const badgeHTML = product.founder_recommended
-      ? `<span class="badge-featured">Founder Pick</span>`
+      ? `<span class="badge-featured">Road Tested</span>`
       : '';
     const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
     const capacity = this.capacityLabel(product);
@@ -82,7 +82,7 @@ class ProductRenderer {
           <p class="product-description">${this.esc(product.description)}</p>
           ${priceHTML}
           <p class="product-note">${this.esc(product.notes)}</p>
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel} →</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
@@ -92,7 +92,7 @@ class ProductRenderer {
       ? `<span class="product-list-price">Price guide £${product.price_gbp}</span>`
       : '';
     const badgeHTML = product.founder_recommended
-      ? `<span class="badge-featured badge-featured--small">Founder Pick</span>`
+      ? `<span class="badge-featured badge-featured--small">Road Tested</span>`
       : '';
     const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
     const capacity = this.capacityLabel(product);
@@ -115,7 +115,7 @@ class ProductRenderer {
         </div>
         <div class="product-list-action">
           ${priceHTML}
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel} →</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
