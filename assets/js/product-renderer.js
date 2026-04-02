@@ -94,7 +94,7 @@ class ProductRenderer {
     const badgeHTML = product.founder_recommended
       ? `<span class="badge-featured badge-featured--small">Road Tested</span>`
       : '';
-    const programmeLabel = { amazon: 'View product', direct: 'View product', referral: 'Get a quote' }[product.affiliate_programme] || 'View product';
+    const programmeLabel = { amazon: 'View', direct: 'View', referral: 'Quote' }[product.affiliate_programme] || 'View';
     const capacity = this.capacityLabel(product);
     const capPillHTML = capacity ? `<span class="product-cap-pill">${this.esc(capacity)}</span>` : '';
 
