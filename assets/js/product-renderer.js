@@ -101,7 +101,7 @@ class ProductRenderer {
 
     const imageHTML = product.image_url
       ? `<div class="product-list-image"><img src="${this.esc(product.image_url)}" alt="${this.esc(product.name)}" loading="lazy"></div>`
-      : `<div class="product-list-image product-list-image--empty"></div>`;
+      : '';
 
     return `
       <div class="product-list-item" data-product-id="${this.esc(product.id)}">
