@@ -344,32 +344,6 @@
         "notes": "Takes the WanderWay to full 4-bike capacity. Requires the 3rd bike adapter installed."
       }
     ],
-    "roof-racks": [
-      {
-        "id": "thule-wingbar-evo-135",
-        "name": "Thule WingBar Evo 135 Black",
-        "description": "Low-profile aero roof bars for VW T5/T6. 135cm width, quiet at speed. Pairs with Thule footpack for factory roof rails.",
-        "price_gbp": 160,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B07J2HYGSN?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/515Lw-pWeFL._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": true,
-        "tags": ["roof-rack", "accessories", "watersports", "thule"],
-        "notes": "The standard choice for T5/T6 with factory roof rails. Needs Thule footpack (e.g. Evo Raised Rail 7104) sold separately."
-      },
-      {
-        "id": "fiamma-roof-rail-t5t6",
-        "name": "Fiamma Roof Rail for VW T5/T6",
-        "description": "Anodised aluminium roof rail kit for VW Transporter. Mounts to factory fixing points. Carries boards, kayaks, or cargo boxes.",
-        "price_gbp": 253,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B07NJ1QTKR?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/61XoQmjQRQL._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": ["roof-rack", "accessories", "watersports", "fiamma"],
-        "notes": "Solid Fiamma alternative. Anodised finish resists corrosion. Check compatibility with pop-top models before ordering."
-      }
-    ],
     "awnings": [
       {
         "id": "fiamma-f45s",
