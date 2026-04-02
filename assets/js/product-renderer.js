@@ -26,13 +26,14 @@ class ProductRenderer {
     }
   }
 
-  renderCategory(containerId, categoryName, maxItems = 6, layout = 'featured') {
+  renderCategory(containerId, categoryName, maxItems = 6, layout = 'featured', offset = 0) {
     const container = document.getElementById(containerId);
     if (!container) return;
     const items = this.data?.categories?.[categoryName];
     if (!items || items.length === 0) return;
 
-    const subset = items.slice(0, maxItems);
+    const subset = items.slice(offset, offset + maxItems);
+    if (subset.length === 0) { container.remove(); return; }
 
     if (layout === 'list') {
       const rows = subset.map(p => this.renderListItem(p)).join('');
@@ -163,7 +164,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const category = el.dataset.category;
     const max = parseInt(el.dataset.maxItems || '6', 10);
     const layout = el.dataset.layout || 'featured';
-    renderer.renderCategory(el.id, category, max, layout);
+    const offset = parseInt(el.dataset.offset || '0', 10);
+    renderer.renderCategory(el.id, category, max, layout, offset);
   });
 
   // Render featured containers: <div id="..." data-products="featured" data-max-items="6">
