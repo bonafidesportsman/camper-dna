@@ -1,11 +1,19 @@
 // CamperDNA – site-wide password protection via HTTP Basic Auth
 // Runs as a Cloudflare Pages middleware on every request.
-// To change credentials, update USERNAME / PASSWORD below and redeploy.
+// Credentials are provided by Cloudflare Pages env vars:
+// CAMPERDNA_GATE_USER and CAMPERDNA_GATE_PASSWORD.
 
-const USERNAME = "bonafidesportsman";
-const PASSWORD = "camperdna-21";
+export async function onRequest({ request, next, env }) {
+  const USERNAME = env.CAMPERDNA_GATE_USER;
+  const PASSWORD = env.CAMPERDNA_GATE_PASSWORD;
 
-export async function onRequest({ request, next }) {
+  if (!USERNAME || !PASSWORD) {
+    return new Response("Access restricted — password gate not configured.", {
+      status: 503,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+
   const auth = request.headers.get("Authorization") || "";
 
   if (auth.startsWith("Basic ")) {

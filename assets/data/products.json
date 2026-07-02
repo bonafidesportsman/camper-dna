@@ -35,7 +35,7 @@
         "price_gbp": 320,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FPlanar-Air-2D-12v-Heater-Kit-with-Rotary-Controller-EU-2-12-3995%2F6AY",
         "affiliate_programme": "direct",
-        "founder_recommended": false,
+        "founder_recommended": true,
         "tags": ["heating", "diesel-heater", "budget"],
         "notes": "Solid value option. Combine with Autoterm controller for phone control."
       }
@@ -48,7 +48,7 @@
         "price_gbp": 650,
         "affiliate_url": "https://www.bimblesolar.com/offgrid/complete-packages?tracking=TRACKING_PENDING",
         "affiliate_programme": "direct",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": ["solar", "electrical", "energy-independence"],
         "notes": "This is what I use. Overkill for summer, perfect for year-round wild camping."
       },
@@ -60,7 +60,7 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B07FXR5FLW?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/71WqZ4ezcNL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": ["solar", "electrical", "mppt"],
         "notes": "The standard for van builds. See real-time solar input from your phone."
       },
@@ -85,7 +85,7 @@
         "price_gbp": 380,
         "affiliate_url": "https://www.bimblesolar.com/batteries/12vbatts/12v-lithium-batteries?tracking=TRACKING_PENDING",
         "affiliate_programme": "direct",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": ["battery", "electrical", "lithium", "energy-independence"],
         "notes": "The upgrade that makes off-grid van life genuinely comfortable. Worth the premium."
       },
