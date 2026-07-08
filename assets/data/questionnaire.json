@@ -115,12 +115,12 @@
         "type": "single-choice",
         "expand": {
           "summary": "About each source",
-          "body": "VW Approved Used: 12-month warranty + 115-point inspection including bodywork. Wales & North of England tends to have cheapest stock. Private sale: budget £250–400 for an independent inspection — always worth it. Via conversion company: convenient and they know what makes a good donor, but their markup is often built into the conversion quote."
+          "body": "VW Approved Used: 141-point inspection including bodywork, plus warranty — 12 months on vans under 3 years old, 6 months on vans aged 3–6 years (vans over 6 years or 100k miles aren't eligible). Wales & North of England tends to have cheapest stock. Private sale: budget £250–400 for an independent inspection — always worth it. Via conversion company: convenient and they know what makes a good donor, but their markup is often built into the conversion quote."
         },
         "options": [
           {
             "value": "vw-approved",
-            "label": "VW Approved Used (12-month warranty, 115-point check — recommended)"
+            "label": "VW Approved Used (141-point check, warranty included — recommended)"
           },
           {
             "value": "private",
@@ -171,7 +171,7 @@
         "type": "single-choice",
         "expand": {
           "summary": "Manual vs DSG explained",
-          "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009. Available on 150PS and 204PS engines only — the 102PS entry engine comes with a 5-speed manual. Most conversion buyers choose between the 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes urban driving and towing noticeably smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check the service history carefully.\n\nIf you selected the T7 Transporter, this question is less relevant — the T7 uses an 8-speed torque-converter automatic (standard on the 168PS) or a 6-speed manual on lower-powered engines. The DSG is not available on the T7."
+          "body": "DSG (7-speed dual-clutch automatic) first appeared on the T5.1 facelift in September 2009. Available on 150PS and 204PS engines only — the 102PS entry engine comes with a 5-speed manual. Most conversion buyers choose between the 6-speed manual (150PS) and DSG (150PS or 204PS). DSG adds roughly £1,500–2,500 to the purchase price but makes urban driving and towing noticeably smoother. Note: DSG on older T5 units (pre-2012) has a mixed reliability record — check the service history carefully.\n\nIf you selected the T7 Transporter, this question is less relevant — the T7 uses an 8-speed torque-converter automatic (standard on the 170PS diesel) or a 6-speed manual on lower-powered engines. The DSG is not available on the T7."
         },
         "options": [
           {
