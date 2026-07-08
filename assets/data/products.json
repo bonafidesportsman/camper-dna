@@ -14,7 +14,12 @@
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FAUTOTERM-Planar-Digital-Comfort-Controller-for-Air-and-Water-Heaters-AT0050%2F6BL",
         "affiliate_programme": "direct",
         "founder_recommended": true,
-        "tags": ["heating", "diesel-heater", "comfort", "accessories"],
+        "tags": [
+          "heating",
+          "diesel-heater",
+          "comfort",
+          "accessories"
+        ],
         "notes": "Worth every penny. Set your morning temperature from bed. Your partner will thank you."
       },
       {
@@ -25,7 +30,11 @@
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fvehicle-heater-kits%2Fwebasto",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["heating", "diesel-heater", "premium"],
+        "tags": [
+          "heating",
+          "diesel-heater",
+          "premium"
+        ],
         "notes": "OEM quality. Specify at conversion time — retrofitting adds cost and complexity."
       },
       {
@@ -36,7 +45,11 @@
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FPlanar-Air-2D-12v-Heater-Kit-with-Rotary-Controller-EU-2-12-3995%2F6AY",
         "affiliate_programme": "direct",
         "founder_recommended": true,
-        "tags": ["heating", "diesel-heater", "budget"],
+        "tags": [
+          "heating",
+          "diesel-heater",
+          "budget"
+        ],
         "notes": "Solid value option. Combine with Autoterm controller for phone control."
       }
     ],
@@ -46,10 +59,14 @@
         "name": "Bimble Solar 400W Starter Kit",
         "description": "Complete solar setup: 2x 200W panels, MPPT controller, cables, fixings, and instructions.",
         "price_gbp": 650,
-        "affiliate_url": "https://www.bimblesolar.com/offgrid/complete-packages?tracking=TRACKING_PENDING",
+        "affiliate_url": "https://www.bimblesolar.com/offgrid/complete-packages",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["solar", "electrical", "energy-independence"],
+        "tags": [
+          "solar",
+          "electrical",
+          "energy-independence"
+        ],
         "notes": "This is what I use. Overkill for summer, perfect for year-round wild camping."
       },
       {
@@ -61,7 +78,11 @@
         "image_url": "https://m.media-amazon.com/images/I/71WqZ4ezcNL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["solar", "electrical", "mppt"],
+        "tags": [
+          "solar",
+          "electrical",
+          "mppt"
+        ],
         "notes": "The standard for van builds. See real-time solar input from your phone."
       },
       {
@@ -73,7 +94,12 @@
         "image_url": "https://m.media-amazon.com/images/I/51Xrvg-ulFL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["solar", "electrical", "dc-dc", "charging"],
+        "tags": [
+          "solar",
+          "electrical",
+          "dc-dc",
+          "charging"
+        ],
         "notes": "Essential for T6/T6.1 smart alternators. Also has solar MPPT input — can replace a separate controller for smaller panels."
       }
     ],
@@ -83,10 +109,15 @@
         "name": "Bimble 100Ah LiFePO4 Leisure Battery",
         "description": "Lithium iron phosphate battery. 100Ah usable (vs ~50Ah in lead-acid). 2000+ cycle life.",
         "price_gbp": 380,
-        "affiliate_url": "https://www.bimblesolar.com/batteries/12vbatts/12v-lithium-batteries?tracking=TRACKING_PENDING",
+        "affiliate_url": "https://www.bimblesolar.com/batteries/12vbatts/12v-lithium-batteries",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["battery", "electrical", "lithium", "energy-independence"],
+        "tags": [
+          "battery",
+          "electrical",
+          "lithium",
+          "energy-independence"
+        ],
         "notes": "The upgrade that makes off-grid van life genuinely comfortable. Worth the premium."
       },
       {
@@ -98,7 +129,12 @@
         "image_url": "https://m.media-amazon.com/images/I/51hHA3DyjmL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["battery", "electrical", "lithium", "energy-independence"],
+        "tags": [
+          "battery",
+          "electrical",
+          "lithium",
+          "energy-independence"
+        ],
         "notes": "Very popular in the van community. UK company with good support. Competes directly with Bimble."
       },
       {
@@ -109,7 +145,12 @@
         "affiliate_url": "https://www.amazon.co.uk/s?k=renogy+100ah+agm+leisure+battery&tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["battery", "electrical", "agm", "budget"],
+        "tags": [
+          "battery",
+          "electrical",
+          "agm",
+          "budget"
+        ],
         "notes": "Fine starting point. Upgrade to lithium when budget allows."
       }
     ],
@@ -123,7 +164,12 @@
         "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
-        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "3-bike"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "barn-door-compatible",
+          "3-bike"
+        ],
         "notes": "Best option for barn door setups. Swings out around the doors — no need to remove it."
       },
       {
@@ -135,7 +181,12 @@
         "image_url": "https://m.media-amazon.com/images/I/51TOt6epfDL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "2-bike"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "barn-door-compatible",
+          "2-bike"
+        ],
         "notes": "If you only carry two bikes, this is lighter and easier to handle than the 3-bike version."
       },
       {
@@ -147,7 +198,12 @@
         "image_url": "https://m.media-amazon.com/images/I/612MmKJMb6L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "e-bike", "2-bike"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "e-bike",
+          "2-bike"
+        ],
         "notes": "Purpose-built for heavier e-bikes. Lower loading height makes lifting easier."
       },
       {
@@ -159,7 +215,13 @@
         "image_url": "https://m.media-amazon.com/images/I/61vxmCK+dwL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "e-bike", "2-bike", "heavy-duty"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "e-bike",
+          "2-bike",
+          "heavy-duty"
+        ],
         "notes": "Extended arms for larger e-bike frames. The heavy-duty Atera option."
       },
       {
@@ -171,7 +233,13 @@
         "image_url": "https://m.media-amazon.com/images/I/51LXonBYS1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "barn-door-compatible", "3-bike", "lightweight"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "barn-door-compatible",
+          "3-bike",
+          "lightweight"
+        ],
         "notes": "Slides away from the van — gives full access to barn doors even with bikes loaded."
       },
       {
@@ -183,7 +251,12 @@
         "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "3-bike", "premium"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "3-bike",
+          "premium"
+        ],
         "notes": "Premium Atera option. Lighter aluminium build, easier to handle. Worth the step up if budget allows."
       },
       {
@@ -195,7 +268,12 @@
         "image_url": "https://m.media-amazon.com/images/I/51TOt6epfDL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "2-bike", "premium"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "2-bike",
+          "premium"
+        ],
         "notes": "Premium 2-bike option. Same Evo quality, lighter than the 3-bike version."
       },
       {
@@ -207,7 +285,13 @@
         "image_url": "https://m.media-amazon.com/images/I/51NbY6hloiL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "3-bike", "premium", "top-range"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "3-bike",
+          "premium",
+          "top-range"
+        ],
         "notes": "The flagship Atera rack. Fully adjustable, premium materials. For those who want the best."
       },
       {
@@ -219,7 +303,12 @@
         "image_url": "https://m.media-amazon.com/images/I/71bWQvYQ1EL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "3-bike", "tailgate-friendly"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "3-bike",
+          "tailgate-friendly"
+        ],
         "notes": "Thule's best rack for tailgate vans. Tilts down for boot access with bikes loaded."
       },
       {
@@ -231,7 +320,12 @@
         "image_url": "https://m.media-amazon.com/images/I/71f1SGiqcXL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "2-bike", "compact"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "2-bike",
+          "compact"
+        ],
         "notes": "Good value Thule option. Compact when folded, easy to store in the van."
       },
       {
@@ -243,7 +337,13 @@
         "image_url": "https://m.media-amazon.com/images/I/61oAFEN2QdL._AC_SX425_.jpg",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "2-bike", "e-bike", "premium"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "2-bike",
+          "e-bike",
+          "premium"
+        ],
         "notes": "The premium choice. Tool-free, fits any bike frame. No UK Amazon listing — buy direct from Thule."
       },
       {
@@ -255,7 +355,12 @@
         "image_url": "https://m.media-amazon.com/images/I/61XRUyIytCL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "3-bike", "budget"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "3-bike",
+          "budget"
+        ],
         "notes": "Cheapest Thule option. Hanging design — less stable than platform racks but does the job."
       },
       {
@@ -267,7 +372,12 @@
         "image_url": "https://m.media-amazon.com/images/I/61HF7VrY70L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "towbar-rack", "4-bike", "budget"],
+        "tags": [
+          "bikes",
+          "towbar-rack",
+          "4-bike",
+          "budget"
+        ],
         "notes": "4 bikes for £200 — hard to beat on value. Hanging design, less suitable for e-bikes."
       }
     ],
@@ -281,7 +391,14 @@
         "image_url": "https://m.media-amazon.com/images/I/61A8+UhDP6L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
-        "tags": ["bikes", "door-mounted", "2-bike", "e-bike", "no-towbar", "premium"],
+        "tags": [
+          "bikes",
+          "door-mounted",
+          "2-bike",
+          "e-bike",
+          "no-towbar",
+          "premium"
+        ],
         "notes": "The premium door-mounted option. T6-specific, handles e-bikes, tailgate opens with rack fitted. Expandable to 4 bikes with adapters."
       },
       {
@@ -293,7 +410,12 @@
         "image_url": "https://m.media-amazon.com/images/I/51r4qnF1fPL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "door-mounted", "2-bike", "no-towbar"],
+        "tags": [
+          "bikes",
+          "door-mounted",
+          "2-bike",
+          "no-towbar"
+        ],
         "notes": "No towbar required. Mounts directly to the rear door. Expandable to 4 bikes with Fiamma accessories."
       },
       {
@@ -305,7 +427,13 @@
         "image_url": "https://m.media-amazon.com/images/I/315NbAoVskL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "door-mounted", "2-bike", "no-towbar", "lightweight"],
+        "tags": [
+          "bikes",
+          "door-mounted",
+          "2-bike",
+          "no-towbar",
+          "lightweight"
+        ],
         "notes": "Aluminium version — lighter at 7.7kg. Easier to handle and less strain on the door hinges."
       }
     ],
@@ -318,7 +446,13 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B00HFUPH88?tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "accessory", "atera", "extension", "4-bike"],
+        "tags": [
+          "bikes",
+          "accessory",
+          "atera",
+          "extension",
+          "4-bike"
+        ],
         "notes": "Turns your DL 3 into a 4-bike rack. Check total weight doesn't exceed your towbar's nose weight."
       },
       {
@@ -329,7 +463,13 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B0D99FPNPQ?tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "accessory", "thule", "extension", "3-bike"],
+        "tags": [
+          "bikes",
+          "accessory",
+          "thule",
+          "extension",
+          "3-bike"
+        ],
         "notes": "Expands the WanderWay from 2 to 3 bikes. Check weight limits — e-bikes may reduce capacity."
       },
       {
@@ -340,7 +480,13 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B0D99FPLQ7?tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["bikes", "accessory", "thule", "extension", "4-bike"],
+        "tags": [
+          "bikes",
+          "accessory",
+          "thule",
+          "extension",
+          "4-bike"
+        ],
         "notes": "Takes the WanderWay to full 4-bike capacity. Requires the 3rd bike adapter installed."
       }
     ],
@@ -354,7 +500,11 @@
         "image_url": "https://m.media-amazon.com/images/I/31RyqebdsBL._AC_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
-        "tags": ["awning", "outdoor-living", "retractable"],
+        "tags": [
+          "awning",
+          "outdoor-living",
+          "retractable"
+        ],
         "notes": "The go-to choice for T5/T6. Fits tidily on the factory roof rail. No drilling required."
       },
       {
@@ -365,7 +515,11 @@
         "affiliate_url": "https://www.kiravans.com/awning-rails/",
         "affiliate_programme": "direct",
         "founder_recommended": false,
-        "tags": ["awning", "awning-rail", "drive-away"],
+        "tags": [
+          "awning",
+          "awning-rail",
+          "drive-away"
+        ],
         "notes": "Essential if you want a drive-away tent. Fits most T5/T6 — check compatibility with your tent."
       },
       {
@@ -377,76 +531,30 @@
         "image_url": "https://m.media-amazon.com/images/I/51WdfhzM88L._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["awning", "drive-away", "family", "camping"],
+        "tags": [
+          "awning",
+          "drive-away",
+          "family",
+          "camping"
+        ],
         "notes": "The most popular drive-away awning in the T6 community. Pairs with the Kiravans rail. Air beam setup — no poles needed."
       }
     ],
     "insurance": [
       {
-        "id": "brentacre-campervan-insurance",
-        "name": "Brentacre Campervan Insurance",
-        "description": "Specialist campervan insurance. Covers conversions, new for old, European breakdown. Free agreed value.",
-        "price_gbp": 0,
-        "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
-        "affiliate_programme": "referral",
-        "founder_recommended": true,
-        "tags": ["insurance", "legal", "essential"],
-        "notes": "Consistently best value for T5/T6. Get a quote before committing elsewhere."
-      },
-      {
-        "id": "lexham-campervan-insurance",
-        "name": "Lexham Insurance Campervan Policy",
-        "description": "Specialist campervan and motorhome insurer. Agreed value, conversion cover, European breakdown included.",
-        "price_gbp": 0,
-        "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
-        "affiliate_programme": "referral",
-        "founder_recommended": true,
-        "tags": ["insurance", "legal", "essential"],
-        "notes": "Good value, straightforward claims process. Worth getting a quote alongside Brentacre."
-      },
-      {
-        "id": "safeguard-campervan-insurance",
-        "name": "Safeguard Campervan Insurance",
-        "description": "Independent specialist insurer for campervans and motorhomes. Covers self-builds and professional conversions.",
-        "price_gbp": 0,
-        "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
-        "affiliate_programme": "referral",
-        "founder_recommended": true,
-        "tags": ["insurance", "legal", "essential"],
-        "notes": "Independent specialist. Solid for T5/T6 conversions. Originally found via camper forums."
-      },
-      {
-        "id": "adrian-flux-campervan-insurance",
-        "name": "Adrian Flux Campervan Insurance",
-        "description": "Bespoke campervan cover. Specialist in modified vehicles, agreed value, EU cover. Well-known name in the VW community.",
+        "id": "quotesearcher-campervan-insurance",
+        "name": "Compare Specialist Campervan Insurers",
+        "description": "One form, quotes from a panel of UK specialist campervan insurers — conversion cover, agreed value, European use. Comparison service provided by QuoteSearcher.",
         "price_gbp": 0,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
         "affiliate_programme": "referral",
         "founder_recommended": false,
-        "tags": ["insurance", "legal", "modified-vehicles"],
-        "notes": "Large insurer, strong brand. Applied via Awin QuoteSearcher (£12/lead) and Adrian Flux direct (£50/policy) — swap URL to AF direct once approved."
-      },
-      {
-        "id": "comfort-insurance-campervan",
-        "name": "Comfort Insurance Campervan Cover",
-        "description": "Award-winning specialist. 30+ years covering campervans. Campervan Insurance Provider of the Year 2025.",
-        "price_gbp": 0,
-        "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
-        "affiliate_programme": "referral",
-        "founder_recommended": false,
-        "tags": ["insurance", "legal", "award-winning"],
-        "notes": "Won industry award 2025. Covers most UK conversion companies. Good reputation on T6 Forum."
-      },
-      {
-        "id": "howdens-campervan-insurance",
-        "name": "Howdens Campervan Insurance",
-        "description": "Specialist van and campervan insurer (formerly A-Plan Thatcham). Covers professional and self-build conversions, agreed value.",
-        "price_gbp": 0,
-        "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
-        "affiliate_programme": "referral",
-        "founder_recommended": false,
-        "tags": ["insurance", "legal", "specialist"],
-        "notes": "Frequently recommended on T6 Forum. Speak to the Thatcham branch — they're the van specialists."
+        "tags": [
+          "insurance",
+          "legal",
+          "essential"
+        ],
+        "notes": "Specialist insurers only — you're comparing like-for-like campervan policies, not standard van cover."
       }
     ],
     "inspection": [
@@ -458,7 +566,11 @@
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3790&awinaffid=2832996&ued=https%3A%2F%2Fwww.rac.co.uk%2Fbuying-a-car%2Fvehicle-inspections",
         "affiliate_programme": "referral",
         "founder_recommended": true,
-        "tags": ["inspection", "buying-process", "essential"],
+        "tags": [
+          "inspection",
+          "buying-process",
+          "essential"
+        ],
         "notes": "Non-negotiable for private purchases. £300 now or a £3,000 surprise later."
       },
       {
@@ -469,7 +581,11 @@
         "affiliate_url": "https://www.hpicheck.com/",
         "affiliate_programme": "referral",
         "founder_recommended": true,
-        "tags": ["inspection", "buying-process", "history-check"],
+        "tags": [
+          "inspection",
+          "buying-process",
+          "history-check"
+        ],
         "notes": "Do this before every private purchase. Never skip it — takes 5 minutes online."
       }
     ],
@@ -482,7 +598,12 @@
         "affiliate_url": "https://www.edgecampervans.com/",
         "affiliate_programme": "direct",
         "founder_recommended": true,
-        "tags": ["bed", "mattress", "rib", "comfort"],
+        "tags": [
+          "bed",
+          "mattress",
+          "rib",
+          "comfort"
+        ],
         "notes": "The difference between 'camping sleep' and actual sleep. Buy this at conversion time."
       }
     ],
@@ -496,7 +617,12 @@
         "image_url": "https://m.media-amazon.com/images/I/71iB5tUtZPL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["electronics", "audio", "stereo", "carplay"],
+        "tags": [
+          "electronics",
+          "audio",
+          "stereo",
+          "carplay"
+        ],
         "notes": "Most recommended head unit on T6 Forum. Fitting kits widely available for T5.1 and T6."
       },
       {
@@ -508,7 +634,13 @@
         "image_url": "https://m.media-amazon.com/images/I/51J9OGRoXHL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["electronics", "audio", "stereo", "carplay", "floating-screen"],
+        "tags": [
+          "electronics",
+          "audio",
+          "stereo",
+          "carplay",
+          "floating-screen"
+        ],
         "notes": "Single-din chassis with floating 9\" screen. Great for T5.1 where double-din is a tight fit."
       },
       {
@@ -520,7 +652,13 @@
         "image_url": "https://m.media-amazon.com/images/I/71eAXTz9B4L._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["electronics", "audio", "stereo", "navigation", "premium"],
+        "tags": [
+          "electronics",
+          "audio",
+          "stereo",
+          "navigation",
+          "premium"
+        ],
         "notes": "The premium choice if you want built-in sat nav that works without phone signal. Useful for wild camping."
       }
     ],
@@ -534,7 +672,12 @@
         "image_url": "https://m.media-amazon.com/images/I/619NJGBXTvL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["electronics", "projector", "entertainment", "portable"],
+        "tags": [
+          "electronics",
+          "projector",
+          "entertainment",
+          "portable"
+        ],
         "notes": "Can-sized, runs off USB-C power bank. Google TV built in. 200 ANSI lumens — fine for evening use."
       },
       {
@@ -546,7 +689,13 @@
         "image_url": "https://m.media-amazon.com/images/I/51mAvJnPbDL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
-        "tags": ["electronics", "projector", "entertainment", "outdoor", "premium"],
+        "tags": [
+          "electronics",
+          "projector",
+          "entertainment",
+          "outdoor",
+          "premium"
+        ],
         "notes": "Brighter than Nebula at 500 lumens. Splash-proof for outdoor use. Heavier at 3.6kg but picture quality is excellent."
       }
     ],
@@ -560,7 +709,11 @@
         "image_url": "https://m.media-amazon.com/images/I/61qubfqTXbL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
         "founder_recommended": true,
-        "tags": ["towbar", "bikes", "accessories"],
+        "tags": [
+          "towbar",
+          "bikes",
+          "accessories"
+        ],
         "notes": "Detachable is worth the extra cost — remove it when you don't need it."
       }
     ]

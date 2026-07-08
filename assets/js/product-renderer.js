@@ -83,7 +83,7 @@ class ProductRenderer {
           <p class="product-description">${this.esc(product.description)}</p>
           ${priceHTML}
           <p class="product-note">${this.esc(product.notes)}</p>
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel}&nbsp;→</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
@@ -116,7 +116,7 @@ class ProductRenderer {
         </div>
         <div class="product-list-action">
           ${priceHTML}
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="noopener noreferrer">${programmeLabel}&nbsp;→</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
@@ -173,6 +173,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     const max = parseInt(el.dataset.maxItems || '6', 10);
     renderer.renderFeatured(el.id, max);
   });
+
+  // Affiliate disclosure: automatically insert once per page, directly above
+  // the first rendered product section. Skipped if the page already carries
+  // its own .kit-disclaimer (e.g. the kit index).
+  if (!document.querySelector('.kit-disclaimer')) {
+    const containers = document.querySelectorAll('[data-category], [data-products="featured"]');
+    const first = Array.from(containers).find(el => el.innerHTML.trim() !== '');
+    if (first) {
+      const disclosure = document.createElement('div');
+      disclosure.className = 'kit-disclaimer kit-disclaimer--auto';
+      disclosure.innerHTML = '<p>The product links below are affiliate links — if you buy or get a quote through them, CamperDNA earns a small commission at no extra cost to you. It’s how we keep the guides free. We only list things we’d recommend regardless.</p>';
+      first.parentNode.insertBefore(disclosure, first);
+    }
+  }
 });
 
 // Export for manual use
