@@ -1,8 +1,8 @@
 {
   "metadata": {
     "lastUpdated": "2026-08-10",
-    "version": 9,
-    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, application rejected — not earning, needs a decision). Publisher ID 2832996. Bimble Solar affiliate tracking is live (code confirmed 2026-08-10, applied to both bimble entries)."
+    "version": 11,
+    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291); Webasto entry is a range-comparison card, not a single SKU. Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, application rejected — not earning, needs a decision). Publisher ID 2832996. Bimble Solar affiliate tracking is live. Renogy AGM battery is a direct link (not sold via Amazon UK) — price/stock unconfirmed live, spot-check before launch. No entries carry founder_recommended: true — dispassionate-listing policy applied catalogue-wide as of this version."
   },
   "categories": {
     "heating": [
@@ -13,20 +13,20 @@
         "price_gbp": 120,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FAUTOTERM-Planar-Digital-Comfort-Controller-for-Air-and-Water-Heaters-AT0050%2F6BL",
         "affiliate_programme": "direct",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "heating",
           "diesel-heater",
           "comfort",
           "accessories"
         ],
-        "notes": "Worth every penny. Set your morning temperature from bed. Your partner will thank you."
+        "notes": "Adds phone-based timer and thermostat control to a compatible diesel heater."
       },
       {
         "id": "webasto-dbw2000",
-        "name": "Webasto DBW 2000 Diesel Heater",
-        "description": "Premium diesel heater. Quiet, reliable, low 12V draw (~3A). Used in OEM VW Transporters.",
-        "price_gbp": 450,
+        "name": "Webasto Diesel Heaters (Air Top range)",
+        "description": "Butler Technik's Webasto Air Top range for VW Transporters, quiet OEM-spec diesel heating from around £830 to £2,035 depending on kit and controller.",
+        "price_gbp": 0,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fvehicle-heater-kits%2Fwebasto",
         "affiliate_programme": "direct",
         "founder_recommended": false,
@@ -35,7 +35,7 @@
           "diesel-heater",
           "premium"
         ],
-        "notes": "OEM quality. Specify at conversion time — retrofitting adds cost and complexity."
+        "notes": "Compare the range on Butler Technik before choosing — price and output vary by kit and controller."
       },
       {
         "id": "planar-2d-diesel-heater",
@@ -44,13 +44,13 @@
         "price_gbp": 320,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FPlanar-Air-2D-12v-Heater-Kit-with-Rotary-Controller-EU-2-12-3995%2F6AY",
         "affiliate_programme": "direct",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "heating",
           "diesel-heater",
           "budget"
         ],
-        "notes": "Solid value option. Combine with Autoterm controller for phone control."
+        "notes": "Lower-cost diesel heater option. Can be paired with the Autoterm Comfort Controller for app control."
       }
     ],
     "solar": [
@@ -141,8 +141,8 @@
         "name": "Renogy 100Ah AGM Deep Cycle Battery",
         "description": "Budget leisure battery option. 100Ah AGM, maintenance-free. ~50Ah usable capacity.",
         "price_gbp": 120,
-        "affiliate_url": "https://www.amazon.co.uk/s?k=renogy+100ah+agm+leisure+battery&tag=camperdna-21",
-        "affiliate_programme": "amazon",
+        "affiliate_url": "https://uk.renogy.com/pages/12v-100ah-deep-cycle-agm-battery-w-battery-box-rbt100agm12b-html",
+        "affiliate_programme": "direct",
         "founder_recommended": false,
         "tags": [
           "battery",
@@ -150,7 +150,7 @@
           "agm",
           "budget"
         ],
-        "notes": "Fine starting point. Upgrade to lithium when budget allows."
+        "notes": "Entry-level AGM option. Price/stock last confirmed 2026-08-10 — worth a spot-check before launch."
       }
     ],
     "towbar-racks": [
@@ -162,14 +162,14 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B005F2YPO0?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "bikes",
           "towbar-rack",
           "barn-door-compatible",
           "3-bike"
         ],
-        "notes": "Best option for barn door setups. Swings out around the doors — no need to remove it."
+        "notes": "Swings out around barn doors without removing the rack — relevant for barn-door T5/T6 setups specifically."
       },
       {
         "id": "atera-strada-sport-2",
@@ -336,7 +336,7 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B0D8MNX4TC?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61A8+UhDP6L._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "bikes",
           "door-mounted",
@@ -345,7 +345,7 @@
           "no-towbar",
           "premium"
         ],
-        "notes": "The premium door-mounted option. T6-specific, handles e-bikes, tailgate opens with rack fitted. Expandable to 4 bikes with adapters."
+        "notes": "T6-specific door-mounted rack. Tailgate opens with rack fitted; expandable to 4 bikes with adapters."
       },
       {
         "id": "fiamma-carry-bike-t5t6",
@@ -428,36 +428,35 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B004NDVBHQ?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/31RyqebdsBL._AC_.jpg",
         "affiliate_programme": "amazon",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "awning",
           "outdoor-living",
           "retractable"
         ],
-        "notes": "The go-to choice for T5/T6. Fits tidily on the factory roof rail. No drilling required."
+        "notes": "Fits the factory roof rail on T5/T6 without drilling."
       },
       {
         "id": "driveaway-awning-rail",
-        "name": "Kiravans Awning Rail Kit",
-        "description": "Side-door awning rail for T5/T6. Accepts drive-away tents from Outdoor Revolution, Vango etc.",
-        "price_gbp": 65,
-        "affiliate_url": "https://www.kiravans.com/awning-rails/",
-        "affiliate_programme": "direct",
+        "name": "Universal Driveaway Awning Rail Kit",
+        "description": "Twin 4mm/6mm Kador strip with Figure-8 rail channel, fits T4/T5/T6. Needed to attach a drive-away awning to the van's factory rail.",
+        "price_gbp": 50,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B095Z55CLW?tag=camperdna-21",
+        "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": [
           "awning",
           "awning-rail",
           "drive-away"
         ],
-        "notes": "Essential if you want a drive-away tent. Fits most T5/T6 — check compatibility with your tent."
+        "notes": "Needed if you want a drive-away tent. Check compatibility with your specific awning's channel size."
       },
       {
         "id": "vango-kela-v-air-low",
-        "name": "Vango Kela V Air Low Drive-Away Awning",
+        "name": "Vango Kela Pro Air Drive-Away Awning (Kela V Low)",
         "description": "Inflatable drive-away awning for T5/T6. Fits via Kador channel or awning rail. 180–210cm fixing height. Adds a full room to the van.",
-        "price_gbp": 450,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0CY5R6NPY?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/51WdfhzM88L._AC_SX679_.jpg",
+        "price_gbp": 700,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07JQCHFC9?tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": [
@@ -466,7 +465,7 @@
           "family",
           "camping"
         ],
-        "notes": "The most popular drive-away awning in the T6 community. Pairs with the Kiravans rail. Air beam setup — no poles needed."
+        "notes": "Popular drive-away awning in the T6 community. Pairs with an awning rail kit. Air beam setup — no poles needed."
       }
     ],
     "insurance": [
@@ -494,13 +493,13 @@
         "price_gbp": 300,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3790&awinaffid=2832996&ued=https%3A%2F%2Fwww.rac.co.uk%2Fbuying-a-car%2Fvehicle-inspections",
         "affiliate_programme": "referral",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "inspection",
           "buying-process",
           "essential"
         ],
-        "notes": "Non-negotiable for private purchases. £300 now or a £3,000 surprise later."
+        "notes": "Commonly used ahead of private-sale purchases to check for mechanical or bodywork issues before committing."
       },
       {
         "id": "hpi-check",
@@ -509,13 +508,13 @@
         "price_gbp": 20,
         "affiliate_url": "https://www.hpicheck.com/",
         "affiliate_programme": "referral",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "inspection",
           "buying-process",
           "history-check"
         ],
-        "notes": "Do this before every private purchase. Never skip it — takes 5 minutes online."
+        "notes": "Online check, results typically within minutes. Commonly done alongside a physical inspection for private purchases."
       }
     ],
     "bed-mattresses": [
@@ -637,13 +636,13 @@
         "affiliate_url": "https://www.amazon.co.uk/dp/B0CTJ2SH46?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/61qubfqTXbL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "towbar",
           "bikes",
           "accessories"
         ],
-        "notes": "Detachable is worth the extra cost — remove it when you don't need it."
+        "notes": "Detachable design allows removal when not in use. Electrics kit required, sold separately."
       }
     ]
   }
