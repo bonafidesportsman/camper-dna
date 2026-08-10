@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-04-01",
-    "version": 7,
-    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, pending approval). RAC via Awin (MID 3790). Publisher ID 2832996. Bimble Solar affiliate tracking code pending approval — replace TRACKING_PENDING in both bimble entries once code is confirmed."
+    "lastUpdated": "2026-08-10",
+    "version": 9,
+    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291). Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, application rejected — not earning, needs a decision). Publisher ID 2832996. Bimble Solar affiliate tracking is live (code confirmed 2026-08-10, applied to both bimble entries)."
   },
   "categories": {
     "heating": [
@@ -124,10 +124,9 @@
         "id": "fogstar-drift-105ah-lifepo4",
         "name": "Fogstar Drift 105Ah LiFePO4 Leisure Battery",
         "description": "UK-designed LiFePO4 battery. 105Ah usable, built-in BMS, Bluetooth monitoring. Compact under-seat fitment for T6.",
-        "price_gbp": 380,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0FQNWQB9K?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/51hHA3DyjmL._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
+        "price_gbp": 320,
+        "affiliate_url": "https://www.fogstar.co.uk/products/lithium-leisure-battery-fogstar-drift-105ah",
+        "affiliate_programme": "direct",
         "founder_recommended": false,
         "tags": [
           "battery",
@@ -135,7 +134,7 @@
           "lithium",
           "energy-independence"
         ],
-        "notes": "Very popular in the van community. UK company with good support. Competes directly with Bimble."
+        "notes": "Sold direct by Fogstar; the previous Amazon listing was delisted. UK company, spec comparable to Bimble."
       },
       {
         "id": "renogy-100ah-agm",
@@ -225,58 +224,6 @@
         "notes": "Extended arms for larger e-bike frames. The heavy-duty Atera option."
       },
       {
-        "id": "atera-strada-dl3",
-        "name": "Atera Strada DL 3",
-        "description": "Lightweight towbar rack for 3 bikes. Slides away from the van for full barn door access. 60kg capacity.",
-        "price_gbp": 525,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B0053RF0JG?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/51LXonBYS1L._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": [
-          "bikes",
-          "towbar-rack",
-          "barn-door-compatible",
-          "3-bike",
-          "lightweight"
-        ],
-        "notes": "Slides away from the van — gives full access to barn doors even with bikes loaded."
-      },
-      {
-        "id": "atera-strada-evo-3",
-        "name": "Atera Strada Evo 3",
-        "description": "Premium towbar rack for 3 bikes. Aluminium construction, tool-free assembly. 60kg capacity.",
-        "price_gbp": 668,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B007GACED8?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/61SWhdwBA1L._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": [
-          "bikes",
-          "towbar-rack",
-          "3-bike",
-          "premium"
-        ],
-        "notes": "Premium Atera option. Lighter aluminium build, easier to handle. Worth the step up if budget allows."
-      },
-      {
-        "id": "atera-strada-evo-2",
-        "name": "Atera Strada Evo 2",
-        "description": "Premium towbar rack for 2 bikes. Aluminium, tool-free. Same Evo build quality as the 3-bike. 60kg capacity.",
-        "price_gbp": 670,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B007GA8NHE?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/51TOt6epfDL._AC_SX425_.jpg",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": [
-          "bikes",
-          "towbar-rack",
-          "2-bike",
-          "premium"
-        ],
-        "notes": "Premium 2-bike option. Same Evo quality, lighter than the 3-bike version."
-      },
-      {
         "id": "atera-vario-3",
         "name": "Atera Vario 3",
         "description": "Top-of-range Atera towbar rack for 3 bikes. Fully adjustable wheel holders, premium build. 60kg capacity.",
@@ -295,12 +242,11 @@
         "notes": "The flagship Atera rack. Fully adjustable, premium materials. For those who want the best."
       },
       {
-        "id": "thule-velospace-xt-3",
-        "name": "Thule VeloSpace XT 3",
-        "description": "Platform towbar rack for 3 bikes. Tilts for boot access. 13-pin. Extendable to 4 bikes. 60kg capacity.",
-        "price_gbp": 636,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B079NWVW3F?tag=camperdna-21",
-        "image_url": "https://m.media-amazon.com/images/I/71bWQvYQ1EL._AC_SX425_.jpg",
+        "id": "thule-velocompact-3",
+        "name": "Thule Velocompact 13-pin (3-4 bikes)",
+        "description": "Platform towbar rack for 3 bikes, extendable to 4. Tilts for boot access. 13-pin. 60kg capacity.",
+        "price_gbp": 529,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B09MTW9Z4F?tag=camperdna-21",
         "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": [
@@ -309,7 +255,7 @@
           "3-bike",
           "tailgate-friendly"
         ],
-        "notes": "Thule's best rack for tailgate vans. Tilts down for boot access with bikes loaded."
+        "notes": "Replaces the discontinued VeloSpace XT 3 in this slot. Extendable to 4 bikes with the adapter kit; tilts down for boot access with bikes loaded."
       },
       {
         "id": "thule-velocompact-2",
@@ -438,23 +384,6 @@
       }
     ],
     "rack-accessories": [
-      {
-        "id": "atera-dl3-4th-bike-extension",
-        "name": "Atera Strada DL 3 Extension Kit (4th Bike)",
-        "description": "Adds a 4th bike position to the Atera Strada DL 3. Includes wheel rail and spacer.",
-        "price_gbp": 124,
-        "affiliate_url": "https://www.amazon.co.uk/dp/B00HFUPH88?tag=camperdna-21",
-        "affiliate_programme": "amazon",
-        "founder_recommended": false,
-        "tags": [
-          "bikes",
-          "accessory",
-          "atera",
-          "extension",
-          "4-bike"
-        ],
-        "notes": "Turns your DL 3 into a 4-bike rack. Check total weight doesn't exceed your towbar's nose weight."
-      },
       {
         "id": "thule-wanderway-3rd-bike-adapter",
         "name": "Thule WanderWay 3rd Bike Adapter",
@@ -592,19 +521,19 @@
     "bed-mattresses": [
       {
         "id": "rib112-mattress-topper",
-        "name": "Edge Campervans RIB112 Mattress Topper",
-        "description": "Purpose-made memory foam topper for RIB Altair bed systems. Folds with the bed.",
-        "price_gbp": 180,
-        "affiliate_url": "https://www.edgecampervans.com/",
+        "name": "RIB 112cm Mattress Topper",
+        "description": "Foam topper sized for RIB Altair 112cm bed systems. Folds with the bed.",
+        "price_gbp": 118,
+        "affiliate_url": "https://campervanseating.uk/product/campervan-mattress-topper/",
         "affiliate_programme": "direct",
-        "founder_recommended": true,
+        "founder_recommended": false,
         "tags": [
           "bed",
           "mattress",
           "rib",
           "comfort"
         ],
-        "notes": "The difference between 'camping sleep' and actual sleep. Buy this at conversion time."
+        "notes": "From £118, up to £155 depending on foam depth. Select the 112cm option at checkout."
       }
     ],
     "electronics-stereos": [
