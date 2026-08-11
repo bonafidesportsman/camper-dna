@@ -12,7 +12,7 @@ const resultEl     = document.getElementById('quiz-result');
 
 // Result display labels (concise versions for the spec grid)
 const RESULT_LABELS = {
-  van_generation: { t6:'T6 / T6.1 (2015+)', t5:'T5 (2009–2015)', undecided:'T5 or T6' },
+  van_generation: { t6:'T6 / T6.1 (2015+)', t5:'T5 (2009–2015)', t7:'T7 Transporter (2025+)', undecided:'T5, T6 or T7' },
   buying_route:   { preconverted:'Pre-converted', 'donor-converter':'Donor + Converter', 'donor-selfbuild':'Donor + Self-build', undecided:'To be decided' },
   van_source:     { 'vw-approved':'VW Approved Used', private:'Private sale', converter:'Via converter', undecided:'To be decided' },
   transmission:   { '6-manual':'6-speed manual', dsg:'DSG automatic', '5-manual':'5-speed manual', undecided:'To be decided' },
@@ -76,9 +76,10 @@ function buildQuiz() {
       expandHTML = `<details class="quiz-expand"><summary>${q.expand.summary}</summary><div class="quiz-expand-body">${q.expand.body}</div></details>`;
     }
 
-    const optionsHTML = q.options.map(opt =>
-      `<button class="quiz-option" data-key="${q.key}" data-value="${opt.value}">${opt.label}</button>`
-    ).join('');
+    const optionsHTML = q.options.map(opt => {
+      const showIf = opt.showIf ? ` data-show-if='${JSON.stringify(opt.showIf)}'` : '';
+      return `<button class="quiz-option" data-key="${q.key}" data-value="${opt.value}"${showIf}>${opt.label}</button>`;
+    }).join('');
 
     div.innerHTML = `
       <h2>${q.q}</h2>
@@ -109,9 +110,12 @@ function buildQuiz() {
     btn.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     answers[key] = value;
+    pruneInvalidAnswers();
 
     setTimeout(() => goNext(), 280);
   });
+
+  updateOptionVisibility();
 }
 
 function updateProgress() {
@@ -120,6 +124,7 @@ function updateProgress() {
 }
 
 function showQuestion(index) {
+  updateOptionVisibility();
   document.querySelectorAll('.quiz-question').forEach((el, i) => {
     el.classList.toggle('active', i === index);
   });
@@ -130,7 +135,7 @@ function showQuestion(index) {
 
 function goNext() {
   const q = QUESTIONS[current];
-  if (!answers[q.key]) return;
+  if (!isAnswerValid(q.key, answers[q.key])) return;
 
   if (current < QUESTIONS.length - 1) {
     current++;
@@ -139,6 +144,42 @@ function goNext() {
     progressFill.style.width = '100%';
     showResult();
   }
+}
+
+function updateOptionVisibility() {
+  questionsEl.querySelectorAll('.quiz-option[data-show-if]').forEach(btn => {
+    const visible = evaluateShowIf(JSON.parse(btn.dataset.showIf));
+    btn.hidden = !visible;
+    btn.disabled = !visible;
+    if (!visible && answers[btn.dataset.key] === btn.dataset.value) {
+      delete answers[btn.dataset.key];
+      btn.classList.remove('selected');
+    }
+  });
+}
+
+function pruneInvalidAnswers() {
+  QUESTIONS.forEach(q => {
+    if (answers[q.key] && !isAnswerValid(q.key, answers[q.key])) {
+      delete answers[q.key];
+      questionsEl
+        .querySelectorAll(`.quiz-option[data-key="${q.key}"].selected`)
+        .forEach(btn => btn.classList.remove('selected'));
+    }
+  });
+}
+
+function isAnswerValid(key, value) {
+  if (!value) return false;
+  const btn = questionsEl.querySelector(`.quiz-option[data-key="${key}"][data-value="${value}"]`);
+  if (!btn) return false;
+  if (btn.dataset.showIf && !evaluateShowIf(JSON.parse(btn.dataset.showIf))) return false;
+  return true;
+}
+
+function evaluateShowIf(rule) {
+  if (rule.source !== 'phase1') return true;
+  return rule.anyOf.includes(answers[rule.sectionId]);
 }
 
 function goBack() {

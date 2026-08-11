@@ -21,6 +21,18 @@ const QUESTION_LABELS = {
 
 const REQUIRED_KEYS = ['budget', 'buying_route', 'van_generation', 'mileage', 'van_source', 'spec_level', 'transmission', 'seating', 'doors', 'roof', 'bed', 'activities', 'awning', 'heating', 'electrical'];
 
+const ANSWER_COMPATIBILITY = {
+  spec_level: {
+    highline: { van_generation: ['t5', 't6', 'undecided'] },
+    sportline: { van_generation: ['t5', 't6', 'undecided'] },
+    trendline: { van_generation: ['t5', 't6', 'undecided'] },
+  },
+  transmission: {
+    dsg: { van_generation: ['t5', 't6', 'undecided'] },
+    '5-manual': { van_generation: ['t5', 't6', 'undecided'] },
+  },
+};
+
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -52,6 +64,10 @@ export async function onRequestPost(context) {
   const missing = REQUIRED_KEYS.filter(k => !answers[k]);
   if (missing.length > 0) {
     return Response.json({ status: 'error', message: `Missing answers for: ${missing.join(', ')}`, code: 'VALIDATION_ERROR' }, { status: 400, headers });
+  }
+  const invalid = validateAnswers(answers);
+  if (invalid.length > 0) {
+    return Response.json({ status: 'error', message: `Incompatible answers: ${invalid.join(', ')}`, code: 'VALIDATION_ERROR' }, { status: 400, headers });
   }
 
   // Rate limiting + deduplication via KV (if bound)
@@ -132,14 +148,14 @@ Numbered. Specific to their situation.
 
 Close with a warm sign-off that invites questions.
 
+Do not greet the reader by name or infer a name from any data. Start with the Personal Summary heading.
+
 Keep the report to 900–1200 words. Format: plain Markdown.`;
 
   const userMessage = `Please write a personalised CamperDNA buying guide for this reader.
 
 **Quiz Answers:**
-${answerLines}
-
-**Email:** ${email.trim()}`;
+${answerLines}`;
 
   // Call Claude via OpenRouter
   let markdownReport;
@@ -181,14 +197,14 @@ ${answerLines}
   }
 
   // Convert markdown → HTML
-  const reportHTML = markdownToHTML(markdownReport);
+  const reportHTML = markdownToHTML(stripGeneratedGreeting(markdownReport));
 
   // Build spec summary for email header
   const specRows = buildSpecRows(answers);
 
   // Generate email HTML + text
   const emailHTML = buildEmailHTML(reportHTML, specRows, email);
-  const emailText = buildEmailText(markdownReport, specRows, email);
+  const emailText = buildEmailText(stripGeneratedGreeting(markdownReport), specRows);
 
   // Send via Resend
   const fromEmail = env.RESEND_FROM_EMAIL || 'campfire@camper-dna.com';
@@ -216,7 +232,7 @@ ${answerLines}
     }
 
     const resendData = await resendRes.json();
-    return Response.json({ status: 'success', message: `Report sent to ${email.trim()}`, emailId: resendData.id }, { status: 200, headers });
+    return Response.json({ status: 'success', message: 'Report sent. Check your inbox.', emailId: resendData.id }, { status: 200, headers });
 
   } catch (err) {
     console.error('[generate-report] Resend fetch error:', err);
@@ -249,6 +265,37 @@ function buildSpecRows(answers) {
     { label: 'Heating',      value: QUESTION_LABELS.heating?.[answers.heating] || answers.heating },
     { label: 'Electrical',   value: QUESTION_LABELS.electrical?.[answers.electrical] || answers.electrical },
   ];
+}
+
+function validateAnswers(answers) {
+  const invalid = [];
+
+  REQUIRED_KEYS.forEach(key => {
+    if (!Object.prototype.hasOwnProperty.call(QUESTION_LABELS[key] || {}, answers[key])) {
+      invalid.push(key);
+    }
+  });
+
+  Object.entries(ANSWER_COMPATIBILITY).forEach(([key, valueRules]) => {
+    const selectedValue = answers[key];
+    const dependencies = valueRules[selectedValue];
+    if (!dependencies) return;
+
+    Object.entries(dependencies).forEach(([dependencyKey, allowedValues]) => {
+      if (!allowedValues.includes(answers[dependencyKey])) {
+        invalid.push(`${key}=${selectedValue} with ${dependencyKey}=${answers[dependencyKey]}`);
+      }
+    });
+  });
+
+  return invalid;
+}
+
+function stripGeneratedGreeting(markdown) {
+  return markdown
+    .replace(/^\s*(hi|hello|hey)\s+[^,\n]+,\s*(?:\n+|\s+)/i, '')
+    .replace(/^\s*thanks for taking the quiz[.!]?\s*(?:\n+|\s+)/i, '')
+    .trim();
 }
 
 function markdownToHTML(md) {
@@ -303,27 +350,39 @@ function buildEmailHTML(reportHTML, specRows, email) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your CamperDNA Profile</title>
+  <style>
+    @media only screen and (max-width:480px){
+      .spec-summary-grid{display:block !important;}
+      .email-shell{width:100% !important;margin:0 !important;border-radius:0 !important;}
+      .email-section{padding:24px 18px !important;}
+      table.spec-table,table.spec-table thead,table.spec-table tbody,table.spec-table tr,table.spec-table th,table.spec-table td{display:block !important;width:100% !important;}
+      table.spec-table thead{display:none !important;}
+      table.spec-table tr{border:1px solid #E5E7EB;border-radius:4px;margin:0 0 12px;overflow:hidden;}
+      table.spec-table td{box-sizing:border-box;border-bottom:1px solid #E5E7EB !important;}
+      table.spec-table td:last-child{border-bottom:0 !important;}
+    }
+  </style>
 </head>
 <body style="margin:0;padding:0;background:#f0ede8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;line-height:1.6;color:#1F2937;">
-  <div style="max-width:600px;margin:32px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
+  <div class="email-shell" style="max-width:600px;margin:32px auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);">
 
     <!-- Header -->
-    <div style="background:#1F2937;padding:36px 32px;text-align:center;">
+    <div class="email-section" style="background:#1F2937;padding:36px 32px;text-align:center;">
       <div style="font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#D4704F;margin-bottom:10px;">CamperDNA</div>
       <h1 style="margin:0;font-size:26px;font-weight:700;color:#F9F8F6;line-height:1.3;">Your personalised van buying guide</h1>
       <p style="margin:12px 0 0;font-size:14px;color:#9CA3AF;">Based on your CamperDNA profile</p>
     </div>
 
     <!-- Spec Summary -->
-    <div style="background:#fff;padding:32px;border-bottom:1px solid #E5E7EB;">
+    <div class="email-section" style="background:#fff;padding:32px;border-bottom:1px solid #E5E7EB;">
       <h2 style="margin:0 0 20px;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;color:#6B7280;">Your Recommended Spec</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div class="spec-summary-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
         ${specCells}
       </div>
     </div>
 
     <!-- Report Body -->
-    <div style="padding:32px;color:#374151;font-size:15px;line-height:1.7;">
+    <div class="email-section" style="padding:32px;color:#374151;font-size:15px;line-height:1.7;">
       <style>
         h2{font-size:18px;color:#1F2937;margin-top:28px;margin-bottom:10px;border-bottom:1px solid #E5E7EB;padding-bottom:8px;}
         h3{font-size:16px;color:#1F2937;margin-top:20px;margin-bottom:8px;}
@@ -337,17 +396,18 @@ function buildEmailHTML(reportHTML, specRows, email) {
         strong{color:#1F2937;}
         a{color:#D4704F;text-decoration:none;}
       </style>
+      <p style="margin:0 0 18px;color:#374151;">Thanks for taking the quiz. Here’s your CamperDNA profile.</p>
       ${reportHTML}
     </div>
 
     <!-- CTA -->
-    <div style="background:#F9F8F6;padding:28px 32px;text-align:center;border-top:1px solid #E5E7EB;">
+    <div class="email-section" style="background:#F9F8F6;padding:28px 32px;text-align:center;border-top:1px solid #E5E7EB;">
       <p style="margin:0 0 16px;font-size:14px;color:#6B7280;">Questions? Reply to this email — I read everything.</p>
       <a href="https://camper-dna.com/buying-a-van/" style="display:inline-block;padding:14px 28px;background:#D4704F;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border-radius:4px;">📋 Full Buying Guide →</a>
     </div>
 
     <!-- Footer -->
-    <div style="background:#1F2937;padding:20px 32px;text-align:center;">
+    <div class="email-section" style="background:#1F2937;padding:20px 32px;text-align:center;">
       <p style="margin:0;font-size:12px;color:#6B7280;">CamperDNA · Real advice for VW van buyers · <a href="https://camper-dna.com" style="color:#9CA3AF;text-decoration:none;">camper-dna.com</a></p>
       <p style="margin:8px 0 0;font-size:11px;color:#4B5563;">This is a transactional email sent in response to your CamperDNA profile submission.</p>
     </div>
@@ -356,7 +416,7 @@ function buildEmailHTML(reportHTML, specRows, email) {
 </html>`;
 }
 
-function buildEmailText(markdown, specRows, email) {
+function buildEmailText(markdown, specRows) {
   const specLines = specRows.map(r => `${r.label}: ${r.value}`).join('\n');
   const bodyText = markdown
     .replace(/#{1,3} /g, '\n\n')
@@ -375,6 +435,8 @@ Your Recommended Spec
 ${specLines}
 
 ---
+
+Thanks for taking the quiz. Here’s your CamperDNA profile.
 
 ${bodyText}
 

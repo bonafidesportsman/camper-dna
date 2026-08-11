@@ -148,19 +148,46 @@
         "options": [
           {
             "value": "highline",
-            "label": "Highline (recommended — aircon standard, heated windscreen, parking sensors)"
+            "label": "Highline (recommended — aircon standard, heated windscreen, parking sensors)",
+            "showIf": {
+              "source": "phase1",
+              "sectionId": "van_generation",
+              "anyOf": [
+                "t5",
+                "t6",
+                "undecided"
+              ]
+            }
           },
           {
             "value": "sportline",
-            "label": "Sportline (lifestyle grade above Highline — 204PS DSG, lowered sports suspension, premium interior. Note: lowered suspension is a disadvantage for campsites and rough tracks; interior gets stripped in a conversion so the premium may not be worth it)"
+            "label": "Sportline (lifestyle grade above Highline — 204PS DSG, lowered sports suspension, premium interior. Note: lowered suspension is a disadvantage for campsites and rough tracks; interior gets stripped in a conversion so the premium may not be worth it)",
+            "showIf": {
+              "source": "phase1",
+              "sectionId": "van_generation",
+              "anyOf": [
+                "t5",
+                "t6",
+                "undecided"
+              ]
+            }
           },
           {
             "value": "trendline",
-            "label": "Trendline or Startline (budget — aircon often missing, needs retrofitting)"
+            "label": "Trendline or Startline (budget — aircon often missing, needs retrofitting)",
+            "showIf": {
+              "source": "phase1",
+              "sectionId": "van_generation",
+              "anyOf": [
+                "t5",
+                "t6",
+                "undecided"
+              ]
+            }
           },
           {
             "value": "na",
-            "label": "Already have a van / not applicable"
+            "label": "T7 / already have a van / not applicable"
           }
         ]
       },
@@ -176,15 +203,33 @@
         "options": [
           {
             "value": "6-manual",
-            "label": "6-speed manual — most common, reliable, lower purchase price (available with 150PS and 204PS engines)"
+            "label": "6-speed manual — common, reliable, lower purchase price (availability depends on engine and generation)"
           },
           {
             "value": "dsg",
-            "label": "7-speed DSG automatic — smoother in traffic and towing, higher purchase price (150PS or 204PS only)"
+            "label": "7-speed DSG automatic — smoother in traffic and towing, higher purchase price (150PS or 204PS only)",
+            "showIf": {
+              "source": "phase1",
+              "sectionId": "van_generation",
+              "anyOf": [
+                "t5",
+                "t6",
+                "undecided"
+              ]
+            }
           },
           {
             "value": "5-manual",
-            "label": "5-speed manual — older T5 or 102PS engine, lowest cost, very reliable"
+            "label": "5-speed manual — older T5 or lower-powered T6/T6.1 engine, lowest cost, very reliable",
+            "showIf": {
+              "source": "phase1",
+              "sectionId": "van_generation",
+              "anyOf": [
+                "t5",
+                "t6",
+                "undecided"
+              ]
+            }
           },
           {
             "value": "undecided",
