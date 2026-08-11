@@ -117,6 +117,49 @@
       text-align: center;
     }
 
+    .vans-comparison {
+      background: var(--color-off-white);
+      border-bottom: 1px solid rgba(55,65,81,0.1);
+      padding: 48px 24px;
+    }
+    .vans-comparison-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .vans-comparison h2 {
+      margin: 0 0 22px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      line-height: 1.15;
+    }
+    .vans-comparison table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--color-white);
+      border: 1px solid rgba(55,65,81,0.12);
+      border-radius: 6px;
+      overflow: hidden;
+      font-family: var(--font-body);
+    }
+    .vans-comparison th,
+    .vans-comparison td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(55,65,81,0.1);
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+    .vans-comparison tr:last-child td {
+      border-bottom: none;
+    }
+    .vans-comparison th {
+      color: var(--color-slate);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--color-off-white);
+    }
+
     .van-generation-badge {
       position: absolute;
       top: 24px;
@@ -436,6 +479,36 @@
       .vans-hero {
         padding: 52px 24px 44px;
       }
+      .vans-comparison {
+        padding: 36px 18px;
+      }
+      .vans-comparison table,
+      .vans-comparison thead,
+      .vans-comparison tbody,
+      .vans-comparison tr,
+      .vans-comparison th,
+      .vans-comparison td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .vans-comparison thead {
+        display: none;
+      }
+      .vans-comparison tr {
+        border-bottom: 1px solid rgba(55,65,81,0.12);
+      }
+      .vans-comparison tr:last-child {
+        border-bottom: none;
+      }
+      .vans-comparison td {
+        border-bottom: none;
+      }
+      .vans-comparison td:first-child {
+        font-weight: 700;
+        color: var(--color-slate);
+        padding-bottom: 4px;
+      }
     }
 
   </style>
@@ -473,17 +546,19 @@
     <p>The modern conversion market runs almost entirely on T5 onwards. The T5, T6 and T6.1 share the same basic body dimensions, conversion ecosystem and parts supply chain. Roof kits, bed systems, furniture profiles and specialist knowledge all transfer between them. The newest Transporter takes the nameplate in a new direction on a shared Ford platform, and the conversion ecosystem is still catching up.</p>
   </div>
 
-  <section class="vans-intro">
-    <h2>T5 vs T6 vs T6.1 vs T7: quick comparison</h2>
-    <table>
-      <thead><tr><th>Generation</th><th>Best reason to buy</th><th>Main caution</th></tr></thead>
-      <tbody>
-        <tr><td>T5</td><td>Lowest entry cost and plenty of choice.</td><td>Age, rust, mileage and clean air zones.</td></tr>
-        <tr><td>T6</td><td>Strong balance of price, Euro 6 options and converter support.</td><td>Check the V5, early vans may not be Euro 6.</td></tr>
-        <tr><td>T6.1</td><td>Newest version of the familiar Transporter body.</td><td>Higher prices for broadly the same camper layout.</td></tr>
-        <tr><td>T7</td><td>Newer platform and modern powertrain options.</td><td>Less conversion history and more model confusion.</td></tr>
-      </tbody>
-    </table>
+  <section class="vans-comparison">
+    <div class="vans-comparison-inner">
+      <h2>T5 vs T6 vs T6.1 vs T7: quick comparison</h2>
+      <table>
+        <thead><tr><th>Generation</th><th>Best reason to buy</th><th>Main caution</th></tr></thead>
+        <tbody>
+          <tr><td>T5</td><td>Lowest entry cost and plenty of choice.</td><td>Age, rust, mileage and clean air zones.</td></tr>
+          <tr><td>T6</td><td>Strong balance of price, Euro 6 options and converter support.</td><td>Check the V5, early vans may not be Euro 6.</td></tr>
+          <tr><td>T6.1</td><td>Newest version of the familiar Transporter body.</td><td>Higher prices for broadly the same camper layout.</td></tr>
+          <tr><td>T7</td><td>Newer platform and modern powertrain options.</td><td>Less conversion history and more model confusion.</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
 
@@ -500,7 +575,7 @@
 
     <div class="van-block-content">
       <p class="van-model-label">VW T5</p>
-      <h2>Big choice, lower prices</h2>
+      <h2>Older, cheaper, still very usable</h2>
       <div class="van-stats">
         <div class="van-stat"><span>Price guide</span><strong>£10k-30k</strong></div>
         <div class="van-stat"><span>Engine</span><strong>1.9 / 2.5 / 2.0 TDI</strong></div>
@@ -531,7 +606,7 @@
 
     <div class="van-block-content">
       <p class="van-model-label">VW T6</p>
-      <h2>A strong used camper choice</h2>
+      <h2>Modern enough, proven enough</h2>
       <div class="van-stats">
         <div class="van-stat"><span>Price guide</span><strong>£20k-45k</strong></div>
         <div class="van-stat"><span>Engine</span><strong>2.0 TDI</strong></div>
@@ -562,7 +637,7 @@
 
     <div class="van-block-content">
       <p class="van-model-label">VW T6.1</p>
-      <h2>The last of the familiar Transporters</h2>
+      <h2>The newest version of the old shape</h2>
       <div class="van-stats">
         <div class="van-stat"><span>Price guide</span><strong>£30k-£55k+</strong></div>
         <div class="van-stat"><span>Engine</span><strong>2.0 TDI</strong></div>
@@ -593,7 +668,7 @@
 
     <div class="van-block-content">
       <p class="van-model-label">VW T7 Transporter</p>
-      <h2>For buyers looking ahead</h2>
+      <h2>Worth watching, harder to judge</h2>
       <div class="van-stats">
         <div class="van-stat"><span>Price guide</span><strong>£50k+</strong></div>
         <div class="van-stat"><span>Platform</span><strong>Ford Transit Custom</strong></div>
