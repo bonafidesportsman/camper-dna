@@ -2,10 +2,10 @@
 // Receives quiz answers + email, calls Claude via OpenRouter, sends report via Resend
 
 const QUESTION_LABELS = {
-  budget:       { 'under-20k': 'Under £20,000', '20-30k': '£20,000–30,000', '30-45k': '£30,000–45,000', '45k-plus': '£45,000+' },
+  budget:       { 'under-20k': 'Under £20,000', '20-30k': '£20,000-30,000', '30-45k': '£30,000-45,000', '45k-plus': '£45,000+' },
   buying_route: { preconverted: 'Buy pre-converted', 'donor-converter': 'Donor van + conversion company', 'donor-selfbuild': 'Donor van + self-build', undecided: 'Not decided' },
-  van_generation: { t6: 'T6 / T6.1 (2015+, ULEZ-compliant)', t5: 'T5 (2009–2015)', t7: 'T7 Transporter (UK from 2025, Ford Transit Custom platform)', undecided: 'Not sure yet' },
-  mileage:      { 'under-50k': 'Under 50,000 miles preferred', '100-150k': 'Happy with 100–150k with full history', depends: 'Depends on price and history' },
+  van_generation: { t6: 'T6 / T6.1 (2015+, ULEZ-compliant)', t5: 'T5 (2009-2015)', t7: 'T7 Transporter (UK from 2025, Ford Transit Custom platform)', undecided: 'Not sure yet' },
+  mileage:      { 'under-50k': 'Under 50,000 miles preferred', '100-150k': 'Happy with 100-150k with full history', depends: 'Depends on price and history' },
   van_source:   { 'vw-approved': 'VW Approved Used', private: 'Private sale', converter: 'Via conversion company', undecided: 'Not sure' },
   spec_level:   { highline: 'Highline', sportline: 'Sportline', trendline: 'Trendline/Startline', na: 'Already have a van / N/A' },
   transmission: { '6-manual': '6-speed manual', dsg: '7-speed DSG automatic', '5-manual': '5-speed manual', undecided: 'Not decided yet' },
@@ -15,8 +15,8 @@ const QUESTION_LABELS = {
   bed:          { rib: 'RIB bed (ISOfix points available)', 'rock-roll': 'Rock and Roll bed', fixed: 'Fixed bed', undecided: 'Not sure' },
   activities:   { watersports: 'Surfing / water sports', cycling: 'Cycling / mountain biking', hiking: 'Hiking / trail running / climbing', general: 'General use, no specific sport' },
   awning:       { retractable: 'Retractable awning', rail: 'Awning rail for drive-away tent', none: 'No awning needed' },
-  heating:      { yes: 'Yes — year-round use / cold nights', maybe: 'Probably yes', no: 'No — mainly summer / campsites' },
-  electrical:   { essential: 'Essential — wild camp, no mains hookup', useful: 'Useful — mix of wild and sites', 'not-important': 'Not important — mostly hookup sites' },
+  heating:      { yes: 'Yes - year-round use / cold nights', maybe: 'Probably yes', no: 'No - mainly summer / campsites' },
+  electrical:   { essential: 'Essential - wild camp, no mains hookup', useful: 'Useful - mix of wild and sites', 'not-important': 'Not important - mostly hookup sites' },
 };
 
 const REQUIRED_KEYS = ['budget', 'buying_route', 'van_generation', 'mileage', 'van_source', 'spec_level', 'transmission', 'seating', 'doors', 'roof', 'bed', 'activities', 'awning', 'heating', 'electrical'];
@@ -90,7 +90,7 @@ export async function onRequestPost(context) {
       return Response.json({ status: 'error', message: 'Too many requests from this connection. Try again in an hour.', code: 'RATE_LIMITED' }, { status: 429, headers });
     }
 
-    // Write KV (non-blocking — don't await)
+    // Write KV (non-blocking - don't await)
     const expirationTtl = 3600;
     env.CAMPERDNA_KV.put(ipKey, String(count + 1), { expirationTtl }).catch(() => {});
     env.CAMPERDNA_KV.put(emailKey, '1', { expirationTtl }).catch(() => {});
@@ -112,7 +112,7 @@ export async function onRequestPost(context) {
     return `- ${k.replace(/_/g, ' ')}: ${label}`;
   }).join('\n');
 
-  const systemPrompt = `You are writing a personalised CamperDNA buying guide email for someone about to buy a VW Transporter campervan conversion. You are the founder of CamperDNA — you spent a year researching before buying a VW T6, then helped four friends through the same buying process. Your advice is based on real experience, not theory.
+  const systemPrompt = `You are writing a personalised CamperDNA buying guide email for someone about to buy a VW Transporter campervan conversion. You are the founder of CamperDNA - you spent a year researching before buying a VW T6, then helped four friends through the same buying process. Your advice is based on real experience, not theory.
 
 Your tone is:
 - Warm and direct (like talking to a friend who's been through this)
@@ -136,9 +136,9 @@ Present a clear 8-row table using markdown:
 For each spec dimension, write a short paragraph: what they're choosing between, why you'd recommend one option, the trade-offs and gotchas, specific product examples and real costs where relevant.
 
 ## What to Watch Out For
-3–5 specific red flags based on their situation (buying route, budget, mileage tolerance). Include: service history, AdBlue (if T6), damp/mould signs, suspicious pricing, conversion quality.
+3-5 specific red flags based on their situation (buying route, budget, mileage tolerance). Include: service history, AdBlue (if T6), damp/mould signs, suspicious pricing, conversion quality.
 
-## Top 3–5 Things to Verify Before Buying
+## Top 3-5 Things to Verify Before Buying
 Numbered. Specific to their situation.
 
 ## Useful Resources
@@ -150,7 +150,7 @@ Close with a warm sign-off that invites questions.
 
 Do not greet the reader by name or infer a name from any data. Start with the Personal Summary heading.
 
-Keep the report to 900–1200 words. Format: plain Markdown.`;
+Keep the report to 900-1200 words. Format: plain Markdown.`;
 
   const userMessage = `Please write a personalised CamperDNA buying guide for this reader.
 
@@ -218,7 +218,7 @@ ${answerLines}`;
       body: JSON.stringify({
         from: `CamperDNA <${fromEmail}>`,
         to: [email.trim()],
-        subject: `Your CamperDNA Profile — personalised van buying guide`,
+        subject: `Your CamperDNA Profile - personalised van buying guide`,
         html: emailHTML,
         text: emailText,
         reply_to: 'campfire@camper-dna.com',
@@ -402,7 +402,7 @@ function buildEmailHTML(reportHTML, specRows, email) {
 
     <!-- CTA -->
     <div class="email-section" style="background:#F9F8F6;padding:28px 32px;text-align:center;border-top:1px solid #E5E7EB;">
-      <p style="margin:0 0 16px;font-size:14px;color:#6B7280;">Questions? Reply to this email — I read everything.</p>
+      <p style="margin:0 0 16px;font-size:14px;color:#6B7280;">Questions? Reply to this email - I read everything.</p>
       <a href="https://camper-dna.com/buying-a-van/" style="display:inline-block;padding:14px 28px;background:#D4704F;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border-radius:4px;">📋 Full Buying Guide →</a>
     </div>
 

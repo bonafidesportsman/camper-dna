@@ -1,4 +1,4 @@
-// CamperDNA Quiz — Phase 1 (15-question flow)
+// CamperDNA Quiz - Phase 1 (15-question flow)
 // Data-driven from /assets/data/questionnaire.json
 
 let QUESTIONS = [];
@@ -12,7 +12,7 @@ const resultEl     = document.getElementById('quiz-result');
 
 // Result display labels (concise versions for the spec grid)
 const RESULT_LABELS = {
-  van_generation: { t6:'T6 / T6.1 (2015+)', t5:'T5 (2009–2015)', t7:'T7 Transporter (2025+)', undecided:'T5, T6 or T7' },
+  van_generation: { t6:'T6 / T6.1 (2015+)', t5:'T5 (2009-2015)', t7:'T7 Transporter (2025+)', undecided:'T5, T6 or T7' },
   buying_route:   { preconverted:'Pre-converted', 'donor-converter':'Donor + Converter', 'donor-selfbuild':'Donor + Self-build', undecided:'To be decided' },
   van_source:     { 'vw-approved':'VW Approved Used', private:'Private sale', converter:'Via converter', undecided:'To be decided' },
   transmission:   { '6-manual':'6-speed manual', dsg:'DSG automatic', '5-manual':'5-speed manual', undecided:'To be decided' },
@@ -195,7 +195,7 @@ function showResult() {
 
   const grid = document.getElementById('spec-grid');
   grid.innerHTML = SPEC_MAP.map(s => {
-    const raw = answers[s.key] || '—';
+    const raw = answers[s.key] || ' - ';
     const label = RESULT_LABELS[s.key]?.[raw] || raw;
     return `<div class="spec-cell"><div class="spec-label">${s.label}</div><div class="spec-value">${label}</div></div>`;
   }).join('');

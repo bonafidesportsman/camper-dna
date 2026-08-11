@@ -2,7 +2,7 @@
   "metadata": {
     "lastUpdated": "2026-08-11",
     "version": 13,
-    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291, affiliate_programme corrected to 'awin'); Webasto entry is a range-comparison card, not a single SKU. Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, re-applied 2026-08-10, status Pending Approval). Publisher ID 2832996. Bimble Solar affiliate tracking is live. Renogy AGM battery replaced with an Amazon AGM listing (Renogy's own page had no working price/purchase option). No entries carry founder_recommended: true. 5 electronics/awning entries had live prices corrected 2026-08-11 (were up to £449 out) — see CAMPERDNA-005. 5 new categories added 2026-08-11 (security, window-privacy, campsite-basics, water, fridges-cooking) plus 1 new solar entry — see CAMPERDNA-006; all new entries are Amazon Associates, no new affiliate programmes."
+    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291, affiliate_programme corrected to 'awin'); Webasto entry is a range-comparison card, not a single SKU. Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, re-applied 2026-08-10, status Pending Approval). Publisher ID 2832996. Bimble Solar affiliate tracking is live. Renogy AGM battery replaced with an Amazon AGM listing (Renogy's own page had no working price/purchase option). No entries carry founder_recommended: true. 5 electronics/awning entries had live prices corrected 2026-08-11 (were up to £449 out) - see CAMPERDNA-005. 5 new categories added 2026-08-11 (security, window-privacy, campsite-basics, water, fridges-cooking) plus 1 new solar entry - see CAMPERDNA-006; all new entries are Amazon Associates, no new affiliate programmes."
   },
   "categories": {
     "heating": [
@@ -35,7 +35,7 @@
           "diesel-heater",
           "premium"
         ],
-        "notes": "Compare the range on Butler Technik before choosing — price and output vary by kit and controller."
+        "notes": "Compare the range on Butler Technik before choosing - price and output vary by kit and controller."
       },
       {
         "id": "planar-2d-diesel-heater",
@@ -100,7 +100,7 @@
           "dc-dc",
           "charging"
         ],
-        "notes": "Essential for T6/T6.1 smart alternators. Also has solar MPPT input — can replace a separate controller for smaller panels."
+        "notes": "Essential for T6/T6.1 smart alternators. Also has solar MPPT input - can replace a separate controller for smaller panels."
       },
       {
         "id": "victron-smartshunt-500a",
@@ -115,7 +115,7 @@
           "electrical",
           "monitoring"
         ],
-        "notes": "Pairs with the same Victron Connect app as the SmartSolar MPPT above. Voltage alone doesn't reliably indicate charge state on lithium batteries — a shunt-based monitor does."
+        "notes": "Pairs with the same Victron Connect app as the SmartSolar MPPT above. Voltage alone doesn't reliably indicate charge state on lithium batteries - a shunt-based monitor does."
       }
     ],
     "batteries": [
@@ -184,7 +184,7 @@
           "barn-door-compatible",
           "3-bike"
         ],
-        "notes": "Swings out around barn doors without removing the rack — relevant for barn-door T5/T6 setups specifically."
+        "notes": "Swings out around barn doors without removing the rack - relevant for barn-door T5/T6 setups specifically."
       },
       {
         "id": "atera-strada-sport-2",
@@ -305,7 +305,7 @@
           "e-bike",
           "premium"
         ],
-        "notes": "The premium choice. Tool-free, fits any bike frame. No UK Amazon listing — buy direct from Thule."
+        "notes": "The premium choice. Tool-free, fits any bike frame. No UK Amazon listing - buy direct from Thule."
       },
       {
         "id": "thule-hangon-3",
@@ -322,7 +322,7 @@
           "3-bike",
           "budget"
         ],
-        "notes": "Cheapest Thule option. Hanging design — less stable than platform racks but does the job."
+        "notes": "Cheapest Thule option. Hanging design - less stable than platform racks but does the job."
       },
       {
         "id": "thule-hangon-4",
@@ -339,7 +339,7 @@
           "4-bike",
           "budget"
         ],
-        "notes": "4 bikes for £200 — hard to beat on value. Hanging design, less suitable for e-bikes."
+        "notes": "4 bikes for £200 - hard to beat on value. Hanging design, less suitable for e-bikes."
       }
     ],
     "door-mounted-racks": [
@@ -395,7 +395,7 @@
           "no-towbar",
           "lightweight"
         ],
-        "notes": "Aluminium version — lighter at 7.7kg. Easier to handle and less strain on the door hinges."
+        "notes": "Aluminium version - lighter at 7.7kg. Easier to handle and less strain on the door hinges."
       }
     ],
     "rack-accessories": [
@@ -414,7 +414,7 @@
           "extension",
           "3-bike"
         ],
-        "notes": "Expands the WanderWay from 2 to 3 bikes. Check weight limits — e-bikes may reduce capacity."
+        "notes": "Expands the WanderWay from 2 to 3 bikes. Check weight limits - e-bikes may reduce capacity."
       },
       {
         "id": "thule-wanderway-4th-bike-adapter",
@@ -469,7 +469,7 @@
       {
         "id": "vango-kela-v-air-low",
         "name": "Vango Kela Pro Air Drive-Away Awning (Kela V Low)",
-        "description": "Inflatable drive-away awning for T5/T6. Fits via Kador channel or awning rail. 180–210cm fixing height. Adds a full room to the van.",
+        "description": "Inflatable drive-away awning for T5/T6. Fits via Kador channel or awning rail. 180-210cm fixing height. Adds a full room to the van.",
         "price_gbp": 700,
         "affiliate_url": "https://www.amazon.co.uk/dp/B07JQCHFC9?tag=camperdna-21",
         "affiliate_programme": "amazon",
@@ -480,14 +480,14 @@
           "family",
           "camping"
         ],
-        "notes": "Popular drive-away awning in the T6 community. Pairs with an awning rail kit. Air beam setup — no poles needed."
+        "notes": "Popular drive-away awning in the T6 community. Pairs with an awning rail kit. Air beam setup - no poles needed."
       }
     ],
     "insurance": [
       {
         "id": "quotesearcher-campervan-insurance",
         "name": "Compare Specialist Campervan Insurers",
-        "description": "One form, quotes from a panel of UK specialist campervan insurers — conversion cover, agreed value, European use. Comparison service provided by QuoteSearcher.",
+        "description": "One form, quotes from a panel of UK specialist campervan insurers - conversion cover, agreed value, European use. Comparison service provided by QuoteSearcher.",
         "price_gbp": 0,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=3681&awinaffid=2832996&ued=https%3A%2F%2Fwww.quotesearcher.co.uk%2Fcampervan-insurance%2F",
         "affiliate_programme": "referral",
@@ -497,7 +497,7 @@
           "legal",
           "essential"
         ],
-        "notes": "Specialist insurers only — you're comparing like-for-like campervan policies, not standard van cover."
+        "notes": "Specialist insurers only - you're comparing like-for-like campervan policies, not standard van cover."
       }
     ],
     "inspection": [
@@ -621,7 +621,7 @@
           "entertainment",
           "portable"
         ],
-        "notes": "Can-sized, runs off USB-C power bank. Google TV built in. 200 ANSI lumens — fine for evening use."
+        "notes": "Can-sized, runs off USB-C power bank. Google TV built in. 200 ANSI lumens - fine for evening use."
       },
       {
         "id": "benq-gs50-outdoor",
@@ -673,7 +673,7 @@
           "security",
           "theft-deterrent"
         ],
-        "notes": "A visible lock is a low-cost deterrent — most opportunist theft targets vehicles without one."
+        "notes": "A visible lock is a low-cost deterrent - most opportunist theft targets vehicles without one."
       },
       {
         "id": "monimoto-9-gps-tracker",
@@ -688,14 +688,14 @@
           "tracker",
           "gps"
         ],
-        "notes": "Runs on its own battery rather than the van's electrics — works even if the van's disconnected from power. Requires a subscription for continued tracking after the trial period."
+        "notes": "Runs on its own battery rather than the van's electrics - works even if the van's disconnected from power. Requires a subscription for continued tracking after the trial period."
       }
     ],
     "window-privacy": [
       {
         "id": "marvix-t5-t6-cab-thermal-screen",
         "name": "Marvix Internal Cab Thermal Screen (T5/T6)",
-        "description": "9-layer thermal blackout screen set for the cab area — windscreen and side windows. Fits VW T5/T6 without permanent modification.",
+        "description": "9-layer thermal blackout screen set for the cab area - windscreen and side windows. Fits VW T5/T6 without permanent modification.",
         "price_gbp": 57,
         "affiliate_url": "https://www.amazon.co.uk/dp/B0DF5P7PQP?tag=camperdna-21",
         "affiliate_programme": "amazon",
@@ -705,7 +705,7 @@
           "privacy",
           "insulation"
         ],
-        "notes": "Covers the cab only — a separate rear/pop-top screen may be needed depending on conversion layout. Custom-fit alternatives exist at a higher price point."
+        "notes": "Covers the cab only - a separate rear/pop-top screen may be needed depending on conversion layout. Custom-fit alternatives exist at a higher price point."
       }
     ],
     "campsite-basics": [
@@ -722,7 +722,7 @@
           "campsite",
           "budget"
         ],
-        "notes": "Useful on sloped pitches, common at UK sites. A pair covers one axle — check whether your setup needs a second pair."
+        "notes": "Useful on sloped pitches, common at UK sites. A pair covers one axle - check whether your setup needs a second pair."
       }
     ],
     "water": [
@@ -738,7 +738,7 @@
           "water",
           "campsite"
         ],
-        "notes": "A full 25L container weighs around 25kg — worth considering placement and lifting before buying the largest size."
+        "notes": "A full 25L container weighs around 25kg - worth considering placement and lifting before buying the largest size."
       },
       {
         "id": "12v-diaphragm-water-pump",
@@ -753,7 +753,7 @@
           "electrical",
           "plumbing"
         ],
-        "notes": "A basic component for a sink or shower build-out — fitting still requires tank, pipework and a switch."
+        "notes": "A basic component for a sink or shower build-out - fitting still requires tank, pipework and a switch."
       }
     ],
     "fridges-cooking": [
@@ -770,7 +770,7 @@
           "cooking",
           "electrical"
         ],
-        "notes": "Compressor fridges draw more power than thermoelectric coolers but hold temperature properly and work on a slope — relevant for van use."
+        "notes": "Compressor fridges draw more power than thermoelectric coolers but hold temperature properly and work on a slope - relevant for van use."
       },
       {
         "id": "higear-45l-thermoelectric-cooler",

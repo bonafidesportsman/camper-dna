@@ -1,4 +1,4 @@
-// CamperDNA – optional site-wide password protection via HTTP Basic Auth.
+// CamperDNA - optional site-wide password protection via HTTP Basic Auth.
 // Runs as a Cloudflare Pages middleware on every request.
 // When CAMPERDNA_GATE_USER and CAMPERDNA_GATE_PASSWORD are unset, the site is public.
 // Setting both env vars re-enables the password gate for future pre-launch periods.
@@ -12,7 +12,7 @@ export async function onRequest({ request, next, env }) {
   }
 
   if (!USERNAME || !PASSWORD) {
-    return new Response("Access restricted — password gate partially configured.", {
+    return new Response("Access restricted - password gate partially configured.", {
       status: 503,
       headers: { "Content-Type": "text/plain" },
     });
@@ -34,7 +34,7 @@ export async function onRequest({ request, next, env }) {
     }
   }
 
-  return new Response("Access restricted — password required.", {
+  return new Response("Access restricted - password required.", {
     status: 401,
     headers: {
       "WWW-Authenticate": 'Basic realm="CamperDNA"',

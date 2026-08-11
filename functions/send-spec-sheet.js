@@ -21,9 +21,9 @@ const SECTION_LABELS = {
 };
 
 const PHASE1_LABELS = {
-  budget:         { 'under-20k': 'Under £20,000', '20-30k': '£20,000–30,000', '30-45k': '£30,000–45,000', '45k-plus': '£45,000+' },
+  budget:         { 'under-20k': 'Under £20,000', '20-30k': '£20,000-30,000', '30-45k': '£30,000-45,000', '45k-plus': '£45,000+' },
   buying_route:   { preconverted: 'Pre-converted van', 'donor-converter': 'Donor + converter', 'donor-selfbuild': 'Donor + self-build', undecided: 'Not decided' },
-  van_generation: { t6: 'T6 / T6.1 (2015+)', t5: 'T5 (2009–2015)', t7: 'T7 Transporter (UK from 2025)', undecided: 'Not decided' },
+  van_generation: { t6: 'T6 / T6.1 (2015+)', t5: 'T5 (2009-2015)', t7: 'T7 Transporter (UK from 2025)', undecided: 'Not decided' },
   transmission:   { '6-manual': '6-speed manual', dsg: 'DSG automatic', '5-manual': '5-speed manual', undecided: 'Not decided' },
   spec_level:     { highline: 'Highline', sportline: 'Sportline', trendline: 'Trendline/Startline', na: 'Already have a van' },
   roof:           { 'pop-top': 'Pop-top', 'high-roof': 'High-roof', standard: 'Standard roof' },
@@ -193,7 +193,7 @@ function buildSpecSheetEmail(email, phase1Answers, phase2Selections) {
     <div class="email-section" style="background:#1F2937;padding:36px 32px;text-align:center;">
       <div style="font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#D4704F;margin-bottom:10px;">CamperDNA</div>
       <h1 style="margin:0;font-size:26px;font-weight:700;color:#F9F8F6;line-height:1.3;">Your Conversion Spec Sheet</h1>
-      <p style="margin:12px 0 0;font-size:14px;color:#9CA3AF;">Everything you want in your conversion — ready to send to a converter</p>
+      <p style="margin:12px 0 0;font-size:14px;color:#9CA3AF;">Everything you want in your conversion - ready to send to a converter</p>
     </div>
 
     <!-- Body -->
@@ -206,7 +206,7 @@ function buildSpecSheetEmail(email, phase1Answers, phase2Selections) {
 
       <div style="background:#F9F8F6;padding:20px 24px;border-radius:6px;margin-top:24px;">
         <p style="margin:0 0 8px;font-size:14px;color:#374151;"><strong>How to use this spec sheet:</strong></p>
-        <p style="margin:0;font-size:14px;color:#6B7280;">Forward this email to your conversion company and ask them to quote against the selected items. Each item is a starting point for the conversation — your converter may have equivalent or preferred products for some specifications.</p>
+        <p style="margin:0;font-size:14px;color:#6B7280;">Forward this email to your conversion company and ask them to quote against the selected items. Each item is a starting point for the conversation - your converter may have equivalent or preferred products for some specifications.</p>
       </div>
     </div>
 
@@ -250,7 +250,7 @@ function buildSpecSheetText(email, phase1Answers, phase2Selections) {
   return lines.join('\n');
 }
 
-// Convert item IDs like "bed-rib" to "Bed rib" (fallback — real labels come from JSON on the front end)
+// Convert item IDs like "bed-rib" to "Bed rib" (fallback - real labels come from JSON on the front end)
 function formatItemId(id) {
   return id
     .split('-')
