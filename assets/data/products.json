@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "lastUpdated": "2026-08-10",
-    "version": 11,
-    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291); Webasto entry is a range-comparison card, not a single SKU. Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, application rejected — not earning, needs a decision). Publisher ID 2832996. Bimble Solar affiliate tracking is live. Renogy AGM battery is a direct link (not sold via Amazon UK) — price/stock unconfirmed live, spot-check before launch. No entries carry founder_recommended: true — dispassionate-listing policy applied catalogue-wide as of this version."
+    "lastUpdated": "2026-08-11",
+    "version": 13,
+    "note": "Amazon links use tag camperdna-21. Heating products via Awin/Butler Technik (MID 31291, affiliate_programme corrected to 'awin'); Webasto entry is a range-comparison card, not a single SKU. Insurance via Awin/QuoteSearcher (MID 3681, still pending approval). RAC via Awin (MID 3790, re-applied 2026-08-10, status Pending Approval). Publisher ID 2832996. Bimble Solar affiliate tracking is live. Renogy AGM battery replaced with an Amazon AGM listing (Renogy's own page had no working price/purchase option). No entries carry founder_recommended: true. 5 electronics/awning entries had live prices corrected 2026-08-11 (were up to £449 out) — see CAMPERDNA-005. 5 new categories added 2026-08-11 (security, window-privacy, campsite-basics, water, fridges-cooking) plus 1 new solar entry — see CAMPERDNA-006; all new entries are Amazon Associates, no new affiliate programmes."
   },
   "categories": {
     "heating": [
@@ -12,7 +12,7 @@
         "description": "Phone-controllable diesel heater controller with timer, thermostat and remote temperature sensor.",
         "price_gbp": 120,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FAUTOTERM-Planar-Digital-Comfort-Controller-for-Air-and-Water-Heaters-AT0050%2F6BL",
-        "affiliate_programme": "direct",
+        "affiliate_programme": "awin",
         "founder_recommended": false,
         "tags": [
           "heating",
@@ -28,7 +28,7 @@
         "description": "Butler Technik's Webasto Air Top range for VW Transporters, quiet OEM-spec diesel heating from around £830 to £2,035 depending on kit and controller.",
         "price_gbp": 0,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fvehicle-heater-kits%2Fwebasto",
-        "affiliate_programme": "direct",
+        "affiliate_programme": "awin",
         "founder_recommended": false,
         "tags": [
           "heating",
@@ -43,7 +43,7 @@
         "description": "Russian-made diesel heater, popular in van conversions. 2kW output, compact footprint.",
         "price_gbp": 320,
         "affiliate_url": "https://www.awin1.com/cread.php?awinmid=31291&awinaffid=2832996&ued=https%3A%2F%2Fwww.butlertechnik.com%2Fitem%2FAutoterm%2FPlanar-Air-2D-12v-Heater-Kit-with-Rotary-Controller-EU-2-12-3995%2F6AY",
-        "affiliate_programme": "direct",
+        "affiliate_programme": "awin",
         "founder_recommended": false,
         "tags": [
           "heating",
@@ -101,6 +101,21 @@
           "charging"
         ],
         "notes": "Essential for T6/T6.1 smart alternators. Also has solar MPPT input — can replace a separate controller for smaller panels."
+      },
+      {
+        "id": "victron-smartshunt-500a",
+        "name": "Victron SmartShunt Battery Monitor",
+        "description": "Bluetooth battery monitor showing real-time state of charge, voltage, and current draw. Pairs with the Victron Connect app.",
+        "price_gbp": 60,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0DJ2P2XN5?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "solar",
+          "electrical",
+          "monitoring"
+        ],
+        "notes": "Pairs with the same Victron Connect app as the SmartSolar MPPT above. Voltage alone doesn't reliably indicate charge state on lithium batteries — a shunt-based monitor does."
       }
     ],
     "batteries": [
@@ -137,12 +152,12 @@
         "notes": "Sold direct by Fogstar; the previous Amazon listing was delisted. UK company, spec comparable to Bimble."
       },
       {
-        "id": "renogy-100ah-agm",
-        "name": "Renogy 100Ah AGM Deep Cycle Battery",
-        "description": "Budget leisure battery option. 100Ah AGM, maintenance-free. ~50Ah usable capacity.",
-        "price_gbp": 120,
-        "affiliate_url": "https://uk.renogy.com/pages/12v-100ah-deep-cycle-agm-battery-w-battery-box-rbt100agm12b-html",
-        "affiliate_programme": "direct",
+        "id": "agm1100-100ah-leisure-battery",
+        "name": "AGM1100 100Ah Deep Cycle Leisure Battery",
+        "description": "Budget leisure battery option. 100Ah AGM, maintenance-free, fully sealed. ~50Ah usable capacity.",
+        "price_gbp": 140,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B09RSFXV3F?tag=camperdna-21",
+        "affiliate_programme": "amazon",
         "founder_recommended": false,
         "tags": [
           "battery",
@@ -150,7 +165,7 @@
           "agm",
           "budget"
         ],
-        "notes": "Entry-level AGM option. Price/stock last confirmed 2026-08-10 — worth a spot-check before launch."
+        "notes": "Entry-level AGM option. Replaces a previous Renogy listing whose destination page had no working price or purchase option."
       }
     ],
     "towbar-racks": [
@@ -368,7 +383,7 @@
         "id": "fiamma-carry-bike-t5t6-aluminium",
         "name": "Fiamma Carry-Bike T5/T6 Aluminium",
         "description": "Lightweight aluminium rear-door rack for 2 bikes. 35kg capacity. No drilling, no towbar needed.",
-        "price_gbp": 500,
+        "price_gbp": 385,
         "affiliate_url": "https://www.amazon.co.uk/dp/B0GH9J7MVF?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/315NbAoVskL._AC_SX425_.jpg",
         "affiliate_programme": "amazon",
@@ -424,7 +439,7 @@
         "id": "fiamma-f45s",
         "name": "Fiamma F45S Retractable Awning",
         "description": "Wall-mounted retractable awning for VW Transporters. 2.5m or 3m width. UV-stabilised canopy.",
-        "price_gbp": 490,
+        "price_gbp": 758,
         "affiliate_url": "https://www.amazon.co.uk/dp/B004NDVBHQ?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/31RyqebdsBL._AC_.jpg",
         "affiliate_programme": "amazon",
@@ -557,7 +572,7 @@
         "id": "pioneer-sph-evo93dab",
         "name": "Pioneer SPH-EVO93DAB 9\" Floating Touchscreen",
         "description": "9\" floating capacitive touchscreen, wireless CarPlay & Android Auto, DAB+, HDMI input. Single-din chassis fits where double-din can't.",
-        "price_gbp": 550,
+        "price_gbp": 843,
         "affiliate_url": "https://www.amazon.co.uk/dp/B0888P224B?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/51J9OGRoXHL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
@@ -575,7 +590,7 @@
         "id": "kenwood-dnx9190dabs",
         "name": "Kenwood DNX9190DABS Navigation Stereo",
         "description": "HD 6.8\" screen with built-in Garmin navigation, wireless CarPlay & Android Auto, DAB+. Premium option with offline maps.",
-        "price_gbp": 750,
+        "price_gbp": 1199,
         "affiliate_url": "https://www.amazon.co.uk/dp/B07SBHDGK9?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/71eAXTz9B4L._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
@@ -612,7 +627,7 @@
         "id": "benq-gs50-outdoor",
         "name": "BenQ GS50 Outdoor Portable Projector",
         "description": "Full HD 1080p, 500 lumens, splash-proof (IPX2), 2.5hr built-in battery. Premium outdoor projector with excellent colour.",
-        "price_gbp": 550,
+        "price_gbp": 650,
         "affiliate_url": "https://www.amazon.co.uk/dp/B09BTTVJLX?tag=camperdna-21",
         "image_url": "https://m.media-amazon.com/images/I/51mAvJnPbDL._AC_SX679_.jpg",
         "affiliate_programme": "amazon",
@@ -643,6 +658,134 @@
           "accessories"
         ],
         "notes": "Detachable design allows removal when not in use. Electrics kit required, sold separately."
+      }
+    ],
+    "security": [
+      {
+        "id": "milenco-steering-wheel-lock",
+        "name": "Milenco Steering Wheel Lock",
+        "description": "Sold Secure-rated steering wheel lock. Visible deterrent, fits most van steering wheel sizes.",
+        "price_gbp": 82,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B07SD8HP7N?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "security",
+          "theft-deterrent"
+        ],
+        "notes": "A visible lock is a low-cost deterrent — most opportunist theft targets vehicles without one."
+      },
+      {
+        "id": "monimoto-9-gps-tracker",
+        "name": "Monimoto 9 GPS Tracker",
+        "description": "Battery-powered GPS tracker with real-time movement alerts to a phone app. No wiring required, waterproof.",
+        "price_gbp": 149,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0D1KSNHB6?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "security",
+          "tracker",
+          "gps"
+        ],
+        "notes": "Runs on its own battery rather than the van's electrics — works even if the van's disconnected from power. Requires a subscription for continued tracking after the trial period."
+      }
+    ],
+    "window-privacy": [
+      {
+        "id": "marvix-t5-t6-cab-thermal-screen",
+        "name": "Marvix Internal Cab Thermal Screen (T5/T6)",
+        "description": "9-layer thermal blackout screen set for the cab area — windscreen and side windows. Fits VW T5/T6 without permanent modification.",
+        "price_gbp": 57,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0DF5P7PQP?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "window-screens",
+          "privacy",
+          "insulation"
+        ],
+        "notes": "Covers the cab only — a separate rear/pop-top screen may be needed depending on conversion layout. Custom-fit alternatives exist at a higher price point."
+      }
+    ],
+    "campsite-basics": [
+      {
+        "id": "gadlane-levelling-ramp-set",
+        "name": "GADLANE Levelling Ramp Set (Pair)",
+        "description": "Heavy-duty levelling ramps, 4.5 tonne rated, anti-skid grooves. Sold as a pair.",
+        "price_gbp": 25,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0DG5ZVDHJ?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "levelling",
+          "campsite",
+          "budget"
+        ],
+        "notes": "Useful on sloped pitches, common at UK sites. A pair covers one axle — check whether your setup needs a second pair."
+      }
+    ],
+    "water": [
+      {
+        "id": "upwoigh-25l-water-container",
+        "name": "UPWOIGH 25L Water Container",
+        "description": "25-litre portable water container with tap, BPA-free. Suited to fresh water top-ups away from a fixed tank.",
+        "price_gbp": 38,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0BGZ2PDBH?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "water",
+          "campsite"
+        ],
+        "notes": "A full 25L container weighs around 25kg — worth considering placement and lifting before buying the largest size."
+      },
+      {
+        "id": "12v-diaphragm-water-pump",
+        "name": "12V Diaphragm Water Pump",
+        "description": "Self-priming 12V water pump, 12.5L/min flow rate, overload protection. Used for a basic sink or shower setup.",
+        "price_gbp": 73,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B09CYXSZJ6?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "water",
+          "electrical",
+          "plumbing"
+        ],
+        "notes": "A basic component for a sink or shower build-out — fitting still requires tank, pipework and a switch."
+      }
+    ],
+    "fridges-cooking": [
+      {
+        "id": "aaobosi-65l-compressor-fridge",
+        "name": "AAOBOSI 65L Compressor Fridge",
+        "description": "12V/24V compressor fridge-freezer, dual zone, app control. Works reliably at an angle, unlike thermoelectric coolers.",
+        "price_gbp": 240,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0FZBQ5YLS?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "fridge",
+          "cooking",
+          "electrical"
+        ],
+        "notes": "Compressor fridges draw more power than thermoelectric coolers but hold temperature properly and work on a slope — relevant for van use."
+      },
+      {
+        "id": "higear-45l-thermoelectric-cooler",
+        "name": "Hi-Gear 45L Thermoelectric Cooler",
+        "description": "Budget electric cool box, 12V/240V, thermoelectric (not compressor). Cools below ambient rather than to a fixed set temperature.",
+        "price_gbp": 99,
+        "affiliate_url": "https://www.amazon.co.uk/dp/B0CVS3GDKK?tag=camperdna-21",
+        "affiliate_programme": "amazon",
+        "founder_recommended": false,
+        "tags": [
+          "fridge",
+          "cooking",
+          "budget"
+        ],
+        "notes": "Cheaper and lighter than a compressor fridge, but cooling performance is weaker and it needs to stay upright to work properly."
       }
     ]
   }
