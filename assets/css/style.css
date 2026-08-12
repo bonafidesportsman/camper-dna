@@ -37,7 +37,7 @@ section { padding: 72px 0; }
 /* Nav */
 .site-header { background: var(--color-white); border-bottom: 1px solid rgba(55,65,81,0.12); position: sticky; top: 0; z-index: 100; }
 .site-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: var(--max-width); margin: 0 auto; }
-.site-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-slate); text-decoration: none; line-height: 1; }
+.site-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.4rem; font-weight: 500; color: var(--color-slate); text-decoration: none; line-height: 1; }
 .site-logo:hover { text-decoration: none; }
 .site-logo img { height: 44px; width: auto; display: block; flex-shrink: 0; }
 .site-logo span { display: block; }
@@ -409,10 +409,31 @@ input[type="radio"] ~ .spec-item-check { border-radius: 50%; }
 .policy-body td { padding: 9px 12px; border-bottom: 1px solid rgba(55,65,81,0.1); color: var(--color-charcoal); vertical-align: top; }
 .policy-body tr:last-child td { border-bottom: none; }
 .policy-body tr:nth-child(even) td { background: rgba(55,65,81,0.03); }
-.not-found-body { min-height: 45vh; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.not-found-body h1 { width: 100%; max-width: 760px; margin: 0 auto 44px; text-align: center; }
-.not-found-body p { width: 100%; max-width: 640px; margin: 0 auto 32px; text-align: center; }
-.not-found-body .btn-primary { margin-top: 0; }
+.not-found-body {
+  min-height: calc(100vh - 77px);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 96px 24px 112px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.not-found-body h1 {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.not-found-body > p {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+.not-found-body > p:last-child { margin-bottom: 0; }
+.not-found-body .btn-primary { margin: 0 auto; }
 
 .policy-note { background: var(--color-white); border: 1px solid rgba(55,65,81,0.1); border-radius: 4px; padding: 20px 24px; margin-bottom: 1.5rem; }
 .policy-note p { margin: 0; font-size: 0.875rem; }

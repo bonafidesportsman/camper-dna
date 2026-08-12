@@ -131,7 +131,7 @@ async function routeOr404(request, next) {
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg class="icon-hamburger" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
     </nav>
   </header>
-  <main class="policy-body not-found-body">
+  <main class="not-found-body">
     <h1>Nothing here but an empty pitch</h1>
     <p>No page, no awning, no kettle on. Try one of the main CamperDNA guides instead.</p>
     <p><a class="btn btn-primary" href="/">Take me Home</a></p>
