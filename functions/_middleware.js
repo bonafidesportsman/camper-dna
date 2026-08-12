@@ -156,8 +156,5 @@ function normalizePathname(pathname) {
   if (pathname.endsWith('/index.html')) {
     return pathname.slice(0, -'index.html'.length);
   }
-  if (!pathname.includes('.') && !pathname.endsWith('/')) {
-    return `${pathname}/`;
-  }
   return pathname;
 }
