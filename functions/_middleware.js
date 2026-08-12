@@ -143,7 +143,7 @@ async function routeOr404(request, next) {
     }
     .not-found-body > p:last-child { margin-bottom: 0 !important; }
     .not-found-body .btn-primary { margin: 0 auto !important; }
-    .site-logo span { font-weight: 500 !important; }
+    .site-logo span { font-family: var(--font-body); font-size: 1.05rem; font-weight: 500 !important; letter-spacing: 0; }
   </style>
 </head>
 <body class="policy-page">
