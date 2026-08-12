@@ -114,14 +114,28 @@ async function routeOr404(request, next) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing here but an empty pitch | CamperDNA</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="policy-page">
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="/" class="site-logo"><img src="/assets/images/logo.png" alt="CamperDNA"><span>CamperDNA</span></a>
+      <ul class="nav-links">
+        <li><a href="/your-camperdna/">Your CamperDNA</a></li>
+        <li><a href="/the-vans/">The Vans</a></li>
+        <li><a href="/kit/">Kit &amp; Gear</a></li>
+        <li><a href="/blog/">The Logbook</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg class="icon-hamburger" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
+    </nav>
+  </header>
   <main class="policy-body not-found-body">
     <h1>Nothing here but an empty pitch</h1>
     <p>No page, no awning, no kettle on. Try one of the main CamperDNA guides instead.</p>
     <p><a class="btn btn-primary" href="/">Take me Home</a></p>
   </main>
+  <script src="/assets/js/nav.js" defer></script>
 </body>
 </html>`;
   return new Response(notFoundHTML, {
