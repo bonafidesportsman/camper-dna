@@ -110,14 +110,14 @@ async function routeOr404(request, next) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page not found | CamperDNA</title>
+  <title>Nothing here but an empty pitch | CamperDNA</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="policy-page">
-  <main class="policy-body" style="min-height:45vh;text-align:center;">
-    <h1>Page not found</h1>
-    <p>That page is not part of CamperDNA, or it may have moved.</p>
-    <p><a class="btn btn-primary" href="/">Back to CamperDNA</a></p>
+  <main class="policy-body not-found-body">
+    <h1>Nothing here but an empty pitch</h1>
+    <p>No page, no awning, no kettle on. Try one of the main CamperDNA guides instead.</p>
+    <p><a class="btn btn-primary" href="/">Take me Home</a></p>
   </main>
 </body>
 </html>`;

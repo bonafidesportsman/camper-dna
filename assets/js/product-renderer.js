@@ -36,13 +36,30 @@ class ProductRenderer {
     if (subset.length === 0) { container.remove(); return; }
 
     if (layout === 'list') {
-      const rows = subset.map(p => this.renderListItem(p)).join('');
+      const rows = subset.map(p => this.renderListItem(p, categoryName)).join('');
       container.innerHTML = `<div class="product-list">${rows}</div>`;
     } else {
       const gridClass = layout === 'standard' ? 'product-grid product-grid--3col' : 'product-grid';
-      const cards = subset.map(p => this.renderCard(p)).join('');
+      const cards = subset.map(p => this.renderCard(p, categoryName)).join('');
       container.innerHTML = `<div class="${gridClass}">${cards}</div>`;
     }
+
+    this.trackViewItemList(categoryName, subset);
+  }
+
+  // Fire a GA4 view_item_list event so kit/gear category exposure can be
+  // compared against affiliate_click to build a real conversion funnel.
+  trackViewItemList(listName, items) {
+    if (typeof gtag !== 'function' || !items || items.length === 0) return;
+    gtag('event', 'view_item_list', {
+      item_list_name: listName,
+      items: items.map(p => ({
+        item_id: p.id,
+        item_name: p.name,
+        item_category: listName,
+        affiliation: p.affiliate_programme,
+      })),
+    });
   }
 
   // Extract capacity label from tags (e.g. "2-bike" → "2 bikes")
@@ -58,7 +75,7 @@ class ProductRenderer {
     return '';
   }
 
-  renderCard(product) {
+  renderCard(product, categoryName = '') {
     const priceHTML = product.price_gbp > 0
       ? `<p class="product-price">Price guide £${product.price_gbp}</p>`
       : '';
@@ -83,12 +100,12 @@ class ProductRenderer {
           <p class="product-description">${this.esc(product.description)}</p>
           ${priceHTML}
           <p class="product-note">${this.esc(product.notes)}</p>
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer">${programmeLabel}&nbsp;→</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer" data-item-id="${this.esc(product.id)}" data-item-name="${this.esc(product.name)}" data-item-category="${this.esc(categoryName)}" data-affiliate-network="${this.esc(product.affiliate_programme || '')}">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
 
-  renderListItem(product) {
+  renderListItem(product, categoryName = '') {
     const priceHTML = product.price_gbp > 0
       ? `<span class="product-list-price">Price guide £${product.price_gbp}</span>`
       : '';
@@ -116,7 +133,7 @@ class ProductRenderer {
         </div>
         <div class="product-list-action">
           ${priceHTML}
-          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer">${programmeLabel}&nbsp;→</a>
+          <a href="${this.esc(product.affiliate_url)}" class="btn-secondary product-link" target="_blank" rel="sponsored noopener noreferrer" data-item-id="${this.esc(product.id)}" data-item-name="${this.esc(product.name)}" data-item-category="${this.esc(categoryName)}" data-affiliate-network="${this.esc(product.affiliate_programme || '')}">${programmeLabel}&nbsp;→</a>
         </div>
       </div>`;
   }
@@ -142,16 +159,36 @@ class ProductRenderer {
   renderFeatured(containerId, maxItems = 6) {
     const all = [];
     if (this.data?.categories) {
-      Object.values(this.data.categories).forEach(items => {
-        items.forEach(p => { if (p.founder_recommended) all.push(p); });
+      Object.entries(this.data.categories).forEach(([categoryName, items]) => {
+        items.forEach(p => { if (p.founder_recommended) all.push({ product: p, categoryName }); });
       });
     }
     const container = document.getElementById(containerId);
     if (!container) return;
-    const cards = all.slice(0, maxItems).map(p => this.renderCard(p)).join('');
+    const subset = all.slice(0, maxItems);
+    const cards = subset.map(({ product, categoryName }) => this.renderCard(product, categoryName)).join('');
     container.innerHTML = `<div class="product-grid">${cards}</div>`;
+    this.trackViewItemList('featured', subset.map(({ product }) => product));
   }
 }
+
+// Track affiliate clicks as a GA4 Key Event. Delegated on document so it
+// covers every rendered card/list-item regardless of when it was inserted.
+// item_id/item_name/item_category/affiliate_network come from data attrs
+// set in renderCard/renderListItem — this is the click-side counterpart to
+// the view_item_list events fired on render, letting the two be joined into
+// a category → product → click funnel in GA4 Explore.
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('.product-link');
+  if (!link || typeof gtag !== 'function') return;
+  gtag('event', 'affiliate_click', {
+    item_id: link.dataset.itemId || '',
+    item_name: link.dataset.itemName || '',
+    item_category: link.dataset.itemCategory || '',
+    affiliate_network: link.dataset.affiliateNetwork || '',
+    link_url: link.href,
+  });
+});
 
 // Auto-init: render all [data-category] containers on page load
 document.addEventListener('DOMContentLoaded', async () => {
