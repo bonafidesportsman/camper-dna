@@ -36,11 +36,8 @@ const ANSWER_COMPATIBILITY = {
 export async function onRequestPost(context) {
   const { request, env } = context;
 
-  // CORS
-  const headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-  };
+  const origin = request.headers.get('Origin');
+  const headers = buildApiHeaders(origin);
 
   // Parse body
   let body;
@@ -196,15 +193,16 @@ ${answerLines}`;
     return Response.json({ status: 'error', message: 'Report generation timed out. Please try again in a moment.', code: 'API_ERROR' }, { status: 500, headers });
   }
 
-  // Convert markdown → HTML
-  const reportHTML = markdownToHTML(stripGeneratedGreeting(markdownReport));
+  // Convert markdown → safe HTML
+  const cleanMarkdownReport = stripGeneratedGreeting(markdownReport);
+  const reportHTML = markdownToHTML(cleanMarkdownReport);
 
   // Build spec summary for email header
   const specRows = buildSpecRows(answers);
 
   // Generate email HTML + text
   const emailHTML = buildEmailHTML(reportHTML, specRows, email);
-  const emailText = buildEmailText(stripGeneratedGreeting(markdownReport), specRows);
+  const emailText = buildEmailText(cleanMarkdownReport, specRows);
 
   // Send via Resend
   const fromEmail = env.RESEND_FROM_EMAIL || 'campfire@camper-dna.com';
@@ -241,18 +239,55 @@ ${answerLines}`;
 }
 
 // CORS preflight
-export async function onRequestOptions() {
+export async function onRequestOptions({ request }) {
   return new Response(null, {
     status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
+    headers: buildApiHeaders(request.headers.get('Origin')),
   });
 }
 
 // --- Helpers ---
+
+const ALLOWED_ORIGINS = new Set(['https://camper-dna.com', 'https://www.camper-dna.com']);
+
+function buildApiHeaders(origin) {
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    'Cache-Control': 'no-store',
+  };
+  if (ALLOWED_ORIGINS.has(origin)) {
+    headers['Access-Control-Allow-Origin'] = origin;
+    headers['Vary'] = 'Origin';
+  }
+  return headers;
+}
+
+function escapeHTML(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function sanitizeCamperDNALink(href) {
+  const value = String(href || '').trim();
+  if (/^\/[a-z0-9_\-\/]*$/i.test(value)) return value;
+  try {
+    const url = new URL(value);
+    if ((url.protocol === 'https:') && ['camper-dna.com', 'www.camper-dna.com'].includes(url.hostname)) {
+      return url.href;
+    }
+  } catch (_) {}
+  return '';
+}
+
 
 function buildSpecRows(answers) {
   return [
@@ -299,7 +334,8 @@ function stripGeneratedGreeting(markdown) {
 }
 
 function markdownToHTML(md) {
-  return md
+  const escaped = escapeHTML(md);
+  return escaped
     // Headers
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
     .replace(/^## (.+)$/gm, '<h2>$1</h2>')
@@ -326,7 +362,10 @@ function markdownToHTML(md) {
     .replace(/^[-*] (.+)$/gm, '<li>$1</li>')
     .replace(/(<li>.*<\/li>\n?)+/g, (m) => `<ul>${m}</ul>`)
     // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, href) => {
+      const safeHref = sanitizeCamperDNALink(href);
+      return safeHref ? `<a href="${safeHref}">${label}</a>` : label;
+    })
     // Paragraphs (double newline → paragraph break)
     .replace(/\n\n+/g, '</p><p>')
     .replace(/^/, '<p>')
@@ -340,8 +379,8 @@ function markdownToHTML(md) {
 function buildEmailHTML(reportHTML, specRows, email) {
   const specCells = specRows.map(row => `
     <div style="background:#F9F8F6;padding:14px 16px;border-radius:4px;border-left:3px solid #D4704F;margin-bottom:12px;">
-      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#6B7280;margin-bottom:4px;">${row.label}</div>
-      <div style="font-size:15px;font-weight:600;color:#1F2937;">${row.value}</div>
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#6B7280;margin-bottom:4px;">${escapeHTML(row.label)}</div>
+      <div style="font-size:15px;font-weight:600;color:#1F2937;">${escapeHTML(row.value)}</div>
     </div>`).join('');
 
   return `<!DOCTYPE html>
