@@ -103,7 +103,8 @@ async function routeOr404(request, next) {
 
   if (
     PASSTHROUGH_FILES.has(pathname) ||
-    PASSTHROUGH_PREFIXES.some(prefix => pathname.startsWith(prefix))
+    PASSTHROUGH_PREFIXES.some(prefix => pathname.startsWith(prefix)) ||
+    isKnownLocalAsset(pathname)
   ) {
     return next();
   }
@@ -149,6 +150,11 @@ async function routeOr404(request, next) {
   });
 }
 
+
+
+function isKnownLocalAsset(pathname) {
+  return /^\/[-a-z0-9\/]+\.(css|js|mjs|json|png|jpg|jpeg|webp|svg|ico|txt|xml)$/i.test(pathname);
+}
 
 function isKnownRoute(pathname) {
   if (VALID_ROUTES.has(pathname)) return true;
