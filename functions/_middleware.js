@@ -97,12 +97,8 @@ async function routeOr404(request, next) {
   const url = new URL(request.url);
   const pathname = normalizePathname(url.pathname);
 
-  const resolvedRoute = resolveKnownRoute(pathname);
-  if (resolvedRoute) {
-    if (resolvedRoute === pathname) return next();
-    const rewrittenUrl = new URL(request.url);
-    rewrittenUrl.pathname = resolvedRoute;
-    return next(new Request(rewrittenUrl, request));
+  if (isKnownRoute(pathname)) {
+    return next();
   }
 
   if (
@@ -140,15 +136,12 @@ async function routeOr404(request, next) {
 }
 
 
-function resolveKnownRoute(pathname) {
-  if (VALID_ROUTES.has(pathname)) return pathname;
+function isKnownRoute(pathname) {
+  if (VALID_ROUTES.has(pathname)) return true;
   if (pathname.endsWith('/')) {
-    const htmlRoute = `${pathname.slice(0, -1)}.html`;
-    if (VALID_ROUTES.has(htmlRoute)) return htmlRoute;
+    return VALID_ROUTES.has(`${pathname.slice(0, -1)}.html`);
   }
-  const htmlRoute = `${pathname}.html`;
-  if (VALID_ROUTES.has(htmlRoute)) return htmlRoute;
-  return '';
+  return VALID_ROUTES.has(`${pathname}.html`);
 }
 
 function normalizePathname(pathname) {
