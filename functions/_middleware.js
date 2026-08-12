@@ -116,7 +116,7 @@ async function routeOr404(request, next) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nothing here but an empty pitch | CamperDNA</title>
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260812-wordmark2">
   <style>
     .not-found-body {
       min-height: calc(100vh - 77px) !important;
