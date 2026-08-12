@@ -40,7 +40,7 @@ section { padding: 72px 0; }
 .site-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.4rem; font-weight: 500; color: var(--color-slate); text-decoration: none; line-height: 1; }
 .site-logo:hover { text-decoration: none; }
 .site-logo img { height: 44px; width: auto; display: block; flex-shrink: 0; }
-.site-logo span { display: block; }
+.site-logo span { display: block; font-weight: 500 !important; }
 .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
 .nav-links a { font-size: var(--fs-small); font-weight: 500; color: var(--color-charcoal); letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: color 0.15s; }
 .nav-links a:hover, .nav-links a.active { color: var(--color-rust); }

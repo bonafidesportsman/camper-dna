@@ -117,6 +117,34 @@ async function routeOr404(request, next) {
   <title>Nothing here but an empty pitch | CamperDNA</title>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .not-found-body {
+      min-height: calc(100vh - 77px) !important;
+      max-width: 920px !important;
+      margin: 0 auto !important;
+      padding: 96px 24px 112px !important;
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .not-found-body h1 {
+      width: 100% !important;
+      max-width: 760px !important;
+      margin: 0 auto 48px !important;
+      text-align: center !important;
+    }
+    .not-found-body > p {
+      width: 100% !important;
+      max-width: 640px !important;
+      margin: 0 auto 36px !important;
+      text-align: center !important;
+    }
+    .not-found-body > p:last-child { margin-bottom: 0 !important; }
+    .not-found-body .btn-primary { margin: 0 auto !important; }
+    .site-logo span { font-weight: 500 !important; }
+  </style>
 </head>
 <body class="policy-page">
   <header class="site-header">
