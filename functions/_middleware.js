@@ -98,7 +98,7 @@ async function routeOr404(request, next) {
   const pathname = normalizePathname(url.pathname);
 
   if (
-    VALID_ROUTES.has(pathname) ||
+    isKnownRoute(pathname) ||
     PASSTHROUGH_FILES.has(pathname) ||
     PASSTHROUGH_PREFIXES.some(prefix => pathname.startsWith(prefix))
   ) {
@@ -130,6 +130,15 @@ async function routeOr404(request, next) {
       'Cache-Control': 'no-store',
     },
   });
+}
+
+
+function isKnownRoute(pathname) {
+  if (VALID_ROUTES.has(pathname)) return true;
+  if (pathname.endsWith('/')) {
+    return VALID_ROUTES.has(`${pathname.slice(0, -1)}.html`);
+  }
+  return VALID_ROUTES.has(`${pathname}.html`);
 }
 
 function normalizePathname(pathname) {
